@@ -1,0 +1,115 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	display: inline-flex;
+	padding: 0 24px;
+	align-items: center;
+	justify-content: center;
+	border-radius: $radius;
+	font-size: 15px;
+	font-weight: 600;
+	font-family: inherit;
+	&:before{
+		margin-right: 9px;
+	}
+	@media(max-width: $s750) {
+		padding: 0 16px;
+	}
+}
+
+.button-plum{
+	background: $plum;
+	color: $black;
+	&:hover{
+		background: $plum-hover;
+		color: $black;
+	}
+	&:active{
+		background: $plum-active;
+		color: $black;
+	}
+}
+
+.button-orange{
+	background: $orange;
+	color: $white;
+	&:before{
+		background: $white;
+	}
+	&:hover{
+		background: $orange-hover;
+		color: $white;
+	}
+	&:active{
+		background: $orange-active;
+		color: $white;
+	}
+}
+
+.button-orange-light{
+	background: $orange-light;
+	color: $orange;
+	&:before{
+		background: $orange;
+	}
+	&:hover{
+		background: $orange-light-hover;
+		color: $orange;
+	}
+	&:active{
+		background: $orange-light-active;
+		color: $orange;
+	}
+}
+
+.button-white{
+	background: #F4ECE6;
+	color: $black;
+	&:before{
+		background: $black;
+	}
+	&:hover{
+		background: #e3ded9;
+		color: $black;
+	}
+	&:active{
+		background: #dcd8d6;
+		color: $black;
+	}
+}
+
+.button-catalog{
+	flex-shrink: 0;
+	margin-right: 8px;
+	position: relative;
+	@media(max-width: $s950) {
+		font-size: 0;
+		&:before{
+			margin-right: 0;
+		}
+	}
+	@media(max-width: $s750) {
+		display: none;
+	}
+}
+
+.button-basket{
+	margin-left: 4px;
+	@media(max-width: $s950) {
+		font-size: 0;
+		&:before{
+			margin-right: 0;
+		}
+	}
+	@media(max-width: $s750) {
+		display: none;
+	}
+}
+
+.button-basket-mobile{
+	height: 50px;
+	&:before{
+		margin-right: 0;
+	}
+}

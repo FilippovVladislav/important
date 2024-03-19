@@ -1,0 +1,44 @@
+:root {
+  --color-black: #362F3C;
+  --color-black-light: rgba(54, 47, 60, 0.80);
+  --color-white: #fff;
+  --color-plum: rgba(153, 119, 174, 0.16);
+  --color-plum-hover: linear-gradient(0deg, rgba(54, 47, 60, 0.04) 0%,  rgba(54, 47, 60, 0.04) 100%),  rgba(153, 119, 174, 0.16);
+  --color-plum-active: linear-gradient(0deg, rgba(54, 47, 60, 0.08) 0%, rgba(54, 47, 60, 0.08) 100%), rgba(153, 119, 174, 0.16);
+  --color-orange: #F07F3C;
+  --color-orange-hover: linear-gradient(0deg, rgba(54, 47, 60, 0.04) 0%, rgba(54, 47, 60, 0.04) 100%), #F07F3C;
+  --color-orange-active: linear-gradient(0deg, rgba(54, 47, 60, 0.08) 0%, rgba(54, 47, 60, 0.08) 100%),  #F07F3C;
+  --color-orange-light: rgba(240, 127, 60, 0.16);
+  --color-orange-light-hover: linear-gradient(0deg,  rgba(54, 47, 60, 0.04) 0%, rgba(54, 47, 60, 0.04) 100%), rgba(240, 127, 60, 0.16);
+  --color-orange-light-active: linear-gradient(0deg, rgba(54, 47, 60, 0.08) 0%, rgba(54, 47, 60, 0.08) 100%), rgba(240, 127, 60, 0.16);
+  --color-milky: rgba(185, 136, 98, 0.10);
+  --color-milky-hover: linear-gradient(0deg, rgba(54, 47, 60, 0.04) 0%, rgba(54, 47, 60, 0.04) 100%), rgba(185, 136, 98, 0.10);
+  --color-milky-active: linear-gradient(0deg, rgba(54, 47, 60, 0.08) 0%, rgba(54, 47, 60, 0.08) 100%), rgba(185, 136, 98, 0.10);
+  --color-red: #F03C53;
+  --color-default-plum: #9977AE;
+  --color-default-plum-dark: #7A608B;
+}
+
+$black: var(--color-black);
+$black-light: var(--color-black-light);
+$white: var(--color-white);
+$plum: var(--color-plum);
+$plum-hover: var(--color-plum-hover);
+$plum-active: var(--color-plum-active);
+$orange: var(--color-orange);
+$orange-hover: var(--color-orange-hover);
+$orange-active: var(--color-orange-active);
+$orange-light: var(--color-orange-light);
+$orange-light-hover: var(--color-orange-light-hover);
+$orange-light-active: var(--color-orange-light-active);
+$milky: var(--color-milky);
+$milky-hover: var(--color-milky-hover);
+$milky-active: var(--color-milky-active);
+$red: var(--color-red);
+$default-plum: var(--color-default-plum);
+$default-plum-dark: var(--color-default-plum-dark);
+
+$radius: 1000px;
+$radius-24: 24px;
+$radius-16: 16px;
+$radius-12: 12px;
