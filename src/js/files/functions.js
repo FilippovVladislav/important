@@ -554,7 +554,6 @@ export function showMore() {
 export function FLS(message) {
 	setTimeout(() => {
 		if (window.FLS) {
-			console.log(message);
 		}
 	}, 0);
 }

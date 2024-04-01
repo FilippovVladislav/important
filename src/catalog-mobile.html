@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Каталог мобильная"
+})
+
+<body>
+<div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+        <div class="container">
+            <div class="main-page">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumb-items">
+                        <li class="breadcrumb-item">
+                            <a href="#" class="breadcrumb-link">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            Каталог
+                        </li>
+                    </ul>
+                </nav>
+                <div class="product-block mt-0">
+                    <div class="product-block-head">
+                        <h3 class="size-28 font-balsamiq">Каталог</h3>
+                    </div>
+                    <nav class="header-catalog-menu-container">
+                        <ul class="header-catalog-menu-items">
+                            <li class="header-catalog-menu-item">
+                                <a href="#" class="header-catalog-menu-link">
+                                    <span class="header-catalog-menu-icon icon" style="--icon: url('../img/icon/icon-holding-heart.svg')"></span>
+                                    Новое
+                                </a>
+                            </li>
+                            <li class="header-catalog-menu-item">
+                                <a href="#" class="header-catalog-menu-link">
+                                    <span class="header-catalog-menu-icon icon" style="--icon: url('../img/icon/icon-christmas.svg')"></span>
+                                    Новогодние товары
+                                </a>
+                            </li>
+                            <li class="header-catalog-menu-item">
+                                <a href="#" class="header-catalog-menu-link">
+                                    <span class="header-catalog-menu-icon icon" style="--icon: url('../img/icon/icon-leaf.svg')"></span>
+                                    Осень
+                                </a>
+                            </li>
+                            <li class="header-catalog-menu-item">
+                                <a href="#" class="header-catalog-menu-link">
+                                    <span class="header-catalog-menu-icon icon" style="--icon: url('../img/icon/icon-sticker.svg')"></span>
+                                    Стикеры
+                                </a>
+                            </li>
+                            <li class="header-catalog-menu-item">
+                                <a href="#" class="header-catalog-menu-link">
+                                    <span class="header-catalog-menu-icon icon" style="--icon: url('../img/icon/icon-cards.svg')"></span>
+                                    Открытки
+                                </a>
+                            </li>
+                            <li class="header-catalog-menu-item">
+                                <a href="#" class="header-catalog-menu-link">
+                                    <span class="header-catalog-menu-icon icon" style="--icon: url('../img/icon/icon-jpg.svg')"></span>
+                                    Наклейки
+                                </a>
+                            </li>
+                            <li class="header-catalog-menu-item">
+                                <a href="#" class="header-catalog-menu-link">
+                                    <span class="header-catalog-menu-icon icon" style="--icon: url('../img/icon/icon-alt.svg')"></span>
+                                    Боксы, конверты и наборы
+                                </a>
+                            </li>
+                            <li class="header-catalog-menu-item">
+                                <a href="#" class="header-catalog-menu-link">
+                                    <span class="header-catalog-menu-icon icon" style="--icon: url('../img/icon/icon-fox.svg')"></span>
+                                    Временные тату MomAllows
+                                </a>
+                            </li>
+                            <li class="header-catalog-menu-item">
+                                <a href="#" class="header-catalog-menu-link">
+                                    <span class="header-catalog-menu-icon icon" style="--icon: url('../img/icon/icon-menu-dots.svg')"></span>
+                                    Прочее
+                                </a>
+                            </li>
+                            <li class="header-catalog-menu-item">
+                                <a href="#" class="header-catalog-menu-link">
+                                    <span class="header-catalog-menu-icon icon" style="--icon: url('../img/icon/icon-search-heart.svg')"></span>
+                                    Подборки
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="sidebar-btn-apply">
+        Применить (<span class="sidebar-btn-count"></span>)
+    </div>
+    @@include('html/_footer.htm',{})
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+</body>
+
+</html>

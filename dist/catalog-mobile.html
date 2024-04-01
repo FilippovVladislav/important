@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Главная</title>
+	<title>Каталог мобильная</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -148,39 +148,95 @@
 			</div>
 		</header>
 		<main class="page">
-			<section class="hero">
-				<div class='hero__container' style="padding: 100px 0">
-					<div class="container">
-						<h1 class="hero__title _title size-36 font-balsamiq">Список страниц</h1>
-						<div class="hero__row" style="margin-top: 40px">
-							<ol style="list-style-position: inside;">
-								<li style="margin-bottom: 20px;">
-									<a href="home.html">Главная</a>
-								</li>
-								<li style="margin-bottom: 20px;">
-									<a href="search-header.html">Результат поиска в шапке</a>
-								</li>
-								<li style="margin-bottom: 20px;">
-									<a href="catalog.html">Каталог</a>
-								</li>
-								<li style="margin-bottom: 20px;">
-									<a href="catalog-mobile.html">Каталог (для телефона)</a>
-								</li>
-								<li style="margin-bottom: 20px;">
-									<a href="catalog-no-filter.html">Каталог (фильтр не нашел)</a>
-								</li>
-								<li style="margin-bottom: 20px;">
-									<a href="catalog-no-search.html">Каталог (поиск не нашел)</a>
-								</li>
-								<li style="margin-bottom: 20px;">
-									<a href="product.html">Карточка товара</a>
-								</li>
-							</ol>
+			<div class="container">
+				<div class="main-page">
+					<nav class="breadcrumbs">
+						<ul class="breadcrumb-items">
+							<li class="breadcrumb-item">
+								<a href="#" class="breadcrumb-link">
+									Главная
+								</a>
+							</li>
+							<li class="breadcrumb-item">
+								Каталог
+							</li>
+						</ul>
+					</nav>
+					<div class="product-block mt-0">
+						<div class="product-block-head">
+							<h3 class="size-28 font-balsamiq">Каталог</h3>
 						</div>
+						<nav class="header-catalog-menu-container">
+							<ul class="header-catalog-menu-items">
+								<li class="header-catalog-menu-item">
+									<a href="#" class="header-catalog-menu-link">
+										<span class="header-catalog-menu-icon icon" style="--icon: url('../img/icon/icon-holding-heart.svg')"></span>
+										Новое
+									</a>
+								</li>
+								<li class="header-catalog-menu-item">
+									<a href="#" class="header-catalog-menu-link">
+										<span class="header-catalog-menu-icon icon" style="--icon: url('../img/icon/icon-christmas.svg')"></span>
+										Новогодние товары
+									</a>
+								</li>
+								<li class="header-catalog-menu-item">
+									<a href="#" class="header-catalog-menu-link">
+										<span class="header-catalog-menu-icon icon" style="--icon: url('../img/icon/icon-leaf.svg')"></span>
+										Осень
+									</a>
+								</li>
+								<li class="header-catalog-menu-item">
+									<a href="#" class="header-catalog-menu-link">
+										<span class="header-catalog-menu-icon icon" style="--icon: url('../img/icon/icon-sticker.svg')"></span>
+										Стикеры
+									</a>
+								</li>
+								<li class="header-catalog-menu-item">
+									<a href="#" class="header-catalog-menu-link">
+										<span class="header-catalog-menu-icon icon" style="--icon: url('../img/icon/icon-cards.svg')"></span>
+										Открытки
+									</a>
+								</li>
+								<li class="header-catalog-menu-item">
+									<a href="#" class="header-catalog-menu-link">
+										<span class="header-catalog-menu-icon icon" style="--icon: url('../img/icon/icon-jpg.svg')"></span>
+										Наклейки
+									</a>
+								</li>
+								<li class="header-catalog-menu-item">
+									<a href="#" class="header-catalog-menu-link">
+										<span class="header-catalog-menu-icon icon" style="--icon: url('../img/icon/icon-alt.svg')"></span>
+										Боксы, конверты и наборы
+									</a>
+								</li>
+								<li class="header-catalog-menu-item">
+									<a href="#" class="header-catalog-menu-link">
+										<span class="header-catalog-menu-icon icon" style="--icon: url('../img/icon/icon-fox.svg')"></span>
+										Временные тату MomAllows
+									</a>
+								</li>
+								<li class="header-catalog-menu-item">
+									<a href="#" class="header-catalog-menu-link">
+										<span class="header-catalog-menu-icon icon" style="--icon: url('../img/icon/icon-menu-dots.svg')"></span>
+										Прочее
+									</a>
+								</li>
+								<li class="header-catalog-menu-item">
+									<a href="#" class="header-catalog-menu-link">
+										<span class="header-catalog-menu-icon icon" style="--icon: url('../img/icon/icon-search-heart.svg')"></span>
+										Подборки
+									</a>
+								</li>
+							</ul>
+						</nav>
 					</div>
 				</div>
-			</section>
+			</div>
 		</main>
+		<div class="sidebar-btn-apply">
+			Применить (<span class="sidebar-btn-count"></span>)
+		</div>
 		<footer class="footer">
 			<div class="container">
 				<div class="footer-row">

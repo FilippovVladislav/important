@@ -112,5 +112,8 @@ body {
 @import "header";
 @import "footer";
 
+@import "nouislider/dist/nouislider.css";
+@import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
 // Подключение стилей отдельных страниц
 @import "home";

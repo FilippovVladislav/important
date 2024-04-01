@@ -10,6 +10,7 @@
 	font-size: 15px;
 	font-weight: 600;
 	font-family: inherit;
+	min-height: 34px;
 	&:before{
 		margin-right: 9px;
 	}
@@ -111,5 +112,33 @@
 	height: 50px;
 	&:before{
 		margin-right: 0;
+	}
+}
+
+.filter-button-container{
+	margin-top: 16px;
+	.button-orange-light{
+		margin-top: 8px;
+	}
+	@media(max-width: $s1200) {
+		margin: 16px -16px -16px;
+		padding: 16px;
+		position: sticky;
+		background: #F5F3F2;
+		bottom: -78px;
+		z-index: 2;
+		border-radius: 24px;
+	}
+}
+
+.button-filter{
+	width: 100%;
+	height: 48px;
+}
+
+.catalog-no-result{
+	.button{
+		font-size: 13px;
+		padding: 0 12px;
 	}
 }

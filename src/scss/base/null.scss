@@ -37,6 +37,24 @@ body {
 	@media(max-width: $s750) {
 		padding-bottom: 80px;
 	}
+	&.filter-active{
+		overflow: hidden;
+		.filter-container{
+			opacity: 1;
+			pointer-events: auto;
+			.filter-close-btn-mobile{
+				transform: rotate(180deg);
+			}
+			.filter-container-block{
+				transform: translateX(0);
+			}
+		}
+	}
+	&.product-page{
+		.mobile-menu{
+			border-radius: 0;
+		}
+	}
 }
 input,
 button,
@@ -90,6 +108,13 @@ h6 {
 		flex-shrink: 0;
 		transition: 0.25s;
 		background: $black;
+	}
+}
+
+.h-48{
+	height: 48px;
+	@media(max-width: $s750) {
+		height: 48px;
 	}
 }
 

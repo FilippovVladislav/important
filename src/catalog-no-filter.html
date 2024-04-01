@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+<div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+        <div class="container">
+            <div class="main-page">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumb-items">
+                        <li class="breadcrumb-item">
+                            <a href="#" class="breadcrumb-link">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            Новогодние товары
+                        </li>
+                    </ul>
+                </nav>
+                <div class="sidebar sidebar-filter">
+                    <div class="filter-item filter-item-sort">
+                        <div class="filter-head">
+                            <div class="filter-title">Сортировка</div>
+                        </div>
+                        <div class="filter-sort">
+                            <div class="filter-sort__default icon" style="--icon: url('../img/icon/icon-arrow-3.svg')">
+                                По популярности
+                            </div>
+                            <div class="filter-sort__items">
+                                <div class="filter-sort__item">
+                                    <input type="radio" id="sort-popular" name="sorting" value="popular" checked>
+                                    <label for="sort-popular">
+                                        <span class="sort-icon"></span>
+                                        <span class="sort-text">По популярности</span>
+                                    </label>
+                                </div>
+                                <div class="filter-sort__item">
+                                    <input type="radio" id="sort-new" name="sorting" value="new">
+                                    <label for="sort-new">
+                                        <span class="sort-icon"></span>
+                                        <span class="sort-text">Новые</span>
+                                    </label>
+                                </div>
+                                <div class="filter-sort__item">
+                                    <input type="radio" id="sort-cheap" name="sorting" value="cheap">
+                                    <label for="sort-cheap">
+                                        <span class="sort-icon"></span>
+                                        <span class="sort-text">Сначала дешевые</span>
+                                    </label>
+                                </div>
+                                <div class="filter-sort__item">
+                                    <input type="radio" id="sort-expensive" name="sorting" value="expensive">
+                                    <label for="sort-expensive">
+                                        <span class="sort-icon"></span>
+                                        <span class="sort-text">Сначала дорогие</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="filter-button-mobile icon" style="--icon: url('../img/icon/icon-filter.svg')">
+                            Фильтры
+                        </button>
+                    </div>
+                    <div class="filter-container">
+                        <button type="button" class="filter-close-btn-mobile icon" style="--icon: url('../img/icon/icon-close.svg')"></button>
+                        <div class="filter-container-block">
+                            <div class="filter-container-block-list">
+                                <div class="filter-title-mobile">Фильтры</div>
+                                <div class="filter-item">
+                                    <div class="filter-head">
+                                        <div class="filter-title">Основные</div>
+                                        <button type="button" class="filter-reset">Сбросить</button>
+                                    </div>
+                                    <div class="filter-lines">
+                                        <div class="filter-list">
+                                            <div class="check-line">
+                                                <input type="checkbox" id="rating">
+                                                <label for="rating" class="check-label">
+                                                    <span class="check-label__icon"></span>
+                                                    <span class="filter-label__text">Высокий рейтинг</span>
+                                                    <span class="check-label__count">84</span>
+                                                </label>
+                                            </div>
+                                            <div class="check-line">
+                                                <input type="checkbox" id="action">
+                                                <label for="action" class="check-label">
+                                                    <span class="check-label__icon"></span>
+                                                    <span class="filter-label__text">Акции</span>
+                                                    <span class="check-label__count">102</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-item">
+                                    <div class="filter-head">
+                                        <div class="filter-title">Категории</div>
+                                        <button type="button" class="filter-reset">Сбросить</button>
+                                    </div>
+                                    <div class="filter-lines">
+                                        <div class="filter-all">
+                                            <div class="check-line">
+                                                <input type="checkbox" id="allCategory" class="full-category">
+                                                <label for="allCategory" class="check-label">
+                                                    <span class="check-label__icon"></span>
+                                                    <span class="filter-label__text">Все категории</span>
+                                                    <span class="check-label__count">420</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="filter-list">
+                                            <div class="check-line">
+                                                <input type="checkbox" id="ng">
+                                                <label for="ng" class="check-label">
+                                                    <span class="check-label__icon"></span>
+                                                    <span class="filter-label__text">Новогодние товары</span>
+                                                    <span class="check-label__count">84</span>
+                                                </label>
+                                            </div>
+                                            <div class="check-line">
+                                                <input type="checkbox" id="spring">
+                                                <label for="spring" class="check-label">
+                                                    <span class="check-label__icon"></span>
+                                                    <span class="filter-label__text">Весна</span>
+                                                    <span class="check-label__count">102</span>
+                                                </label>
+                                            </div>
+                                            <div class="check-line">
+                                                <input type="checkbox" id="sticker">
+                                                <label for="sticker" class="check-label">
+                                                    <span class="check-label__icon"></span>
+                                                    <span class="filter-label__text">Стикеры</span>
+                                                    <span class="check-label__count">43</span>
+                                                </label>
+                                            </div>
+                                            <div class="check-line">
+                                                <input type="checkbox" id="ribbons">
+                                                <label for="ribbons" class="check-label">
+                                                    <span class="check-label__icon"></span>
+                                                    <span class="filter-label__text">Ленточки</span>
+                                                    <span class="check-label__count">67</span>
+                                                </label>
+                                            </div>
+                                            <div class="check-line">
+                                                <input type="checkbox" id="ng2">
+                                                <label for="ng2" class="check-label">
+                                                    <span class="check-label__icon"></span>
+                                                    <span class="filter-label__text">Новогодние товары</span>
+                                                    <span class="check-label__count">84</span>
+                                                </label>
+                                            </div>
+                                            <div class="check-line">
+                                                <input type="checkbox" id="spring2">
+                                                <label for="spring2" class="check-label">
+                                                    <span class="check-label__icon"></span>
+                                                    <span class="filter-label__text">Весна</span>
+                                                    <span class="check-label__count">102</span>
+                                                </label>
+                                            </div>
+                                            <div class="check-line">
+                                                <input type="checkbox" id="sticker3">
+                                                <label for="sticker3" class="check-label">
+                                                    <span class="check-label__icon"></span>
+                                                    <span class="filter-label__text">Стикеры</span>
+                                                    <span class="check-label__count">43</span>
+                                                </label>
+                                            </div>
+                                            <div class="check-line">
+                                                <input type="checkbox" id="ribbons4">
+                                                <label for="ribbons4" class="check-label">
+                                                    <span class="check-label__icon"></span>
+                                                    <span class="filter-label__text">Ленточки</span>
+                                                    <span class="check-label__count">67</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="filter-all-show icon"  style="--icon: url('../img/icon/icon-arrow-down.svg')">
+                                            Показать больше
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="filter-item">
+                                    <div class="filter-head">
+                                        <div class="filter-title">Стоимость</div>
+                                        <button type="button" class="filter-reset">Сбросить</button>
+                                    </div>
+                                    <div class="slider-inputs">
+                                        <input type="text" class="slider-input" id="slider-input-start" placeholder="От 200₽" data-price-min="200">
+                                        <input type="text" class="slider-input" id="slider-input-end" placeholder="От 2000₽" data-price-max="2000">
+                                    </div>
+                                    <div id="slider"></div>
+                                </div>
+                                <div class="filter-item">
+                                    <div class="filter-head">
+                                        <div class="filter-title">Категории</div>
+                                        <button type="button" class="filter-reset">Сбросить</button>
+                                    </div>
+                                    <div class="filter-lines">
+                                        <div class="filter-list">
+                                            <div class="check-line">
+                                                <input type="checkbox" id="author">
+                                                <label for="author" class="check-label">
+                                                    <span class="check-label__icon"></span>
+                                                    <span class="filter-label__text">alpushistik</span>
+                                                    <span class="check-label__count">84</span>
+                                                </label>
+                                            </div>
+                                            <div class="check-line">
+                                                <input type="checkbox" id="author2">
+                                                <label for="author2" class="check-label">
+                                                    <span class="check-label__icon"></span>
+                                                    <span class="filter-label__text">alpushistik</span>
+                                                    <span class="check-label__count">102</span>
+                                                </label>
+                                            </div>
+                                            <div class="check-line">
+                                                <input type="checkbox" id="author3">
+                                                <label for="author3" class="check-label">
+                                                    <span class="check-label__icon"></span>
+                                                    <span class="filter-label__text">foxofcouse</span>
+                                                    <span class="check-label__count">43</span>
+                                                </label>
+                                            </div>
+                                            <div class="check-line">
+                                                <input type="checkbox" id="author4">
+                                                <label for="author4" class="check-label">
+                                                    <span class="check-label__icon"></span>
+                                                    <span class="filter-label__text">milka69milka</span>
+                                                    <span class="check-label__count">67</span>
+                                                </label>
+                                            </div>
+                                            <div class="check-line">
+                                                <input type="checkbox" id="author5">
+                                                <label for="author5" class="check-label">
+                                                    <span class="check-label__icon"></span>
+                                                    <span class="filter-label__text">alpushistik</span>
+                                                    <span class="check-label__count">84</span>
+                                                </label>
+                                            </div>
+                                            <div class="check-line">
+                                                <input type="checkbox" id="author6">
+                                                <label for="author6" class="check-label">
+                                                    <span class="check-label__icon"></span>
+                                                    <span class="filter-label__text">applyes</span>
+                                                    <span class="check-label__count">102</span>
+                                                </label>
+                                            </div>
+                                            <div class="check-line">
+                                                <input type="checkbox" id="author7">
+                                                <label for="author7" class="check-label">
+                                                    <span class="check-label__icon"></span>
+                                                    <span class="filter-label__text">foxofcouse</span>
+                                                    <span class="check-label__count">43</span>
+                                                </label>
+                                            </div>
+                                            <div class="check-line">
+                                                <input type="checkbox" id="author8">
+                                                <label for="author8" class="check-label">
+                                                    <span class="check-label__icon"></span>
+                                                    <span class="filter-label__text">milka69milka</span>
+                                                    <span class="check-label__count">67</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="filter-all-show icon"  style="--icon: url('../img/icon/icon-arrow-down.svg')">
+                                            Показать больше
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="filter-button-container">
+                                    <a href="#" class="button button-orange button-filter">Применить (3)</a>
+                                    <button type="button" class="button button-orange-light button-filter">Сбросить фильтры</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-container">
+                    <div class="product-block mt-0">
+                        <div class="product-block-head">
+                            <h3 class="size-28 font-balsamiq">Лучшие предложения</h3>
+                        </div>
+                        <div class="product-block-slider product-block-slider-catalog">
+                            <button type="button" class="swiper-navigation-arrow swiper-navigation-prev icon"
+                                    style="--icon: url('../img/icon/icon-arrow2-left.svg')"></button>
+                            <div class="swiper product-swiper product-swiper-five">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-swiper__item">
+                                            <a href="#" class="product-swiper__pic">
+                                                <span class="tag tag-hit">Хит продаж</span>
+                                                <img src="img/swiper-product.jpg" alt="">
+                                            </a>
+                                            <div class="product-swiper__content">
+                                                <div class="product-swiper__price">
+                                                    <div class="product-swiper__price-current color-plum">500<span
+                                                            class='ruble'>₽</span></div>
+                                                </div>
+                                                <a href="#" class="product-swiper__title">
+                                                    Название товара в две строки
+                                                </a>
+                                                <div class="product-event">
+                                                    <div class="product-event__add">
+                                                        <button type="button" class="button button-orange-light icon"
+                                                                style="--icon: url('../img/icon/icon-cart.svg')">
+                                                            Купить
+                                                        </button>
+                                                        <div class="product-event__count">
+                                                            <button type="button"
+                                                                    class="product-event__sign product-event__sign-minus icon"
+                                                                    style="--icon: url('../img/icon/icon-minus-circle.svg')"></button>
+                                                            <div class="product-event__count-size"><span>0</span> шт.
+                                                            </div>
+                                                            <button type="button"
+                                                                    class="product-event__sign product-event__sign-plus icon"
+                                                                    style="--icon: url('../img/icon/icon-plus-circle.svg')"></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-favorites">
+                                                        <input type="checkbox">
+                                                        <span class="product-favorites-icon icon"
+                                                              style="--icon: url('../img/icon/icon-heart-empty.svg')"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-swiper__item">
+                                            <a href="#" class="product-swiper__pic">
+                                                <span class="tag tag-sale">-20%</span>
+                                                <img src="img/swiper-product.jpg" alt="">
+                                            </a>
+                                            <div class="product-swiper__content">
+                                                <div class="product-swiper__price">
+                                                    <div class="product-swiper__price-current">500<span
+                                                            class='ruble'>₽</span></div>
+                                                    <div class="product-swiper__price-old">890<span
+                                                            class='ruble'>₽</span></div>
+                                                </div>
+                                                <a href="#" class="product-swiper__title">
+                                                    Название товара в две строки
+                                                </a>
+                                                <div class="product-event">
+                                                    <div class="product-event__add">
+                                                        <button type="button" class="button button-orange-light icon"
+                                                                style="--icon: url('../img/icon/icon-cart.svg')">
+                                                            Купить
+                                                        </button>
+                                                        <div class="product-event__count">
+                                                            <button type="button"
+                                                                    class="product-event__sign product-event__sign-minus icon"
+                                                                    style="--icon: url('../img/icon/icon-minus-circle.svg')"></button>
+                                                            <div class="product-event__count-size"><span>1</span> шт.
+                                                            </div>
+                                                            <button type="button"
+                                                                    class="product-event__sign product-event__sign-plus icon"
+                                                                    style="--icon: url('../img/icon/icon-plus-circle.svg')"></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-favorites">
+                                                        <input type="checkbox">
+                                                        <span class="product-favorites-icon icon"
+                                                              style="--icon: url('../img/icon/icon-heart-empty.svg')"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-swiper__item">
+                                            <a href="#" class="product-swiper__pic">
+                                                <span class="tag tag-hit">Хит продаж</span>
+                                                <span class="tag tag-sale">-20%</span>
+                                                <img src="img/swiper-product.jpg" alt="">
+                                            </a>
+                                            <div class="product-swiper__content">
+                                                <div class="product-swiper__price">
+                                                    <div class="product-swiper__price-current">500<span
+                                                            class='ruble'>₽</span></div>
+                                                    <div class="product-swiper__price-old">890<span
+                                                            class='ruble'>₽</span></div>
+                                                </div>
+                                                <a href="#" class="product-swiper__title">
+                                                    Название товара в две строки
+                                                </a>
+                                                <div class="product-event">
+                                                    <div class="product-event__add">
+                                                        <button type="button" class="button button-orange-light icon"
+                                                                style="--icon: url('../img/icon/icon-cart.svg')">
+                                                            Купить
+                                                        </button>
+                                                        <div class="product-event__count">
+                                                            <button type="button"
+                                                                    class="product-event__sign product-event__sign-minus icon"
+                                                                    style="--icon: url('../img/icon/icon-minus-circle.svg')"></button>
+                                                            <div class="product-event__count-size"><span>1</span> шт.
+                                                            </div>
+                                                            <button type="button"
+                                                                    class="product-event__sign product-event__sign-plus icon"
+                                                                    style="--icon: url('../img/icon/icon-plus-circle.svg')"></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-favorites">
+                                                        <input type="checkbox">
+                                                        <span class="product-favorites-icon icon"
+                                                              style="--icon: url('../img/icon/icon-heart-empty.svg')"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-swiper__item">
+                                            <a href="#" class="product-swiper__pic">
+                                                <span class="tag tag-hit">Хит продаж</span>
+                                                <span class="tag tag-sale">-20%</span>
+                                                <img src="img/swiper-product.jpg" alt="">
+                                            </a>
+                                            <div class="product-swiper__content">
+                                                <div class="product-swiper__price">
+                                                    <div class="product-swiper__price-current">500<span
+                                                            class='ruble'>₽</span></div>
+                                                    <div class="product-swiper__price-old">890<span
+                                                            class='ruble'>₽</span></div>
+                                                </div>
+                                                <a href="#" class="product-swiper__title">
+                                                    Название товара в две строки
+                                                </a>
+                                                <div class="product-event">
+                                                    <div class="product-event__add">
+                                                        <button type="button" class="button button-orange-light icon"
+                                                                style="--icon: url('../img/icon/icon-cart.svg')">
+                                                            Купить
+                                                        </button>
+                                                        <div class="product-event__count">
+                                                            <button type="button"
+                                                                    class="product-event__sign product-event__sign-minus icon"
+                                                                    style="--icon: url('../img/icon/icon-minus-circle.svg')"></button>
+                                                            <div class="product-event__count-size"><span>1</span> шт.
+                                                            </div>
+                                                            <button type="button"
+                                                                    class="product-event__sign product-event__sign-plus icon"
+                                                                    style="--icon: url('../img/icon/icon-plus-circle.svg')"></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-favorites">
+                                                        <input type="checkbox">
+                                                        <span class="product-favorites-icon icon"
+                                                              style="--icon: url('../img/icon/icon-heart-empty.svg')"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-swiper__item">
+                                            <a href="#" class="product-swiper__pic">
+                                                <span class="tag tag-hit">Хит продаж</span>
+                                                <img src="img/swiper-product.jpg" alt="">
+                                            </a>
+                                            <div class="product-swiper__content">
+                                                <div class="product-swiper__price">
+                                                    <div class="product-swiper__price-current color-plum">500<span
+                                                            class='ruble'>₽</span></div>
+                                                </div>
+                                                <a href="#" class="product-swiper__title">
+                                                    Название товара в две строки
+                                                </a>
+                                                <div class="product-event">
+                                                    <div class="product-event__add">
+                                                        <button type="button" class="button button-orange-light icon"
+                                                                style="--icon: url('../img/icon/icon-cart.svg')">
+                                                            Купить
+                                                        </button>
+                                                        <div class="product-event__count">
+                                                            <button type="button"
+                                                                    class="product-event__sign product-event__sign-minus icon"
+                                                                    style="--icon: url('../img/icon/icon-minus-circle.svg')"></button>
+                                                            <div class="product-event__count-size"><span>1</span> шт.
+                                                            </div>
+                                                            <button type="button"
+                                                                    class="product-event__sign product-event__sign-plus icon"
+                                                                    style="--icon: url('../img/icon/icon-plus-circle.svg')"></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-favorites">
+                                                        <input type="checkbox">
+                                                        <span class="product-favorites-icon icon"
+                                                              style="--icon: url('../img/icon/icon-heart-empty.svg')"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-swiper__item">
+                                            <a href="#" class="product-swiper__pic">
+                                                <span class="tag tag-sale">-20%</span>
+                                                <img src="img/swiper-product.jpg" alt="">
+                                            </a>
+                                            <div class="product-swiper__content">
+                                                <div class="product-swiper__price">
+                                                    <div class="product-swiper__price-current">500<span
+                                                            class='ruble'>₽</span></div>
+                                                    <div class="product-swiper__price-old">890<span
+                                                            class='ruble'>₽</span></div>
+                                                </div>
+                                                <a href="#" class="product-swiper__title">
+                                                    Название товара в две строки
+                                                </a>
+                                                <div class="product-event">
+                                                    <div class="product-event__add">
+                                                        <button type="button" class="button button-orange-light icon"
+                                                                style="--icon: url('../img/icon/icon-cart.svg')">
+                                                            Купить
+                                                        </button>
+                                                        <div class="product-event__count">
+                                                            <button type="button"
+                                                                    class="product-event__sign product-event__sign-minus icon"
+                                                                    style="--icon: url('../img/icon/icon-minus-circle.svg')"></button>
+                                                            <div class="product-event__count-size"><span>1</span> шт.
+                                                            </div>
+                                                            <button type="button"
+                                                                    class="product-event__sign product-event__sign-plus icon"
+                                                                    style="--icon: url('../img/icon/icon-plus-circle.svg')"></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-favorites">
+                                                        <input type="checkbox">
+                                                        <span class="product-favorites-icon icon"
+                                                              style="--icon: url('../img/icon/icon-heart-empty.svg')"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-swiper__item">
+                                            <a href="#" class="product-swiper__pic">
+                                                <span class="tag tag-hit">Хит продаж</span>
+                                                <span class="tag tag-sale">-20%</span>
+                                                <img src="img/swiper-product.jpg" alt="">
+                                            </a>
+                                            <div class="product-swiper__content">
+                                                <div class="product-swiper__price">
+                                                    <div class="product-swiper__price-current">500<span
+                                                            class='ruble'>₽</span></div>
+                                                    <div class="product-swiper__price-old">890<span
+                                                            class='ruble'>₽</span></div>
+                                                </div>
+                                                <a href="#" class="product-swiper__title">
+                                                    Название товара в две строки
+                                                </a>
+                                                <div class="product-event">
+                                                    <div class="product-event__add">
+                                                        <button type="button" class="button button-orange-light icon"
+                                                                style="--icon: url('../img/icon/icon-cart.svg')">
+                                                            Купить
+                                                        </button>
+                                                        <div class="product-event__count">
+                                                            <button type="button"
+                                                                    class="product-event__sign product-event__sign-minus icon"
+                                                                    style="--icon: url('../img/icon/icon-minus-circle.svg')"></button>
+                                                            <div class="product-event__count-size"><span>1</span> шт.
+                                                            </div>
+                                                            <button type="button"
+                                                                    class="product-event__sign product-event__sign-plus icon"
+                                                                    style="--icon: url('../img/icon/icon-plus-circle.svg')"></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-favorites">
+                                                        <input type="checkbox">
+                                                        <span class="product-favorites-icon icon"
+                                                              style="--icon: url('../img/icon/icon-heart-empty.svg')"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-swiper__item">
+                                            <a href="#" class="product-swiper__pic">
+                                                <span class="tag tag-hit">Хит продаж</span>
+                                                <span class="tag tag-sale">-20%</span>
+                                                <img src="img/swiper-product.jpg" alt="">
+                                            </a>
+                                            <div class="product-swiper__content">
+                                                <div class="product-swiper__price">
+                                                    <div class="product-swiper__price-current">500<span
+                                                            class='ruble'>₽</span></div>
+                                                    <div class="product-swiper__price-old">890<span
+                                                            class='ruble'>₽</span></div>
+                                                </div>
+                                                <a href="#" class="product-swiper__title">
+                                                    Название товара в две строки
+                                                </a>
+                                                <div class="product-event">
+                                                    <div class="product-event__add">
+                                                        <button type="button" class="button button-orange-light icon"
+                                                                style="--icon: url('../img/icon/icon-cart.svg')">
+                                                            Купить
+                                                        </button>
+                                                        <div class="product-event__count">
+                                                            <button type="button"
+                                                                    class="product-event__sign product-event__sign-minus icon"
+                                                                    style="--icon: url('../img/icon/icon-minus-circle.svg')"></button>
+                                                            <div class="product-event__count-size"><span>1</span> шт.
+                                                            </div>
+                                                            <button type="button"
+                                                                    class="product-event__sign product-event__sign-plus icon"
+                                                                    style="--icon: url('../img/icon/icon-plus-circle.svg')"></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-favorites">
+                                                        <input type="checkbox">
+                                                        <span class="product-favorites-icon icon"
+                                                              style="--icon: url('../img/icon/icon-heart-empty.svg')"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-swiper__item">
+                                            <a href="#" class="product-swiper__pic">
+                                                <span class="tag tag-hit">Хит продаж</span>
+                                                <img src="img/swiper-product.jpg" alt="">
+                                            </a>
+                                            <div class="product-swiper__content">
+                                                <div class="product-swiper__price">
+                                                    <div class="product-swiper__price-current color-plum">500<span
+                                                            class='ruble'>₽</span></div>
+                                                </div>
+                                                <a href="#" class="product-swiper__title">
+                                                    Название товара в две строки
+                                                </a>
+                                                <div class="product-event">
+                                                    <div class="product-event__add">
+                                                        <button type="button" class="button button-orange-light icon"
+                                                                style="--icon: url('../img/icon/icon-cart.svg')">
+                                                            Купить
+                                                        </button>
+                                                        <div class="product-event__count">
+                                                            <button type="button"
+                                                                    class="product-event__sign product-event__sign-minus icon"
+                                                                    style="--icon: url('../img/icon/icon-minus-circle.svg')"></button>
+                                                            <div class="product-event__count-size"><span>1</span> шт.
+                                                            </div>
+                                                            <button type="button"
+                                                                    class="product-event__sign product-event__sign-plus icon"
+                                                                    style="--icon: url('../img/icon/icon-plus-circle.svg')"></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-favorites">
+                                                        <input type="checkbox">
+                                                        <span class="product-favorites-icon icon"
+                                                              style="--icon: url('../img/icon/icon-heart-empty.svg')"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-swiper__item">
+                                            <a href="#" class="product-swiper__pic">
+                                                <span class="tag tag-sale">-20%</span>
+                                                <img src="img/swiper-product.jpg" alt="">
+                                            </a>
+                                            <div class="product-swiper__content">
+                                                <div class="product-swiper__price">
+                                                    <div class="product-swiper__price-current">500<span
+                                                            class='ruble'>₽</span></div>
+                                                    <div class="product-swiper__price-old">890<span
+                                                            class='ruble'>₽</span></div>
+                                                </div>
+                                                <a href="#" class="product-swiper__title">
+                                                    Название товара в две строки
+                                                </a>
+                                                <div class="product-event">
+                                                    <div class="product-event__add">
+                                                        <button type="button" class="button button-orange-light icon"
+                                                                style="--icon: url('../img/icon/icon-cart.svg')">
+                                                            Купить
+                                                        </button>
+                                                        <div class="product-event__count">
+                                                            <button type="button"
+                                                                    class="product-event__sign product-event__sign-minus icon"
+                                                                    style="--icon: url('../img/icon/icon-minus-circle.svg')"></button>
+                                                            <div class="product-event__count-size"><span>1</span> шт.
+                                                            </div>
+                                                            <button type="button"
+                                                                    class="product-event__sign product-event__sign-plus icon"
+                                                                    style="--icon: url('../img/icon/icon-plus-circle.svg')"></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-favorites">
+                                                        <input type="checkbox">
+                                                        <span class="product-favorites-icon icon"
+                                                              style="--icon: url('../img/icon/icon-heart-empty.svg')"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="swiper-navigation-arrow swiper-navigation-next icon"
+                                    style="--icon: url('../img/icon/icon-arrow2-right.svg')"></button>
+                        </div>
+                    </div>
+                    <div class="product-block product-block-empty">
+                        <div class="product-block-head">
+                            <h3 class="size-28 font-balsamiq">Новогодние товары</h3>
+                        </div>
+                        <div class="catalog-no-result">
+                            <span class="icon" style="--icon: url('../img/icon/icon-filter.svg')"></span>
+                            <div class="catalog-no-result-title">Не нашли подходящий товар :(</div>
+                            <div class="catalog-no-result-text">Измените фильтры и попробуйте еще раз</div>
+                            <button type="button" class="button button-orange-light">Сбросить фильтры</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="sidebar-btn-apply">
+        Применить (<span class="sidebar-btn-count"></span>)
+    </div>
+    @@include('html/_footer.htm',{})
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+</body>
+
+</html>

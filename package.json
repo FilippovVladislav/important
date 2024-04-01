@@ -50,7 +50,7 @@
 		"lightgallery": "^2.7.1",
 		"load-plugins": "^2.1.2",
 		"mini-css-extract-plugin": "^2.7.2",
-		"nouislider": "^15.6.1",
+		"nouislider": "^15.7.1",
 		"pug": "^2.0.4",
 		"pug-loader": "^2.4.0",
 		"sass": "^1.57.1",
@@ -75,6 +75,7 @@
 		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {
+		"@fancyapps/ui": "^5.0.35",
 		"simplebar": "^6.2.0"
 	}
 }

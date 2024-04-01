@@ -1,19 +1,32 @@
 //<FORM>
 // Снипет (HTML):
-.form {
-	&__row {
-	}
-	&__column {
-	}
-	&__line {
-	}
-	&__input {
-	}
-	&__button {
-	}
-	&__error {
+.form-item{
+	margin-bottom: 24px;
+	display: flex;
+	flex-direction: column;
+}
+
+.form-item__label{
+	font-family: 'BalsamiqSans';
+	font-size: 20px;
+	letter-spacing: -.4px;
+	line-height: 24px;
+	margin-bottom: 6px;
+}
+
+.select-element-standard{
+	font-size: 15px;
+	width: 100% !important;
+	.select-element__default{
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		height: 56px;
+		&:before{
+			margin: 0 0 0 10px;
+		}
 	}
 }
+
 //</FORM>
 
 // <BUTTONS>
