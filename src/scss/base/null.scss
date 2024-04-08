@@ -51,6 +51,12 @@ body {
 		}
 	}
 	&.product-page{
+		@media(max-width: $s950) {
+			padding-bottom: 90px;
+		}
+		@media(max-width: $s750) {
+			padding-bottom: 140px;
+		}
 		.mobile-menu{
 			border-radius: 0;
 		}
@@ -147,4 +153,24 @@ h6 {
 
 .color-plum{
 	color: $default-plum !important;
+}
+
+.color-orange{
+	color: $orange;
+}
+
+.text-underline{
+	text-decoration: underline !important;
+}
+
+p + p{
+	margin-top: 10px;
+}
+
+.mb-16{
+	margin-bottom: 16px;
+}
+
+.mb-8{
+	margin-bottom: 8px !important;
 }

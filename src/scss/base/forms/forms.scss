@@ -4,6 +4,9 @@
 	margin-bottom: 24px;
 	display: flex;
 	flex-direction: column;
+	&.mb-16{
+		margin-bottom: 16px;
+	}
 }
 
 .form-item__label{
@@ -27,6 +30,14 @@
 	}
 }
 
+.form-label{
+	font-weight: 500;
+	font-size: 14px;
+	margin-bottom: 6px;
+	line-height: 18px;
+	color: $black-light;
+}
+
 //</FORM>
 
 // <BUTTONS>
@@ -43,7 +54,7 @@
 
 // <RADIO>
 // Снипет (HTML): opt
-// @import "radio";
+@import "radio";
 
 // <SELECT>
 // Снипет (HTML): sel

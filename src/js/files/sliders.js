@@ -176,3 +176,14 @@ if(document.querySelector('.product-gallery')){
     },
   })
 }
+
+if(document.querySelector('.wholesale-swiper')){
+  const sliderWholesale = new Swiper('.wholesale-swiper', {
+    modules: [Pagination],
+    spaceBetween: 10,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  })
+}

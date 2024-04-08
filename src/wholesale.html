@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":" Оптовые закупки"
+})
+
+<body>
+<div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+        <div class="container">
+            <div class="main-page">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumb-items">
+                        <li class="breadcrumb-item">
+                            <a href="#" class="breadcrumb-link">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            Оптовые закупки
+                        </li>
+                    </ul>
+                </nav>
+                <div class="wholesale-container">
+                    <div class="product-block mt-0">
+                        <div class="product-block-head mb-8">
+                            <h3 class="size-28 font-balsamiq">Оптовые закупки</h3>
+                        </div>
+                        <div class="wholesale-pics">
+                            <div class="wholesale-pic">
+                                <img src="img/wholesale-1.jpg" alt="">
+                            </div>
+                            <div class="wholesale-pics-column">
+                                <div class="wholesale-pic">
+                                    <img src="img/wholesale-2.jpg" alt="">
+                                </div>
+                                <div class="wholesale-pic">
+                                    <img src="img/wholesale-3.jpg" alt="">
+                                </div>
+                                <div class="wholesale-pic">
+                                    <img src="img/wholesale-4.jpg" alt="">
+                                </div>
+                                <div class="wholesale-pic">
+                                    <img src="img/wholesale-5.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wholesale-swiper swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="img/wholesale-slider.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/wholesale-slider.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/wholesale-slider.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/wholesale-slider.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/wholesale-slider.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <p>
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum.
+                        </p>
+                    </div>
+                    <div class="product-block mt-0">
+                        <div class="product-block-head mb-8">
+                            <h3 class="size-28 font-balsamiq">Связаться с нами</h3>
+                        </div>
+                        <div class="text-label">Будем рады сотрудничеству!</div>
+                        <form action="#" class="wholesale-form">
+                            <div class="form-item mb-16">
+                                <div class="form-label">Имя</div>
+                                <input type="text" class="input input-page" placeholder="Иван">
+                            </div>
+                            <div class="form-item mb-16">
+                                <div class="form-label">Электронная почта</div>
+                                <input type="text" class="input input-page" placeholder="example@mail.com">
+                            </div>
+                            <div class="form-item mb-16">
+                                <div class="form-label">Категория</div>
+                                <div class="form-item__radio-elements">
+                                    <div class="form-item__radio-element">
+                                        <input type="radio" name="category" id="category-1">
+                                        <label for="category-1" class="form-item__radio-label">У нас магазин</label>
+                                    </div>
+                                    <div class="form-item__radio-element">
+                                        <input type="radio" name="category" id="category-2">
+                                        <label for="category-2" class="form-item__radio-label">Хочу много для себя</label>
+                                    </div>
+                                    <div class="form-item__radio-element">
+                                        <input type="radio" name="category" id="category-3">
+                                        <label for="category-3" class="form-item__radio-label">Интересует свой дизайн</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-item mb-16">
+                                <div class="form-label">Сообщение</div>
+                                <textarea class="input input-textarea" placeholder="Напишите ваше предложение или пожелание..."></textarea>
+                            </div>
+                            <button type="button" class="button button-orange h-56">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('html/_footer.htm',{})
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+</body>
+
+</html>

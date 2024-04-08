@@ -87,10 +87,9 @@
     top: 0;
     width: 100%;
     right: 0;
-    height: 100dvh;
+    height: calc(100dvh - 20px);
     overflow: auto;
     z-index: 5;
-    background: rgba(54, 47, 60, 0.8);
     padding: 128px 48px 80px;
     display: flex;
     justify-content: flex-end;
@@ -99,6 +98,16 @@
     pointer-events: none;
     .filter-item{
       padding: 16px;
+    }
+    &:before{
+      width: 100%;
+      content: '';
+      background: rgba(54, 47, 60, 0.8);
+      height: 100dvh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: -1;
     }
   }
   @media(max-width: $s750) {
@@ -155,6 +164,9 @@
   }
   &:hover{
     background: $orange;
+  }
+  @media(max-width: $s950) {
+    right: 12px;
   }
 }
 
@@ -570,6 +582,9 @@
 }
 
 .scroll-top {
+  .product-modal.active{
+    top: 185px;
+  }
   .top-send {
     animation: topsend .25s linear;
     animation-fill-mode: forwards;
@@ -594,6 +609,9 @@
 }
 
 .scroll-down {
+  .product-modal.active{
+    top: 125px;
+  }
   .top-send {
     animation: downsend .25s linear;
     animation-fill-mode: forwards;
@@ -605,6 +623,9 @@
 
   .sidebar {
     top: 140px;
+    @media(max-width: $s1200) {
+      top: auto;
+    }
   }
 }
 
@@ -1358,6 +1379,7 @@
   margin: 16px 0;
   display: flex;
   align-items: center;
+  width: 100%;
   justify-content: center;
   @media(max-width: $s750) {
     padding-top: 24px;
@@ -1962,10 +1984,11 @@
   width: 73%;
   margin-left: 3%;
   img{
-    transition: all .25s linear;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform-origin: var(--zoom-pos-x, 0%) var(--zoom-pos-y, 0%);
+    transition: transform 0.15s linear;
   }
   .swiper-slide{
     height: 618px;
@@ -1986,16 +2009,18 @@
       height: 323px;
     }
   }
-  &:hover{
-    img{
-      transform: scale(2);
-    }
-  }
   @media(max-width: $s950) {
     width: 83%;
   }
   @media(max-width: $s750) {
     width: 81%;
+  }
+}
+
+.zoomable--zoomed{
+  img{
+    cursor: zoom-in;
+    transform: scale(var(--zoom, 2));
   }
 }
 
@@ -2016,5 +2041,228 @@
   }
   &:hover{
     background: $orange;
+  }
+}
+
+.product-modal{
+  position: fixed;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  box-shadow: 0px 2px 12px 0px rgba(54, 47, 60, 0.08);
+  border-radius: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  background: $white;
+  top: -200px;
+  transition: all .25s linear;
+  .product-price{
+    margin-bottom: 0;
+  }
+  .product-price__current{
+    font-size: 20px;
+  }
+  .product-price__old{
+    margin-left: 6px;
+    font-size: 14px;
+  }
+  .product-price__percent{
+    margin-left: 6px;
+    padding: 2px 4px;
+    font-size: 13px;
+    border-radius: 6px;
+  }
+  .product-modal__title{
+    margin-top: 4px;
+    font-size: 14px;
+  }
+  .product-main-event{
+    flex-shrink: 0;
+  }
+  .button-add-basket{
+    width: 160px;
+    height: 34px;
+  }
+  .product-main-event .product-favorites{
+    height: 34px;
+    width: 34px;
+  }
+  .product-main-event .product-favorites-icon:before, .product-main-event .product-event__add .button:before{
+    width: 18px;
+    height: 18px;
+  }
+  .button{
+    height: 34px;
+  }
+  .product-event__count, .product-main-event .product-event__add{
+    height: 34px;
+  }
+  @media(max-width: $s950) {
+    display: none;
+  }
+}
+
+.product-modal__content{
+  width: 100%;
+}
+
+.product-modal-pic{
+  width: 72px;
+  height: 90px;
+  flex-shrink: 0;
+  margin-right: 12px;
+  img{
+    border-radius: 12px;
+  }
+}
+
+.product-items-five{
+  .product-item{
+   flex-basis: calc(20% - 16px);
+    @media(max-width: $s1200) {
+      flex-basis: calc(25% - 16px);
+    }
+    @media(max-width: $s950) {
+      flex-basis: calc(33.3% - 16px);
+    }
+    @media(max-width: $s750) {
+      flex-basis: calc(50% - 8px);
+    }
+  }
+}
+
+.product-block-light{
+  max-width: 1042px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.question-block{
+  display: flex;
+  align-items: flex-start;
+  padding: 24px;
+  margin-bottom: 16px;
+  background: rgba(191, 177, 172, 0.10);
+  border-radius: 16px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+  @media(max-width: $s750) {
+    padding: 16px;
+    margin-bottom: 12px;
+    flex-direction: column;
+  }
+}
+
+.question-block__value{
+  flex-basis: 52%;
+  font-family: 'BalsamiqSans';
+  font-size: 20px;
+  padding-right: 10px;
+  line-height: 1.2;
+  @media(max-width: $s950) {
+    flex-basis: 54%;
+    padding-right: 30px;
+  }
+  @media(max-width: $s750) {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+.question-block__description{
+  flex-basis: 48%;
+  line-height: 1.35;
+  color: $black-light;
+  font-weight: 500;
+  @media(max-width: $s950) {
+    flex-basis: 46%;
+  }
+}
+
+.wholesale-container{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: $black-light;
+  line-height: 1.35;
+  .product-block{
+    flex-basis: calc(50% - 8px);
+    @media(max-width: $s1200) {
+      flex-basis: 100%;
+      &:nth-child(2){
+        margin-top: 16px;
+      }
+    }
+  }
+  @media(max-width: $s1200) {
+    flex-direction: column;
+  }
+}
+
+.wholesale-pics{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  img{
+    border-radius: 12px;
+  }
+  @media(max-width: $s750) {
+    display: none;
+  }
+}
+
+.wholesale-swiper{
+  display: none;
+  @media(max-width: $s750) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 18px;
+  }
+}
+
+.wholesale-pic{
+  flex-basis: calc(50% - 4px);
+  margin: 4px 0;
+  @media(max-width: $s1200) {
+    height: 340px;
+    img{
+      max-height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}
+
+.wholesale-pics-column{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  flex-basis: calc(50% - 4px);
+  .wholesale-pic{
+    @media(max-width: $s1200) {
+      height: 166px;
+    }
+  }
+}
+
+.text-label{
+  color: rgba(54, 47, 60, 0.60);
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 16px;
+}
+
+.wholesale-form{
+  @media(max-width: $s750) {
+    .button{
+      width: 100%;
+      height: 56px;
+    }
   }
 }

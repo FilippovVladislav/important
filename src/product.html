@@ -57,33 +57,33 @@
                         </div>
                         <div class="gallery-big swiper">
                             <div class="swiper-wrapper">
-                                <a href="img/imgFull.jpg" class="swiper-slide" data-fancybox="gallery">
-                                    <img src="img/imgFull.jpg" alt="">
+                                <a href="img/imgFull.jpg" class="swiper-slide zoomable" data-fancybox="gallery">
+                                    <img src="img/imgFull.jpg" alt="" class="zoomable__img">
                                     <span class="swiper-slide-full icon"
                                           style="--icon: url('../img/icon/icon-maximize.svg')"></span>
                                 </a>
-                                <a href="img/imgFull.jpg" class="swiper-slide" data-fancybox="gallery">
-                                    <img src="img/imgFull.jpg" alt="">
+                                <a href="img/imgFull.jpg" class="swiper-slide zoomable" data-fancybox="gallery">
+                                    <img src="img/imgFull.jpg" alt="" class="zoomable__img">
                                     <span class="swiper-slide-full icon"
                                           style="--icon: url('../img/icon/icon-maximize.svg')"></span>
                                 </a>
-                                <a href="img/imgFull.jpg" class="swiper-slide" data-fancybox="gallery">
-                                    <img src="img/imgFull.jpg" alt="">
+                                <a href="img/imgFull.jpg" class="swiper-slide zoomable" data-fancybox="gallery">
+                                    <img src="img/imgFull.jpg" alt="" class="zoomable__img">
                                     <span class="swiper-slide-full icon"
                                           style="--icon: url('../img/icon/icon-maximize.svg')"></span>
                                 </a>
-                                <a href="img/imgFull.jpg" class="swiper-slide" data-fancybox="gallery">
-                                    <img src="img/imgFull.jpg" alt="">
+                                <a href="img/imgFull.jpg" class="swiper-slide zoomable" data-fancybox="gallery">
+                                    <img src="img/imgFull.jpg" alt="" class="zoomable__img">
                                     <span class="swiper-slide-full icon"
                                           style="--icon: url('../img/icon/icon-maximize.svg')"></span>
                                 </a>
-                                <a href="img/imgFull.jpg" class="swiper-slide" data-fancybox="gallery">
-                                    <img src="img/imgFull.jpg" alt="">
+                                <a href="img/imgFull.jpg" class="swiper-slide zoomable" data-fancybox="gallery">
+                                    <img src="img/imgFull.jpg" alt="" class="zoomable__img">
                                     <span class="swiper-slide-full icon"
                                           style="--icon: url('../img/icon/icon-maximize.svg')"></span>
                                 </a>
-                                <a href="img/imgFull.jpg" class="swiper-slide" data-fancybox="gallery">
-                                    <img src="img/imgFull.jpg" alt="">
+                                <a href="img/imgFull.jpg" class="swiper-slide zoomable" data-fancybox="gallery">
+                                    <img src="img/imgFull.jpg" alt="" class="zoomable__img">
                                     <span class="swiper-slide-full icon"
                                           style="--icon: url('../img/icon/icon-maximize.svg')"></span>
                                 </a>
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                     <div class="product-main">
-                        <div class="product-block">
+                        <div class="product-block product-block-start">
                             <div class="product-block__status">
                                 <span></span>
                                 <span></span>
@@ -1127,6 +1127,46 @@
     </main>
     <div class="sidebar-btn-apply">
         Применить (<span class="sidebar-btn-count"></span>)
+    </div>
+    <div class="product-modal">
+        <div class="product-modal-pic">
+            <img src="img/imgFull.jpg" alt="">
+        </div>
+        <div class="product-modal__content">
+            <div class="product-price product-price-sale">
+                <div class="product-price__current">
+                    500<span class="ruble">₽</span>
+                </div>
+                <div class="product-price__old">890₽</div>
+                <div class="product-price__percent">-20%</div>
+            </div>
+            <div class="product-modal__title">Название товара в две строки</div>
+        </div>
+        <div class="product-main-event">
+            <div class="product-main-event__button">
+                <div class="product-event__add">
+                    <button type="button" class="button button-add-basket button-orange-light icon" style="--icon: url('../img/icon/icon-cart.svg')">
+                        Купить
+                    </button>
+                    <div class="product-event__count">
+                        <button type="button" class="product-event__sign product-event__sign-minus icon" style="--icon: url('../img/icon/icon-minus-circle.svg')"></button>
+                        <div class="product-event__count-size"><span>1</span> шт.</div>
+                        <button type="button" class="product-event__sign product-event__sign-plus icon" style="--icon: url('../img/icon/icon-plus-circle.svg')"></button>
+                    </div>
+                    <a href="#" class="button button-basket-link button-orange">
+                        В корзину
+                    </a>
+                </div>
+                <div class="product-event-message">
+                    <button data-popup="#report-arrival" type="button" class="button button-orange-light h-48 icon" style="--icon: url('../img/icon/icon-email.svg')">Сообщить о наличии
+                    </button>
+                </div>
+            </div>
+            <div class="product-favorites">
+                <input type="checkbox">
+                <span class="product-favorites-icon h-48 icon" style="--icon: url('../img/icon/icon-heart-empty.svg')"></span>
+            </div>
+        </div>
     </div>
     <div id="report-arrival" aria-hidden="true" class="popup">
         <div class="popup__wrapper">

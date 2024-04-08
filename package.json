@@ -76,6 +76,7 @@
 	},
 	"dependencies": {
 		"@fancyapps/ui": "^5.0.35",
+		"js-image-zoom": "^0.7.0",
 		"simplebar": "^6.2.0"
 	}
 }
