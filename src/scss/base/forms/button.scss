@@ -17,6 +17,11 @@
 	@media(max-width: $s750) {
 		padding: 0 16px;
 	}
+	&[disabled]{
+		color: rgba(54, 47, 60, 0.35);
+		background: rgba(54, 47, 60, 0.24);
+		pointer-events: none;
+	}
 }
 
 .button-plum{
@@ -141,4 +146,9 @@
 		font-size: 13px;
 		padding: 0 12px;
 	}
+}
+
+.button-mini{
+	font-size: 13px;
+	padding: 0 12px;
 }

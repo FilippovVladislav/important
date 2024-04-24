@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Система лояльности"
+})
+
+<body>
+<div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+        <div class="container">
+            <div class="main-page">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumb-items">
+                        <li class="breadcrumb-item">
+                            <a href="#" class="breadcrumb-link">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            Система лояльности
+                        </li>
+                    </ul>
+                </nav>
+                <div class="sidebar sidebar-fast">
+                    <div class="fast-link">
+                        <a href="#action" class="fast-link-item anchor icon"
+                           style="--icon: url('../img/icon/icon-arrow-right.svg')">
+                            <span class="fast-link-item-icon icon"
+                                  style="--icon: url('../img/icon/icon-action.svg')"></span>
+                            Акции
+                        </a>
+                        <a href="#bonus" class="fast-link-item anchor icon"
+                           style="--icon: url('../img/icon/icon-arrow-right.svg')">
+                            <span class="fast-link-item-icon icon"
+                                  style="--icon: url('../img/icon/icon-bonus.svg')"></span>
+                            Про бонусы
+                        </a>
+                        <a href="#sale" class="fast-link-item anchor icon"
+                           style="--icon: url('../img/icon/icon-arrow-right.svg')">
+                            <span class="fast-link-item-icon icon"
+                                  style="--icon: url('../img/icon/icon-gift.svg')"></span>
+                            Персональная скидка
+                        </a>
+                    </div>
+                </div>
+                <div class="main-container">
+                    <div class="product-block mt-0" id="action">
+                        <div class="product-block-head">
+                            <h3 class="size-28 font-balsamiq">Акции</h3>
+                        </div>
+                        <div class="action-item">
+                            <div class="action-item__label size-22 font-balsamiq">Бесплатная доставка</div>
+                            <div class="action-item__value color-80">
+                                При заказе на сумму от 1500 рублей дарим бесплатную доставку по России заказным письмом
+                                ❤️
+                            </div>
+                        </div>
+                        <div class="action-item">
+                            <div class="action-item__label size-22 font-balsamiq">#фото_этоважно</div>
+                            <div class="action-item__value color-80">
+                                <p>
+                                    Купил наши стикеры и в восторге от их качества и фотогиеничности? Сделай фото с
+                                    ними,
+                                    скинь нам в предложенные новости в Вконтакте и выиграй сертификат на покупку 😍 все
+                                    условия: 
+                                </p>
+                                <p>
+                                    <a href="#" class="color-orange mt-16"> https://vk.com/wall-169733710_23154</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="action-item">
+                            <div class="action-item__label size-22 font-balsamiq">За 5 паков -10%</div>
+                            <div class="action-item__value color-80">
+                                При покупке 5 товаров одного вида, скидка 10% на весь заказ ❤️️ Например, 5 тетрадей со
+                                стикерами или 5 открыток ☺️
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-block" id="bonus">
+                        <div class="product-block-head product-block-head-start">
+                            <h3 class="size-28 font-balsamiq">Про бонусы</h3>
+                            <div class="bonus-formula">1 бонус = 1 <span class="ruble">₽</span></div>
+                        </div>
+                        <div class="loyalty-items">
+                            <div class="loyalty-item">
+                                <div class="loyalty-item__pic">
+                                    <img src="img/loyalty-1.png" alt="">
+                                </div>
+                                <div class="loyalty-item__content">
+                                    <h4 class="size-22 font-balsamiq mb-16">Бонусы за регистрацию</h4>
+                                    <p class="color-80">При регистрации мы начисляем целых 200 баллов на бонусный счет
+                                        для дальнейших покупок в нашем магазине :)</p>
+                                </div>
+                            </div>
+                            <div class="loyalty-item">
+                                <div class="loyalty-item__pic">
+                                    <img src="img/loyalty-2.png" alt="">
+                                </div>
+                                <div class="loyalty-item__content">
+                                    <h4 class="size-22 font-balsamiq mb-16">Одинаковые стикеры</h4>
+                                    <p class="color-80">Начисляем по 50 баллов за одинаковые стикеры на ваших
+                                        заказах!</p>
+                                    <p>
+                                        <a href="#" class="color-orange">Подробнее тут</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="loyalty-item">
+                                <div class="loyalty-item__pic">
+                                    <img src="img/loyalty-3.png" alt="">
+                                </div>
+                                <div class="loyalty-item__content">
+                                    <h4 class="size-22 font-balsamiq mb-16">Бонусы за фото</h4>
+                                    <p class="color-80">
+                                        Участвуй в #этоважно_напальчике , тебе нужно только купить наши стикеры,
+                                        сфотографировать стикер на пальчике, выложить фото и отметить нас! За такую
+                                        активность можно получить 100 баллов на бонусный счет!
+                                    </p>
+                                    <p class="color-80">
+                                        *можно использовать не чаще раза в месяц <br>
+                                        ** бонусы начисляются не сразу, а в
+                                        течение суток после публикации
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="loyalty-item">
+                                <div class="loyalty-item__pic">
+                                    <img src="img/loyalty-4.png" alt="">
+                                </div>
+                                <div class="loyalty-item__content">
+                                    <h4 class="size-22 font-balsamiq mb-16">Бонусы за активность</h4>
+                                    <p class="color-80">
+                                        В Instagram в актуальных историях мы клеим стикеры на улицах города! Тебе нужно
+                                        только найти стикер на улице, сфотографировать и отметить нас :з За такую
+                                        активность можно получить 150 баллов на бонусный счет!
+                                    </p>
+                                    <p class="color-80">
+                                        *можно использовать не чаще раза в месяц <br> ** бонусы начисляются не сразу, а
+                                        в
+                                        течение суток после публикации
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="loyalty-item">
+                                <div class="loyalty-item__pic">
+                                    <img src="img/loyalty-5.png" alt="">
+                                </div>
+                                <div class="loyalty-item__content">
+                                    <h4 class="size-22 font-balsamiq mb-16">Рейтинг подписчиков</h4>
+                                    <p class="color-80">Каждую пятницу (в историях ВКонтакте) мы публикуем рейтинг самых
+                                        активных подписчиков. Самые активные получают от 20 до 100 баллов на бонусный
+                                        счет, в зависимости от рейтинг</p>
+                                </div>
+                            </div>
+                            <div class="loyalty-item">
+                                <div class="loyalty-item__pic">
+                                    <img src="img/loyalty-6.png" alt="">
+                                </div>
+                                <div class="loyalty-item__content">
+                                    <h4 class="size-22 font-balsamiq mb-16">Бонусы за покупку</h4>
+                                    <p class="color-80">Просто делай заказы у нас! С каждой покупки 7% тебе возвращаются
+                                        баллами на бонусный счет, которыми ты потом можешь оплатить до 20% следующих
+                                        заказов!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-block" id="sale">
+                        <div class="product-block-head">
+                            <h3 class="size-28 font-balsamiq">Персональная скидка</h3>
+                        </div>
+                        <div class="loyalty-block mb-16">
+                            <div class="loyalty-block-left">
+                                <div class="bagel-element">
+                                    <div class="bagel">
+                                        <div class="bagel-inner">
+                                            <div class="bagel-label">Покупок</div>
+                                            <div class="bagel-value">6/10</div>
+                                            <div class="bagel-finish">до 15%</div>
+                                        </div>
+                                    </div>
+                                    <svg class="bagel-svg" data-attr="60">
+                                        <defs>
+                                            <linearGradient id="GradientColor">
+                                                <stop offset="0%" stop-color="#F07F3C" />
+                                                <stop offset="100%" stop-color="#F07F3C" />
+                                            </linearGradient>
+                                        </defs>
+                                        <circle r="53" cx="59" cy="59" stroke-linecap="round"></circle>
+                                    </svg>
+                                </div>
+                                <div class="loyalty-sale">
+                                    <div class="color-80 fw-500 mb-4">Персональная скидка</div>
+                                    <div class="size-36 font-balsamiq">10%</div>
+                                </div>
+                            </div>
+                            <div class="loyalty-block-right">
+                                <div class="loyalty-block-item passed">
+                                    <div class="loyalty-block-icon mb-10"></div>
+                                    <div class="loyalty-block-title font-balsamiq mb-10">Без бонуса</div>
+                                    <div class="loyalty-block-description">Скидка отсутствует</div>
+                                </div>
+                                <div class="loyalty-block-item active">
+                                    <div class="loyalty-block-icon mb-10"></div>
+                                    <div class="loyalty-block-title font-balsamiq mb-10">Бонус 5%</div>
+                                    <div class="loyalty-block-description">Совершить от 5 покупок</div>
+                                </div>
+                                <div class="loyalty-block-item">
+                                    <div class="loyalty-block-icon mb-10"></div>
+                                    <div class="loyalty-block-title font-balsamiq mb-10">Бонус 10%</div>
+                                    <div class="loyalty-block-description">Совершить от 10 покупок</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="color-80 lh-35">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('html/_footer.htm',{})
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+</body>
+
+</html>

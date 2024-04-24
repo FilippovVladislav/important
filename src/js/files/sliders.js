@@ -48,6 +48,8 @@ if(document.querySelector('.product-swiper')){
       sliderThreeElementDesktop(item)
     } else if(item.classList.contains('product-swiper-five')){
       sliderFiveElementDesktop(item)
+    }else if(item.classList.contains('product-swiper-five-light')){
+      sliderFiveElementLight(item)
     }else{
       sliderFourElementDesktop(item);
     }
@@ -129,6 +131,37 @@ function sliderFiveElementDesktop(item){
         spaceBetween: 16,
       },
       950: {
+        slidesPerView: 5,
+        spaceBetween: 16,
+      }
+    }
+  })
+}
+
+function sliderFiveElementLight(item){
+
+  let sliderProduct = new Swiper(item, {
+    modules: [Navigation, Pagination, A11y],
+    a11y: true,
+    loop: true,
+    navigation: {
+      nextEl: item.closest('.product-block-slider').querySelector('.swiper-navigation-next'),
+      prevEl: item.closest('.product-block-slider').querySelector('.swiper-navigation-prev'),
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 8,
+      },
+      700: {
+        slidesPerView: 4,
+        spaceBetween: 16,
+      },
+      950: {
+        slidesPerView: 3,
+        spaceBetween: 16,
+      },
+      1200: {
         slidesPerView: 5,
         spaceBetween: 16,
       }

@@ -117,6 +117,14 @@ h6 {
 	}
 }
 
+.flex{
+	display: flex;
+}
+
+.flex-column{
+	flex-direction: column;
+}
+
 .h-48{
 	height: 48px;
 	@media(max-width: $s750) {
@@ -151,12 +159,78 @@ h6 {
 	}
 }
 
+.size-28-mobile{
+	@media(max-width: $s750) {
+		font-size: 28px;
+		line-height: 34px;
+	}
+}
+
+.word-break{
+	word-break: break-all;
+}
+
+.size-24{
+	font-size: 24px;
+	letter-spacing: -.6px;
+	line-height: 26px;
+}
+
+.size-22{
+	font-size: 22px;
+	letter-spacing: -0.6px;
+	line-height: 24px;
+}
+
+.size-20{
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.size-18{
+	font-size: 18px;
+	letter-spacing: -0.072px;
+	line-height: 24px;
+}
+
+.size-14{
+	font-size: 14px;
+}
+
+.size-12{
+	font-size: 12px;
+}
+
+.size-11{
+	font-size: 11px;
+}
+
+.color-80{
+	color: $black-light;
+}
+
+.color-60{
+	color: rgba(54, 47, 60, 0.60);
+}
+
 .color-plum{
 	color: $default-plum !important;
 }
 
 .color-orange{
 	color: $orange;
+}
+
+a.color-orange:hover{
+	color: #e0783a;
+}
+
+.color-green{
+	color: #30C066;
+}
+
+.color-red{
+	color: #C03042;
 }
 
 .text-underline{
@@ -167,10 +241,42 @@ p + p{
 	margin-top: 10px;
 }
 
+.mb-24{
+	margin-bottom: 24px;
+}
+
+.mb-20{
+	margin-bottom: 20px;
+}
+
 .mb-16{
 	margin-bottom: 16px;
 }
 
+.mb-12{
+	margin-bottom: 12px;
+}
+
+.mb-10{
+	margin-bottom: 10px;
+}
+
 .mb-8{
 	margin-bottom: 8px !important;
+}
+
+.mb-4{
+	margin-bottom: 4px;
+}
+
+.mt-16{
+	margin-top: 16px;
+}
+
+.lh-35{
+	line-height: 1.35;
+}
+
+.fw-500{
+	font-weight: 500;
 }

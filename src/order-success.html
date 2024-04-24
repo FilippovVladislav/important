@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Оформление заказа"
+})
+
+<body class="basket-page">
+<div class="wrapper">
+    <div class="top-send">
+        <div class="container">
+            <div class="top-send__container icon" style="--icon: url('../img/icon/icon-info.svg')">
+                Следующая дата отправки заказов 4 марта
+            </div>
+        </div>
+    </div>
+    <div class="formalization-step">
+        <div class="container">
+            <div class="formalization-step-container">
+                <a href="#" class="formalization-step-logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <div class="formalization-step-items">
+                    <div class="formalization-step-item active">
+                        <div class="formalization-step-item-number">1</div>
+                        <div class="formalization-step-item-text">Корзина</div>
+                    </div>
+                    <div class="formalization-step-item active">
+                        <div class="formalization-step-item-number">2</div>
+                        <div class="formalization-step-item-text">Оформление заказа</div>
+                    </div>
+                    <div class="formalization-step-item active">
+                        <div class="formalization-step-item-number">3</div>
+                        <div class="formalization-step-item-text">Заказ принят</div>
+                    </div>
+                </div>
+                <div class="formalization-step-mobile">
+                    <div class="formalization-step-mobile-top">
+                        3<span>/3</span>
+                    </div>
+                    <div class="formalization-step-mobile-bottom">Оформление заказа</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="page">
+        <div class="container">
+            <div class="main-page">
+                <div class="order-success-block">
+                    <div class="order-success-block-top"></div>
+                    <div class="order-success-block-content">
+                        <div class="order-success-block-title size-36 font-balsamiq mb-10">Спасибо за заказ!</div>
+                        <div class="order-success-block-text mb-24">Ваш заказ успешно оформлен и в скором времени будет передан в доставку</div>
+                        <div class="order-success-block-number mb-24">
+                            <div class="order-success-block-number-label">Номер заказа</div>
+                            <div class="order-success-block-number-value">12582</div>
+                        </div>
+                        <div class="order-success-block-success-button">
+                            <a href="#" class="button button-orange-light h-56">За покупками</a>
+                            <a href="#" class="button button-orange h-56">К моим заказам</a>
+                        </div>
+                        <a href="#" class="order-success-block-success-support icon" style="--icon: url('../img/icon/icon-messages.svg')">Связаться с поддержкой</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row footer-row-bottom">
+                <div class="footer-column">
+                    <a href="#" class="footer-link">Публичная оферта</a>
+                </div>
+                <div class="footer-column">
+                    <a href="#" class="footer-link">Политика конфиденциальности</a>
+                </div>
+                <div class="footer-column">
+                    © «Это важно», все права защищены
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+</body>
+
+</html>

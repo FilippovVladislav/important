@@ -14,7 +14,7 @@
 		opacity: 0;
 		z-index: -1;
 		&:checked{
-			&.form-item__radio-label{
+			& + .form-item__radio-label{
 				border: 1px solid $orange;
 			}
 		}

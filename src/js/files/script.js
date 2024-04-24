@@ -392,8 +392,9 @@ const options = {
 
 const observer = new IntersectionObserver(callback, options);
 var target = document.querySelector(".product-block-start");
-observer.observe(target);
-
+if(target){
+    observer.observe(target);
+}
 function callback (entries, observer) {
     entries.forEach(entry => {
         if(entry.isIntersecting){
@@ -401,6 +402,87 @@ function callback (entries, observer) {
         }else{
             document.querySelector('.product-modal').classList.add('active')
         }
-
     });
 };
+
+const observer2 = new IntersectionObserver(callback2, options);
+var target2 = document.querySelector(".sidebar-formalization");
+if(target2){
+    observer2.observe(target2);
+}
+function callback2 (entries, observer) {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            document.querySelector('.basket-mobile').classList.remove('active')
+        }else{
+            document.querySelector('.basket-mobile').classList.add('active')
+        }
+    });
+};
+
+
+if(document.querySelector('.bagel')){
+    function SVGRoad(elem) {
+        this.pathLength = elem.getTotalLength();
+        this.setStrokeDasharrayInPercent = function() {
+            var strokeDasharray = "";
+            for (let i = 0; i < arguments.length; i++) {
+                strokeDasharray += arguments[i] / 100 * this.pathLength + " ";
+            }
+            elem.style.strokeDasharray = strokeDasharray;
+        };
+
+        this.setStrokeDashoffsetInPercent = function(strokeDashoffset) {
+            elem.style.strokeDashoffset = strokeDashoffset / 100 * this.pathLength;
+        };
+    }
+
+    var pathElem = document.querySelector(".bagel-svg circle");
+    console.log(pathElem)
+    var SVGRoadInstance = new SVGRoad(pathElem);
+
+//change the following values
+    SVGRoadInstance.setStrokeDasharrayInPercent(document.querySelector(".bagel-svg").getAttribute('data-attr'));
+    SVGRoadInstance.setStrokeDashoffsetInPercent(0);
+}
+
+const anchors = document.querySelectorAll('.anchor')
+for (let i = 0; i < anchors.length; i++) {
+    anchors[i].addEventListener('click', function (e) {
+        e.preventDefault()
+        const blockID = anchors[i].getAttribute('href').substr(1);
+        let idS = document.getElementById(blockID)
+        const yOffset = -180;
+        const y = idS.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({top: y, behavior: 'smooth'});
+    })
+}
+
+if(document.querySelector('.sidebar-basket-final-profit')){
+    document.querySelector('.sidebar-basket-final-profit-default').addEventListener('click', function (){
+        const hiddenContainer = document.querySelector('.sidebar-basket-final-profit-hidden'),
+              hiddenContainerHeight = document.querySelector('.sidebar-basket-final-profit-hidden-container').clientHeight;
+
+        if(document.querySelector('.sidebar-basket-final-profit').classList.contains('active')){
+            document.querySelector('.sidebar-basket-final-profit').classList.remove('active');
+            hiddenContainer.style.height = 0
+        }else{
+            document.querySelector('.sidebar-basket-final-profit').classList.add('active');
+            hiddenContainer.style.height = hiddenContainerHeight + 'px'
+        }
+    })
+}
+
+if(document.querySelector('.delivery-page-item')){
+    document.querySelectorAll('[name="delivery"]').forEach((item) => {
+        item.addEventListener('click', function (){
+            const idInput = item.getAttribute('id')
+            if(document.querySelector('.product-block-address').classList.contains('active')){
+                document.querySelector('.product-block-address').classList.remove('active')
+            }
+            if(document.querySelector(`[data-id=${idInput}]`)){
+                document.querySelector(`[data-id=${idInput}]`).classList.add('active')
+            }
+        })
+    })
+}
