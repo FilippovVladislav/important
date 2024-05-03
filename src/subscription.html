@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Оформление подписки"
+})
+
+<body class="basket-page">
+<div class="wrapper">
+    <div class="top-send">
+        <div class="container">
+            <div class="top-send__container icon" style="--icon: url('../img/icon/icon-info.svg')">
+                Следующая дата отправки заказов 4 марта
+            </div>
+        </div>
+    </div>
+    <div class="formalization-step">
+        <div class="container">
+            <div class="formalization-step-container">
+                <a href="#" class="formalization-step-logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <div class="formalization-step-items">
+                    <div class="formalization-step-item active">
+                        <div class="formalization-step-item-number">2</div>
+                        <div class="formalization-step-item-text">Оформление заказа</div>
+                    </div>
+                    <div class="formalization-step-item">
+                        <div class="formalization-step-item-number">3</div>
+                        <div class="formalization-step-item-text">Заказ принят</div>
+                    </div>
+                </div>
+                <div class="formalization-step-mobile">
+                    <div class="formalization-step-mobile-top">
+                        2<span>/3</span>
+                    </div>
+                    <div class="formalization-step-mobile-bottom">Оформление заказа</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="page">
+        <div class="container">
+            <div class="main-page main-page-formalization">
+                <div class="formalization-container">
+                    <div class="product-block mt-0">
+                        <div class="product-block-starting">
+                            <a href="#" class="product-block-starting-back icon"
+                               style="--icon: url('../img/icon/icon-arrow2-left.svg')"></a>
+                            <div class="font-balsamiq size-36">Оформление подписки</div>
+                        </div>
+                    </div>
+                    <div class="product-block">
+                        <h3 class="size-28 mb-12 font-balsamiq">Ваши данные</h3>
+                        <div class="form-input mb-16"> <!-- form-input-error -->
+                            <div class="form-label">ФИО</div>
+                            <div class="form-input__relative">
+                                <input type="text" id="name" class="input h-56"
+                                       placeholder="Александ Мящериков Николаевич">
+                                <div class="form-input-error-icon icon"
+                                     style="--icon: url('../img/icon/icon-close.svg')"></div>
+                            </div>
+
+                            <!-- <div class="error-text">Ошибка</div>-->
+                        </div>
+                        <div class="form-input-flex">
+                            <div class="form-input mb-16"> <!-- form-input-error -->
+                                <div class="form-label">Электронная почта</div>
+                                <div class="form-input__relative">
+                                    <input type="text" id="email" class="input h-56"
+                                           placeholder="Александ Мящериков Николаевич">
+                                    <div class="form-input-error-icon icon"
+                                         style="--icon: url('../img/icon/icon-close.svg')"></div>
+                                </div>
+                                <!-- <div class="error-text">Ошибка</div>-->
+                            </div>
+                            <div class="form-input mb-16"> <!-- form-input-error -->
+                                <div class="form-label">Номер телефона</div>
+                                <div class="form-input__relative">
+                                    <input type="tel" id="phone" class="input h-56"
+                                           placeholder="+7 (987) 654-32-10">
+                                    <div class="form-input-error-icon icon"
+                                         style="--icon: url('../img/icon/icon-close.svg')"></div>
+                                </div>
+                                <!-- <div class="error-text">Ошибка</div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-block">
+                        <h3 class="size-28 mb-12 font-balsamiq">Способ доставки</h3>
+                        <div class="delivery-page-items">
+                            <div class="delivery-page-item">
+                                <input type="radio" name="delivery" id="delivery-1" class="delivery-page-item-checkbox">
+                                <label for="delivery-1" class="delivery-page-item-label">
+                                    <span class="delivery-page-item-icon"></span>
+                                    <span class="delivery-page-item-content">
+                                        <span class="delivery-page-item-title">Почта России по РФ</span>
+                                        <span class="delivery-page-item-price">
+                                            <span>120 <span class="ruble"> ₽</span></span>
+                                            <span class="delivery-page-item-tooltip">
+                                                <span class="delivery-page-item-tooltip-icon icon"
+                                                      style="--icon: url('../img/icon/icon-question.svg')"></span>
+                                                <span class="delivery-page-item-tooltip-message">
+                                                    Цена доставки не зависит от кол-ва паков и оплачивается единоразово.
+                                                    Ориентировочные сроки доставки 3-14 дней в зависимости от удаленности от Москвы.
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="delivery-page-item-pic">
+                                        <img src="img/delivery-1.png" alt="">
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="delivery-page-item">
+                                <input type="radio" name="delivery" id="delivery-2" class="delivery-page-item-checkbox">
+                                <label for="delivery-2" class="delivery-page-item-label">
+                                    <span class="delivery-page-item-icon"></span>
+                                    <span class="delivery-page-item-content">
+                                        <span class="delivery-page-item-title">СДЭК до пункта выдачи</span>
+                                        <span class="delivery-page-item-price">
+                                            <span>300 <span class="ruble"> ₽</span></span>
+                                            <span class="delivery-page-item-tooltip">
+                                                <span class="delivery-page-item-tooltip-icon icon"
+                                                      style="--icon: url('../img/icon/icon-question.svg')"></span>
+                                                <span class="delivery-page-item-tooltip-message">
+                                                    Цена доставки не зависит от кол-ва паков и оплачивается единоразово.
+                                                    Ориентировочные сроки доставки 3-14 дней в зависимости от удаленности от Москвы.
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="delivery-page-item-pic">
+                                        <img src="img/delivery-2.png" alt="">
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="delivery-page-item">
+                                <input type="radio" name="delivery" id="delivery-3" class="delivery-page-item-checkbox">
+                                <label for="delivery-3" class="delivery-page-item-label">
+                                    <span class="delivery-page-item-icon"></span>
+                                    <span class="delivery-page-item-content">
+                                        <span class="delivery-page-item-title">Почта России простое письмо по РФ</span>
+                                        <span class="delivery-page-item-price">
+                                            <span>80 <span class="ruble"> ₽</span></span>
+                                            <span class="delivery-page-item-tooltip">
+                                                <span class="delivery-page-item-tooltip-icon icon"
+                                                      style="--icon: url('../img/icon/icon-question.svg')"></span>
+                                                <span class="delivery-page-item-tooltip-message">
+                                                    Цена доставки не зависит от кол-ва паков и оплачивается единоразово.
+                                                    Ориентировочные сроки доставки 3-14 дней в зависимости от удаленности от Москвы.
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="delivery-page-item-pic">
+                                        <img src="img/delivery-1.png" alt="">
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="delivery-page-item">
+                                <input type="radio" name="delivery" id="delivery-4" class="delivery-page-item-checkbox">
+                                <label for="delivery-4" class="delivery-page-item-label">
+                                    <span class="delivery-page-item-icon"></span>
+                                    <span class="delivery-page-item-content">
+                                        <span class="delivery-page-item-title">Почта России международная доставка</span>
+                                        <span class="delivery-page-item-price">
+                                            <span>500 <span class="ruble"> ₽</span></span>
+                                            <span class="delivery-page-item-tooltip">
+                                                <span class="delivery-page-item-tooltip-icon icon"
+                                                      style="--icon: url('../img/icon/icon-question.svg')"></span>
+                                                <span class="delivery-page-item-tooltip-message">
+                                                    Цена доставки не зависит от кол-ва паков и оплачивается единоразово.
+                                                    Ориентировочные сроки доставки 3-14 дней в зависимости от удаленности от Москвы.
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="delivery-page-item-pic">
+                                        <img src="img/delivery-1.png" alt="">
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="delivery-page-item">
+                                <input type="radio" name="delivery" id="delivery-5" class="delivery-page-item-checkbox">
+                                <label for="delivery-5" class="delivery-page-item-label">
+                                    <span class="delivery-page-item-icon"></span>
+                                    <span class="delivery-page-item-content">
+                                        <span class="delivery-page-item-title">Яндекс доставка</span>
+                                        <span class="delivery-page-item-price">
+                                            <span>500 <span class="ruble"> ₽</span></span>
+                                            <span class="delivery-page-item-tooltip">
+                                                <span class="delivery-page-item-tooltip-icon icon"
+                                                      style="--icon: url('../img/icon/icon-question.svg')"></span>
+                                                <span class="delivery-page-item-tooltip-message">
+                                                    Цена доставки не зависит от кол-ва паков и оплачивается единоразово.
+                                                    Ориентировочные сроки доставки 3-14 дней в зависимости от удаленности от Москвы.
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="delivery-page-item-pic">
+                                        <img src="img/delivery-3.png" alt="">
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-address">
+                        <div data-id="delivery-1" class="product-block-address">
+                            <div class="product-block">
+                                <h3 class="size-28 mb-12 font-balsamiq">Адрес доставки</h3>
+                                <img src="img/address.jpg" alt="" class="mb-10">
+                                <div class="form-input"> <!-- form-input-error -->
+                                    <div class="form-label">Адрес</div>
+                                    <div class="form-input__relative">
+                                        <input type="text" id="name" class="input h-56"
+                                               placeholder="Город">
+                                        <div class="form-input-error-icon icon"
+                                             style="--icon: url('../img/icon/icon-close.svg')"></div>
+                                    </div>
+
+                                    <!-- <div class="error-text">Ошибка</div>-->
+                                </div>
+                            </div>
+                            <div class="product-block-danger icon" style="--icon: url('../img/icon/icon-danger.svg')">
+                                <div class="product-block-danger-message">Если Вы неверно указали какие либо данные, то
+                                    мы не несем отвественности за недоставленное письмо.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-block">
+                        <h3 class="size-28 mb-12 font-balsamiq">Комментарий (опционально)</h3>
+                        <div class="form-item">
+                            <textarea class="input input-textarea" placeholder="Какое то сообщение"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar sidebar-formalization">
+                    <div class="size-20 mb-8 font-balsamiq">Детали заказа</div>
+                    <div class="sidebar-order-detailing">
+                        <div class="sidebar-order-detailing-label">Товары (3)</div>
+                        <div class="sidebar-order-detailing-value">1 900 ₽</div>
+                    </div>
+                    <div class="sidebar-order-detailing">
+                        <div class="sidebar-order-detailing-label">Начислим баллов</div>
+                        <div class="sidebar-order-detailing-value color-orange">+284</div>
+                    </div>
+                    <div class="sidebar-order-detailing">
+                        <div class="sidebar-order-detailing-label">Доставка</div>
+                        <div class="sidebar-order-detailing-value color-green">Бесплатно</div>
+                    </div>
+                    <div class="sidebar-basket-final-result">
+                        Итого
+                        <span>1 900 <span class="ruble">₽</span></span>
+                    </div>
+                    <div class="sidebar-basket-final-info">Сумма будет списываться ежемесячно 11&nbsp;числа&nbsp;каждого месяца</div>
+                    <a href="#" class="button button-orange sidebar-basket-final-button">Перейти к оплате</a>
+                    <div class="agreed-message">
+                        Нажимая кнопку «Оформить заказ», я соглашаюсь с <a href="#" class="color-orange">Условиями заказа и доставки</a>, а также на
+                        обработку персональных данных в соответствии с <a href="#" class="color-orange">Политикой обработки персональных данных</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row footer-row-bottom">
+                <div class="footer-column">
+                    <a href="#" class="footer-link">Публичная оферта</a>
+                </div>
+                <div class="footer-column">
+                    <a href="#" class="footer-link">Политика конфиденциальности</a>
+                </div>
+                <div class="footer-column">
+                    © «Это важно», все права защищены
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="basket-mobile">
+        <div class="container">
+            <div class="basket-mobile-top">
+                <div class="basket-mobile-top-element">
+                    <div class="basket-mobile-top-label">Товары (3)</div>
+                    <div class="basket-mobile-top-value">2 432 ₽</div>
+                </div>
+                <div class="basket-mobile-top-element">
+                    <div class="basket-mobile-top-label">Начислим баллов</div>
+                    <div class="basket-mobile-top-value color-orange">+284</div>
+                </div>
+                <div class="basket-mobile-top-element">
+                    <div class="basket-mobile-top-label">Доставка</div>
+                    <div class="basket-mobile-top-value color-green">Бесплатно</div>
+                </div>
+            </div>
+            <a href="#" class="button button-orange sidebar-basket-final-button">
+                Перейти к оплате (1 900 ₽)
+            </a>
+        </div>
+    </div>
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+</body>
+
+</html>

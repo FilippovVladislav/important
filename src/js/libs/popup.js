@@ -335,3 +335,4 @@ class Popup {
 }
 // Запускаем и добавляем в объект модулей
 flsModules.popup = new Popup({});
+window.flsModules = flsModules

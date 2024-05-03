@@ -2348,7 +2348,7 @@
   display: flex;
   flex-direction: column;
   flex-basis: calc(31.4% - 4px);
-  img{
+  picture{
     &:first-child{
       margin-bottom: 8px;
       @media(max-width: $s1200) {
@@ -2360,6 +2360,11 @@
       height: 136px;
       object-fit: cover;
     }
+  }
+  img{
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
   @media(max-width: $s1200) {
     flex-direction: row;
@@ -2380,7 +2385,7 @@
     a{
       flex-basis: calc(50% - 4px);
     }
-    img{
+    picture{
       width: 100%;
     }
   }
@@ -2993,7 +2998,7 @@
   flex-shrink: 0;
   margin-right: 12px;
   justify-content: space-between;
-  img{
+  picture{
     width: calc(50% - 1px);
     border-radius: 4px;
     &:nth-child(3), &:nth-child(4){
@@ -3003,7 +3008,7 @@
 }
 
 .order-item__pics-subscription{
-  img{
+  img, picture{
     width: 100%;
   }
 }
@@ -3205,6 +3210,9 @@
 
 .profile-balls-column{
   flex-basis: calc(50% - 12px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .profile-balls-number{
@@ -3246,6 +3254,7 @@
 .profile{
   display: flex;
   align-items: flex-start;
+  width: 100%;
   @media(max-width: $s1200) {
     flex-direction: column-reverse;
   }
@@ -3257,7 +3266,16 @@
   margin: 8px 8px 0;
   position: sticky;
   transition: all .25s linear;
-  z-index: 5;
+  z-index: 2;
+  &:before{
+    background: #F5F3F2;
+    content: "";
+    left: 0;
+    width: 100%;
+    bottom: calc(100%);
+    position: absolute;
+    height: 100px;
+  }
 }
 
 .formalization-step-container{
@@ -3563,6 +3581,7 @@
     display: flex;
     background: rgba(240, 127, 60, 0.16);
     color: $orange;
+    pointer-events: auto;
   }
   .product-event__sign{
     background: transparent;
@@ -4035,6 +4054,41 @@
   color: $orange;
   &:before{
     margin-right: 8px;
+
     background: $orange;
   }
+}
+
+.sidebar-basket-final-info{
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(54, 47, 60, 0.60);
+}
+
+.subscription-page-success{
+  color: #362F3C;
+  background: rgba(185, 136, 98, 0.10);
+  .subscription-page__button{
+    align-items: center;
+    display: flex;
+  }
+  .button{
+    height: 48px;
+    flex-direction: column;
+    &:first-child{
+      margin-right: 10px;
+    }
+    span{
+      font-size: 10px;
+      font-weight: 500;
+    }
+  }
+  .subscription-page__price{
+    background-image: url('../img/subscription-page-bg-success.png');
+  }
+}
+
+.pic-not{
+  margin-bottom: 18px;
 }

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Заказы"
+})
+
+<body>
+<div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+        <div class="container">
+            <div class="main-page">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumb-items">
+                        <li class="breadcrumb-item">
+                            <a href="#" class="breadcrumb-link">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            Профиль
+                        </li>
+                    </ul>
+                </nav>
+                <div class="profile">
+                    <div class="sidebar sidebar-profile">
+                        <a href="#" class="sidebar-profile-person">
+                        <span class="sidebar-profile-person-pic">
+                            <img src="img/avatar.png" alt="">
+                        </span>
+                            <span class="sidebar-profile-person-content">
+                            <span class="sidebar-profile-person-name">Александр </span>
+                            <span class="sidebar-profile-person-edit">Изменить профиль</span>
+                        </span>
+                            <span class="sidebar-profile-person-arrow icon"
+                                  style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                        </a>
+                        <div class="sidebar-profile-menu">
+                            <a href="#" class="fast-link-item icon"
+                               style="--icon: url('../img/icon/icon-arrow-right.svg')">
+                            <span class="fast-link-item-icon icon"
+                                  style="--icon: url('../img/icon/icon-star-empty.svg')"></span>
+                                Избранное
+                            </a>
+                            <a href="#" class="fast-link-item icon"
+                               style="--icon: url('../img/icon/icon-arrow-right.svg')">
+                            <span class="fast-link-item-icon icon"
+                                  style="--icon: url('../img/icon/icon-bag.svg')"></span>
+                                Доставка
+                            </a>
+                            <a href="#" class="fast-link-item icon"
+                               style="--icon: url('../img/icon/icon-arrow-right.svg')">
+                            <span class="fast-link-item-icon icon"
+                                  style="--icon: url('../img/icon/icon-MenuProfile.svg')"></span>
+                                О нас
+                            </a>
+                            <a href="#" class="fast-link-item icon"
+                               style="--icon: url('../img/icon/icon-arrow-right.svg')">
+                            <span class="fast-link-item-icon icon"
+                                  style="--icon: url('../img/icon/icon-boxes.svg')"></span>
+                                Оптом
+                            </a>
+                            <a href="#" class="fast-link-item icon"
+                               style="--icon: url('../img/icon/icon-arrow-right.svg')">
+                            <span class="fast-link-item-icon icon"
+                                  style="--icon: url('../img/icon/icon-discount.svg')"></span>
+                                Система лояльности
+                            </a>
+                            <a href="#" class="fast-link-item icon"
+                               style="--icon: url('../img/icon/icon-arrow-right.svg')">
+                            <span class="fast-link-item-icon icon"
+                                  style="--icon: url('../img/icon/icon-question.svg')"></span>
+                                Ответы на вопросы
+                            </a>
+                        </div>
+                    </div>
+                    <div class="main-container">
+                        <div class="product-block mt-0">
+                            <div class="product-block-head">
+                                <h3 class="size-28 font-balsamiq">Активные заказы</h3>
+                            </div>
+                            <div class="order-items">
+                                <a href="#" class="order-item">
+                                <span class="order-item__left">
+                                    <span class="order-item__pics">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                    </span>
+                                    <span class="order-item__content">
+                                        <span class="order-item__number">Заказ 643 893</span>
+                                        <span class="order-item__info">
+                                            <span class="order-item__info-element">
+                                                Товары: <span>6</span>
+                                            </span>
+                                            <span class="order-item__info-element">
+                                                Оформлен: <span>05.09.2024</span>
+                                            </span>
+                                            <span class="order-item__info-element">
+                                                <span>СДЕК</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                    <span class="order-item__right">
+                                    <span class="order-item__block">
+                                        <span class="order-item__status">
+                                            Получен
+                                            <img src="img/status-success.svg" alt="">
+                                        </span>
+                                        <span class="order-item__price">
+                                            960 ₽
+                                        </span>
+                                    </span>
+                                    <span class="order-item__arrow icon"
+                                          style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                                </span>
+                                </a>
+                                <a href="#" class="order-item">
+                                <span class="order-item__left">
+                                    <span class="order-item__pics order-item__pics-subscription">
+                                      <img src="img/order-subscription.png" alt="">
+                                    </span>
+                                    <span class="order-item__content">
+                                        <span class="order-item__number">Подписка “Это важно”</span>
+                                        <span class="order-item__info">
+                                            <span class="order-item__info-element">
+                                                Оформлен: <span>05.09.2024</span>
+                                            </span>
+                                            <span class="order-item__info-element">
+                                                <span>Почта России</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                    <span class="order-item__right">
+                                    <span class="order-item__block">
+                                        <span class="order-item__status">
+                                            В обработке
+                                            <img src="img/status-treatment.svg" alt="">
+                                        </span>
+                                        <span class="order-item__price">
+                                         1 990 ₽
+                                        </span>
+                                    </span>
+                                    <span class="order-item__arrow icon"
+                                          style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                                </span>
+                                </a>
+                                <a href="#" class="order-item">
+                                <span class="order-item__left">
+                                    <span class="order-item__pics">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                    </span>
+                                    <span class="order-item__content">
+                                        <span class="order-item__number">Заказ 643 893</span>
+                                        <span class="order-item__info">
+                                            <span class="order-item__info-element">
+                                                Товары: <span>6</span>
+                                            </span>
+                                            <span class="order-item__info-element">
+                                                Оформлен: <span>05.09.2024</span>
+                                            </span>
+                                            <span class="order-item__info-element">
+                                                <span>СДЕК</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                    <span class="order-item__right">
+                                    <span class="order-item__block">
+                                        <span class="order-item__status">
+                                            На складе сортировки
+                                            <img src="img/status-stock.svg" alt="">
+                                        </span>
+                                        <span class="order-item__price">
+                                            960 ₽
+                                        </span>
+                                    </span>
+                                    <span class="order-item__arrow icon"
+                                          style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                                </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-block">
+                            <div class="product-block-head">
+                                <h3 class="size-28 font-balsamiq">История заказов</h3>
+                            </div>
+                            <div class="order-items">
+                                <a href="#" class="order-item">
+                                <span class="order-item__left">
+                                    <span class="order-item__pics">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                    </span>
+                                    <span class="order-item__content">
+                                        <span class="order-item__number">Заказ 643 893</span>
+                                        <span class="order-item__info">
+                                            <span class="order-item__info-element">
+                                                Товары: <span>6</span>
+                                            </span>
+                                            <span class="order-item__info-element">
+                                                Оформлен: <span>05.09.2024</span>
+                                            </span>
+                                            <span class="order-item__info-element">
+                                                <span>СДЕК</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                    <span class="order-item__right">
+                                    <span class="order-item__block">
+                                        <span class="order-item__status">
+                                            Получен
+                                            <img src="img/status-success.svg" alt="">
+                                        </span>
+                                        <span class="order-item__price">
+                                            960 ₽
+                                        </span>
+                                    </span>
+                                    <span class="order-item__arrow icon"
+                                          style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                                </span>
+                                </a>
+                                <a href="#" class="order-item">
+                                <span class="order-item__left">
+                                    <span class="order-item__pics order-item__pics-subscription">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                    </span>
+                                    <span class="order-item__content">
+                                        <span class="order-item__number">Подписка “Это важно”</span>
+                                        <span class="order-item__info">
+                                            <span class="order-item__info-element">
+                                                Оформлен: <span>05.09.2024</span>
+                                            </span>
+                                            <span class="order-item__info-element">
+                                                <span>Почта России</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                    <span class="order-item__right">
+                                    <span class="order-item__block">
+                                        <span class="order-item__status">
+                                            Собираем
+                                            <img src="img/status-gather.svg" alt="">
+                                        </span>
+                                        <span class="order-item__price">
+                                         1 990 ₽
+                                        </span>
+                                    </span>
+                                    <span class="order-item__arrow icon"
+                                          style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                                </span>
+                                </a>
+                                <a href="#" class="order-item">
+                                <span class="order-item__left">
+                                    <span class="order-item__pics">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                    </span>
+                                    <span class="order-item__content">
+                                        <span class="order-item__number">Заказ 643 893</span>
+                                        <span class="order-item__info">
+                                            <span class="order-item__info-element">
+                                                Товары: <span>6</span>
+                                            </span>
+                                            <span class="order-item__info-element">
+                                                Оформлен: <span>05.09.2024</span>
+                                            </span>
+                                            <span class="order-item__info-element">
+                                                <span>СДЕК</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                    <span class="order-item__right">
+                                    <span class="order-item__block">
+                                        <span class="order-item__status">
+                                            Передали в доставку
+                                            <img src="img/status-stock.svg" alt="">
+                                        </span>
+                                        <span class="order-item__price">
+                                            960 ₽
+                                        </span>
+                                    </span>
+                                    <span class="order-item__arrow icon"
+                                          style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                                </span>
+                                </a>
+                                <a href="#" class="order-item">
+                                <span class="order-item__left">
+                                    <span class="order-item__pics">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                    </span>
+                                    <span class="order-item__content">
+                                        <span class="order-item__number">Заказ 643 893</span>
+                                        <span class="order-item__info">
+                                            <span class="order-item__info-element">
+                                                Товары: <span>6</span>
+                                            </span>
+                                            <span class="order-item__info-element">
+                                                Оформлен: <span>05.09.2024</span>
+                                            </span>
+                                            <span class="order-item__info-element">
+                                                <span>СДЕК</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                    <span class="order-item__right">
+                                    <span class="order-item__block">
+                                        <span class="order-item__status">
+                                            На складе сортировки
+                                            <img src="img/status-stock.svg" alt="">
+                                        </span>
+                                        <span class="order-item__price">
+                                            960 ₽
+                                        </span>
+                                    </span>
+                                    <span class="order-item__arrow icon"
+                                          style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                                </span>
+                                </a>
+                                <a href="#" class="order-item">
+                                <span class="order-item__left">
+                                    <span class="order-item__pics order-item__pics-subscription">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                    </span>
+                                    <span class="order-item__content">
+                                        <span class="order-item__number">Подписка “Это важно”</span>
+                                        <span class="order-item__info">
+                                            <span class="order-item__info-element">
+                                                Оформлен: <span>05.09.2024</span>
+                                            </span>
+                                            <span class="order-item__info-element">
+                                                <span>Почта России</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                    <span class="order-item__right">
+                                    <span class="order-item__block">
+                                        <span class="order-item__status">
+                                            В обработке
+                                            <img src="img/status-treatment.svg" alt="">
+                                        </span>
+                                        <span class="order-item__price">
+                                         1 990 ₽
+                                        </span>
+                                    </span>
+                                    <span class="order-item__arrow icon"
+                                          style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                                </span>
+                                </a>
+                                <a href="#" class="order-item">
+                                <span class="order-item__left">
+                                    <span class="order-item__pics order-item__pics-subscription">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                    </span>
+                                    <span class="order-item__content">
+                                        <span class="order-item__number">Подписка “Это важно”</span>
+                                        <span class="order-item__info">
+                                            <span class="order-item__info-element">
+                                                Оформлен: <span>05.09.2024</span>
+                                            </span>
+                                            <span class="order-item__info-element">
+                                                <span>Почта России</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                    <span class="order-item__right">
+                                    <span class="order-item__block">
+                                        <span class="order-item__status">
+                                            В пунке выдачи
+                                            <img src="img/status-point.svg" alt="">
+                                        </span>
+                                        <span class="order-item__price">
+                                         1 990 ₽
+                                        </span>
+                                    </span>
+                                    <span class="order-item__arrow icon"
+                                          style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                                </span>
+                                </a>
+                                <a href="#" class="order-item">
+                                <span class="order-item__left">
+                                    <span class="order-item__pics">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                      <img src="img/order-item-profile.jpg" alt="">
+                                    </span>
+                                    <span class="order-item__content">
+                                        <span class="order-item__number">Заказ 643 893</span>
+                                        <span class="order-item__info">
+                                            <span class="order-item__info-element">
+                                                Товары: <span>6</span>
+                                            </span>
+                                            <span class="order-item__info-element">
+                                                Оформлен: <span>05.09.2024</span>
+                                            </span>
+                                            <span class="order-item__info-element">
+                                                <span>СДЕК</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                    <span class="order-item__right">
+                                    <span class="order-item__block">
+                                        <span class="order-item__status">
+                                            Отменён
+                                            <img src="img/status-cancellation.svg" alt="">
+                                        </span>
+                                        <span class="order-item__price">
+                                            960 ₽
+                                        </span>
+                                    </span>
+                                    <span class="order-item__arrow icon"
+                                          style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                                </span>
+                                </a>
+                            </div>
+                        </div>
+                        <nav class="pagination">
+                            <ul class="pagination-items">
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-link icon" style="--icon: url('../img/icon/icon-arrow2-left.svg')" disabled=""></a>
+                                </li>
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-link active">1</a>
+                                </li>
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-link">2</a>
+                                </li>
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-link">3</a>
+                                </li>
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-link">4</a>
+                                </li>
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-link">...</a>
+                                </li>
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-link">100</a>
+                                </li>
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-link icon" style="--icon: url('../img/icon/icon-arrow2-right.svg')"></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('html/_footer.htm',{})
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+</body>
+
+</html>

@@ -1713,6 +1713,151 @@ header:before {
   transform: translateY(0);
 }
 
+.header-event-user {
+  position: relative;
+}
+.header-event-user:hover .header-user-panel {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.header-user-panel {
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s linear;
+}
+
+.header-user-panel-container {
+  width: 256px;
+  background: white;
+  z-index: 1;
+  padding: 20px;
+  border-radius: 24px;
+  box-shadow: 0px 2px 12px 0px rgba(54, 47, 60, 0.08);
+}
+
+.header-user-top {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-user-info {
+  display: flex;
+  align-items: center;
+}
+
+.header-user-avatar {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+.header-user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.header-user-text {
+  font-family: "BalsamiqSans";
+  font-size: 18px;
+  color: var(--color-orange);
+  letter-spacing: -0.072px;
+}
+
+.header-user-exit:before {
+  background: #7A608B;
+}
+.header-user-exit:hover:before {
+  background: var(--color-orange);
+}
+
+.header-user-menu-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+.header-user-menu-link:hover {
+  color: var(--color-orange);
+}
+.header-user-menu-link:hover .header-user-menu-left:before {
+  background: var(--color-orange);
+}
+.header-user-menu-link:hover .header-user-menu-left {
+  color: var(--color-orange);
+}
+
+.header-user-menu-left {
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.25s linear;
+  display: flex;
+  align-items: center;
+}
+.header-user-menu-left:before {
+  background: #7A608B;
+  margin-right: 8px;
+}
+
+.header-user-menu-icon {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  color: rgba(54, 47, 60, 0.6);
+  font-size: 12px;
+  font-weight: 500;
+}
+.header-user-menu-icon:before {
+  width: 20px;
+  height: 20px;
+  background: rgba(54, 47, 60, 0.45);
+  margin-left: 2px;
+}
+
+.header-user-menu-item-final {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(54, 47, 60, 0.12);
+}
+
+.header-user-name {
+  color: #362F3C;
+}
+
+.header-user-phone {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(54, 47, 60, 0.6);
+  font-family: "Onest";
+  margin-top: 3px;
+}
+
+.box-count {
+  background: rgba(240, 127, 60, 0.16);
+  color: #F07F3C;
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-user-menu-link-logout .header-user-menu-left {
+  color: #C03042;
+}
+.header-user-menu-link-logout .header-user-menu-left:before {
+  background: #C03042;
+}
+
 footer {
   background: var(--color-white);
   margin: 0 8px 8px;
@@ -1808,6 +1953,8 @@ footer {
 
 .footer-contact {
   font-style: normal;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-social {
@@ -4251,20 +4398,25 @@ footer {
   flex-direction: column;
   flex-basis: calc(31.4% - 4px);
 }
-.about-column__two img:first-child {
+.about-column__two picture:first-child {
   margin-bottom: 8px;
 }
 @media (max-width: 1200px) {
-  .about-column__two img:first-child {
+  .about-column__two picture:first-child {
     margin-bottom: 0;
   }
 }
 @media (max-width: 1200px) {
-  .about-column__two img {
+  .about-column__two picture {
     width: calc(50% - 4px);
     height: 136px;
     object-fit: cover;
   }
+}
+.about-column__two img {
+  max-height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 @media (max-width: 1200px) {
   .about-column__two {
@@ -4288,7 +4440,7 @@ footer {
 .about-column-video .about-column__two a {
   flex-basis: calc(50% - 4px);
 }
-.about-column-video .about-column__two img {
+.about-column-video .about-column__two picture {
   width: 100%;
 }
 .about-column-video img {
@@ -4935,15 +5087,15 @@ footer {
   margin-right: 12px;
   justify-content: space-between;
 }
-.order-item__pics img {
+.order-item__pics picture {
   width: calc(50% - 1px);
   border-radius: 4px;
 }
-.order-item__pics img:nth-child(3), .order-item__pics img:nth-child(4) {
+.order-item__pics picture:nth-child(3), .order-item__pics picture:nth-child(4) {
   margin-top: 2px;
 }
 
-.order-item__pics-subscription img {
+.order-item__pics-subscription img, .order-item__pics-subscription picture {
   width: 100%;
 }
 
@@ -5164,6 +5316,9 @@ footer {
 
 .profile-balls-column {
   flex-basis: calc(50% - 12px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .profile-balls-number {
@@ -5205,6 +5360,7 @@ footer {
 .profile {
   display: flex;
   align-items: flex-start;
+  width: 100%;
 }
 @media (max-width: 1200px) {
   .profile {
@@ -5218,7 +5374,16 @@ footer {
   margin: 8px 8px 0;
   position: sticky;
   transition: all 0.25s linear;
-  z-index: 5;
+  z-index: 2;
+}
+.formalization-step:before {
+  background: #F5F3F2;
+  content: "";
+  left: 0;
+  width: 100%;
+  bottom: 100%;
+  position: absolute;
+  height: 100px;
 }
 
 .formalization-step-container {
@@ -5538,6 +5703,7 @@ footer {
   display: flex;
   background: rgba(240, 127, 60, 0.16);
   color: var(--color-orange);
+  pointer-events: auto;
 }
 .basket-item-event .product-event__sign {
   background: transparent;
@@ -6013,6 +6179,40 @@ footer {
 .order-success-block-success-support:before {
   margin-right: 8px;
   background: var(--color-orange);
+}
+
+.sidebar-basket-final-info {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(54, 47, 60, 0.6);
+}
+
+.subscription-page-success {
+  color: #362F3C;
+  background: rgba(185, 136, 98, 0.1);
+}
+.subscription-page-success .subscription-page__button {
+  align-items: center;
+  display: flex;
+}
+.subscription-page-success .button {
+  height: 48px;
+  flex-direction: column;
+}
+.subscription-page-success .button:first-child {
+  margin-right: 10px;
+}
+.subscription-page-success .button span {
+  font-size: 10px;
+  font-weight: 500;
+}
+.subscription-page-success .subscription-page__price {
+  background-image: url("../img/subscription-page-bg-success.png");
+}
+
+.pic-not {
+  margin-bottom: 18px;
 }
 .swiper {
   overflow: hidden;

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"404"
+})
+
+<body>
+<div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+        <div class="container">
+            <div class="main-page">
+                <div class="product-block mt-0 product-block-empty">
+                    <div class="catalog-no-result">
+                        <img src="img/404Img.svg" alt="" class="pic-not">
+                        <div class="catalog-no-result-title">Ой, кажется, мы потеряли эту страницу!</div>
+                        <div class="catalog-no-result-text">Не волнуйтесь, попробуйте перейти в другой раздел</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('html/_footer.htm',{})
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+</body>
+
+</html>

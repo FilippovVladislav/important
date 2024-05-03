@@ -2236,7 +2236,7 @@
         return i.indexOf(e) === t;
       });
     }
-    e.popup = new (class {
+    (e.popup = new (class {
       constructor(e) {
         let t = {
           logging: !0,
@@ -2497,7 +2497,8 @@
       popupLogging(e) {
         this.options.logging && r();
       }
-    })({});
+    })({})),
+      (window.flsModules = e);
     function l(e) {
       return (
         null !== e &&
@@ -14587,25 +14588,33 @@
             : document.querySelector(i).classList.remove(n));
       });
     }
-    document.querySelector(".product-event__add") &&
-      document
-        .querySelectorAll(
-          ".product-event__add .button-orange-light, .product-event__add .button-orange"
-        )
-        .forEach((e) => {
-          e.addEventListener("click", function () {
-            e.closest(".product-main-event__button")
-              ? document
-                  .querySelectorAll(
-                    ".product-main-event__button .product-event__add"
-                  )
-                  .forEach((e) => {
-                    e.closest(".product-event__add").classList.add("active"),
-                      Bi(e.closest(".product-event__add"));
-                  })
-              : (e.closest(".product-event__add").classList.add("active"),
-                Bi(e.closest(".product-event__add")));
-          });
+    document.querySelector(".product-event__add")
+      ? (document
+          .querySelectorAll(
+            ".product-event__add .button-orange-light, .product-event__add .button-orange"
+          )
+          .forEach((e) => {
+            e.addEventListener("click", function () {
+              e.closest(".product-main-event__button")
+                ? document
+                    .querySelectorAll(
+                      ".product-main-event__button .product-event__add"
+                    )
+                    .forEach((e) => {
+                      e.closest(".product-event__add").classList.add("active"),
+                        Bi(e.closest(".product-event__add"));
+                    })
+                : (e.closest(".product-event__add").classList.add("active"),
+                  Bi(e.closest(".product-event__add")));
+            });
+          }),
+        document.querySelector(".basket-item-event") &&
+          document.querySelectorAll(".basket-item-event").forEach((e) => {
+            Bi(e);
+          }))
+      : document.querySelector(".basket-item-event") &&
+        document.querySelectorAll(".basket-item-event").forEach((e) => {
+          console.log(e), Bi(e);
         }),
       document.querySelector(".product-main-event") &&
         document.body.classList.add("product-page"),

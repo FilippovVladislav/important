@@ -113,9 +113,20 @@ if (document.querySelector('.product-event__add')) {
                 item.closest('.product-event__add').classList.add('active');
                 editCountProduct(item.closest('.product-event__add'));
             }
-
         })
     })
+    if (document.querySelector('.basket-item-event')) {
+        document.querySelectorAll('.basket-item-event').forEach((item) => {
+            editCountProduct(item);
+        })
+    }
+}else{
+    if (document.querySelector('.basket-item-event')) {
+        document.querySelectorAll('.basket-item-event').forEach((item) => {
+            console.log(item)
+            editCountProduct(item);
+        })
+    }
 }
 
 //добавляем счетчик на кнопке корзина
