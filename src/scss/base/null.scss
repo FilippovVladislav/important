@@ -69,6 +69,18 @@ textarea {
 	font-size: inherit;
 	transition: all .25s linear;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
 button {
 	cursor: pointer;
 	color: inherit;
@@ -197,6 +209,11 @@ h6 {
 	font-size: 14px;
 }
 
+.size-13{
+	font-size: 13px;
+	line-height: 1.4;
+}
+
 .size-12{
 	font-size: 12px;
 }
@@ -265,8 +282,16 @@ p + p{
 	margin-bottom: 8px !important;
 }
 
+.mb-6{
+	margin-bottom: 6px;
+}
+
 .mb-4{
 	margin-bottom: 4px;
+}
+
+.mb-0{
+	margin-bottom: 0 !important;
 }
 
 .mt-16{
@@ -279,4 +304,8 @@ p + p{
 
 .fw-500{
 	font-weight: 500;
+}
+
+.text-center{
+	text-align: center;
 }

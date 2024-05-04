@@ -334,13 +334,13 @@
                 e
               );
             })(),
-            z = {
+            _ = {
               to: function (e) {
                 return void 0 === e ? "" : e.toFixed(2);
               },
               from: Number,
             },
-            I = {
+            z = {
               target: "target",
               base: "base",
               origin: "origin",
@@ -378,7 +378,7 @@
               valueLarge: "value-large",
               valueSub: "value-sub",
             },
-            _ = { tooltips: ".__tooltips", aria: ".__aria" };
+            I = { tooltips: ".__tooltips", aria: ".__aria" };
           function D(e, t) {
             if (!c(t)) throw new Error("noUiSlider: 'step' is not numeric.");
             e.singleStep = t;
@@ -634,8 +634,8 @@
                 padding: null,
                 animate: !0,
                 animationDuration: 300,
-                ariaFormat: z,
-                format: z,
+                ariaFormat: _,
+                format: _,
               },
               i = {
                 step: { r: !1, t: D },
@@ -670,7 +670,7 @@
                 orientation: "horizontal",
                 keyboardSupport: !0,
                 cssPrefix: "noUi-",
-                cssClasses: I,
+                cssClasses: z,
                 keyboardPageMultiplier: 5,
                 keyboardMultiplier: 1,
                 keyboardDefaultStep: 10,
@@ -711,13 +711,13 @@
               L = [],
               k = [],
               A = 0,
-              z = {},
-              I = t.ownerDocument,
-              D = i.documentElement || I.documentElement,
-              $ = I.body,
-              R = "rtl" === I.dir || 1 === i.ort ? 0 : 100;
+              _ = {},
+              z = t.ownerDocument,
+              D = i.documentElement || z.documentElement,
+              $ = z.body,
+              R = "rtl" === z.dir || 1 === i.ort ? 0 : 100;
             function N(e, t) {
-              var i = I.createElement("div");
+              var i = z.createElement("div");
               return t && f(i, t), e.appendChild(i), i;
             }
             function F(e, t) {
@@ -809,7 +809,7 @@
             }
             function Y() {
               E &&
-                (ye("update" + _.tooltips),
+                (ye("update" + I.tooltips),
                 E.forEach(function (e) {
                   e && n(e);
                 }),
@@ -818,7 +818,7 @@
             function U() {
               Y(),
                 (E = p.map(q)),
-                ve("update" + _.tooltips, function (e, t, n) {
+                ve("update" + I.tooltips, function (e, t, n) {
                   if (E && i.tooltips && !1 !== E[t]) {
                     var s = e[t];
                     !0 !== i.tooltips[t] && (s = i.tooltips[t].to(n[t])),
@@ -827,8 +827,8 @@
                 });
             }
             function Z() {
-              ye("update" + _.aria),
-                ve("update" + _.aria, function (e, t, n, s, o) {
+              ye("update" + I.aria),
+                ve("update" + I.aria, function (e, t, n, s, o) {
                   k.forEach(function (e) {
                     var t = p[e],
                       s = xe(L, e, 0, !0, !0, !0),
@@ -938,7 +938,7 @@
             function ee(t, n, s) {
               var o,
                 r,
-                a = I.createElement("div"),
+                a = z.createElement("div"),
                 l =
                   (((o = {})[e.PipsType.None] = ""),
                   (o[e.PipsType.NoValue] = i.cssClasses.valueNormal),
@@ -1060,7 +1060,7 @@
                 }
               }
               return (
-                (t = t || v(I)),
+                (t = t || v(z)),
                 (s || o) && ((r = e.clientX + t.x), (a = e.clientY + t.y)),
                 (e.pageOffset = t),
                 (e.points = [r, a]),
@@ -1194,9 +1194,9 @@
               var t = ae(e.calcPoint),
                 i = M.getStep(t),
                 n = M.fromStepping(i);
-              Object.keys(z).forEach(function (e) {
+              Object.keys(_).forEach(function (e) {
                 "hover" === e.split(".")[0] &&
-                  z[e].forEach(function (e) {
+                  _[e].forEach(function (e) {
                     e.call(Fe, n);
                   });
               });
@@ -1273,33 +1273,33 @@
                   });
             }
             function ve(e, t) {
-              (z[e] = z[e] || []),
-                z[e].push(t),
+              (_[e] = _[e] || []),
+                _[e].push(t),
                 "update" === e.split(".")[0] &&
                   p.forEach(function (e, t) {
                     we("update", t);
                   });
             }
             function be(e) {
-              return e === _.aria || e === _.tooltips;
+              return e === I.aria || e === I.tooltips;
             }
             function ye(e) {
               var t = e && e.split(".")[0],
                 i = t ? e.substring(t.length) : e;
-              Object.keys(z).forEach(function (e) {
+              Object.keys(_).forEach(function (e) {
                 var n = e.split(".")[0],
                   s = e.substring(n.length);
                 (t && t !== n) ||
                   (i && i !== s) ||
                   (be(s) && i !== s) ||
-                  delete z[e];
+                  delete _[e];
               });
             }
             function we(e, t, n) {
-              Object.keys(z).forEach(function (s) {
+              Object.keys(_).forEach(function (s) {
                 var o = s.split(".")[0];
                 e === o &&
-                  z[s].forEach(function (e) {
+                  _[s].forEach(function (e) {
                     e.call(
                       Fe,
                       O.map(i.format.to),
@@ -1439,21 +1439,21 @@
             function Ae(e) {
               ke(i.start, e);
             }
-            function ze(e, t, i, n) {
+            function _e(e, t, i, n) {
               if (!((e = Number(e)) >= 0 && e < k.length))
                 throw new Error("noUiSlider: invalid handle number, got: " + e);
               Me(e, Le(t, e), !0, !0, n), we("update", e), i && we("set", e);
             }
-            function Ie(e) {
+            function ze(e) {
               if ((void 0 === e && (e = !1), e))
                 return 1 === O.length ? O[0] : O.slice(0);
               var t = O.map(i.format.to);
               return 1 === t.length ? t[0] : t;
             }
-            function _e() {
+            function Ie() {
               for (
-                ye(_.aria),
-                  ye(_.tooltips),
+                ye(I.aria),
+                  ye(I.tooltips),
                   Object.keys(i.cssClasses).forEach(function (e) {
                     m(P, i.cssClasses[e]);
                   });
@@ -1493,7 +1493,7 @@
               return k.map(De);
             }
             function Re(e, t) {
-              var n = Ie(),
+              var n = ze(),
                 o = [
                   "margin",
                   "limit",
@@ -1533,13 +1533,13 @@
             }
             Ne();
             var Fe = {
-              destroy: _e,
+              destroy: Ie,
               steps: $e,
               on: ve,
               off: ye,
-              get: Ie,
+              get: ze,
               set: ke,
-              setHandle: ze,
+              setHandle: _e,
               reset: Ae,
               disable: G,
               enable: X,
@@ -1574,9 +1574,9 @@
             var i = re(e, oe(t), t);
             return (e.noUiSlider = i), i;
           }
-          var le = { __spectrum: A, cssClasses: I, create: ae };
+          var le = { __spectrum: A, cssClasses: z, create: ae };
           (e.create = ae),
-            (e.cssClasses = I),
+            (e.cssClasses = z),
             (e.default = le),
             Object.defineProperty(e, "__esModule", { value: !0 });
         })(t);
@@ -1714,16 +1714,16 @@
                     .replace(/^\s+/, "")
                     .replace(/\s+$/, ""));
             },
-            z = function (e) {
+            _ = function (e) {
               return e.llTempImage;
             },
-            I = function (e, t) {
+            z = function (e, t) {
               if (t) {
                 var i = t._observer;
                 i && i.unobserve(e);
               }
             },
-            _ = function (e, t) {
+            I = function (e, t) {
               e && (e.loadingCount += t);
             },
             D = function (e, t) {
@@ -1777,13 +1777,13 @@
               k(e, t.class_applied),
                 C(e, v),
                 i &&
-                  (t.unobserve_completed && I(e, t),
+                  (t.unobserve_completed && z(e, t),
                   L(t.callback_applied, e, i));
             },
             U = function (e, t, i) {
               k(e, t.class_loading),
                 C(e, m),
-                i && (_(i, 1), L(t.callback_loading, e, i));
+                i && (I(i, 1), L(t.callback_loading, e, i));
             },
             Z = function (e, t, i) {
               i && e.setAttribute(t, i);
@@ -1851,15 +1851,15 @@
               !(function (e) {
                 delete e.llTempImage;
               })(e),
-                _(i, -1),
+                I(i, -1),
                 (function (e) {
                   e && (e.toLoadCount -= 1);
                 })(i),
                 A(e, t.class_loading),
-                t.unobserve_completed && I(e, i);
+                t.unobserve_completed && z(e, i);
             },
             re = function (e, t, i) {
-              var n = z(e) || e;
+              var n = _(e) || e;
               ne(n) ||
                 (function (e, t, i) {
                   ne(e) || (e.llEvLisnrs = {});
@@ -1911,7 +1911,7 @@
                           r = o && s ? s : n;
                         r &&
                           ((e.style.backgroundImage = 'url("'.concat(r, '")')),
-                          z(e).setAttribute(c, r),
+                          _(e).setAttribute(c, r),
                           U(e, t, i));
                       })(e, t, i),
                       (function (e, t, i) {
@@ -2012,7 +2012,7 @@
                         k(e, i.class_entered),
                         A(e, i.class_exited),
                         (function (e, t, i) {
-                          t.unobserve_entered && I(e, i);
+                          t.unobserve_entered && z(e, i);
                         })(e, i, n),
                         L(i.callback_enter, e, t, n),
                         s || ae(e, i, n);
@@ -2035,7 +2035,7 @@
                             })(e),
                             ce(e),
                             A(e, i.class_loading),
-                            _(n, -1),
+                            I(n, -1),
                             T(e),
                             L(i.callback_cancel, e, t, n));
                         })(e, t, i, n),
@@ -2146,7 +2146,7 @@
                 var t = this,
                   i = this._settings;
                 be(e, i).forEach(function (e) {
-                  I(e, t), ae(e, i, t);
+                  z(e, t), ae(e, i, t);
                 });
               },
               restoreAll: function () {
@@ -3228,7 +3228,7 @@
       d();
     }
     let L, k, A;
-    function z() {
+    function _() {
       return (
         L ||
           (L = (function () {
@@ -3260,11 +3260,11 @@
         L
       );
     }
-    function I(e = {}) {
+    function z(e = {}) {
       return (
         k ||
           (k = (function ({ userAgent: e } = {}) {
-            const t = z(),
+            const t = _(),
               i = p(),
               n = i.navigator.platform,
               s = e || i.navigator.userAgent,
@@ -3306,7 +3306,7 @@
         k
       );
     }
-    function _() {
+    function I() {
       return (
         A ||
           (A = (function () {
@@ -5257,9 +5257,9 @@
         }
         const n = this;
         (n.__swiper__ = !0),
-          (n.support = z()),
-          (n.device = I({ userAgent: i.userAgent })),
-          (n.browser = _()),
+          (n.support = _()),
+          (n.device = z({ userAgent: i.userAgent })),
+          (n.browser = I()),
           (n.eventsListeners = {}),
           (n.eventsAnyListeners = []),
           (n.modules = [...n.__modules__]),
@@ -6875,7 +6875,7 @@
         }),
       document.querySelector(".product-gallery"))
     ) {
-      const Qi = new re(".gallery-small", {
+      const tn = new re(".gallery-small", {
         modules: [ue, le],
         freeMode: !0,
         watchSlidesProgress: !0,
@@ -7065,7 +7065,7 @@
               Object.assign(e.thumbs, { init: r, update: a });
           },
         ],
-        thumbs: { swiper: Qi },
+        thumbs: { swiper: tn },
       });
     }
     if (document.querySelector(".wholesale-swiper")) {
@@ -7616,8 +7616,8 @@
         (e[(e.Mousemove = 4)] = "Mousemove"),
         (e[(e.Destroy = 5)] = "Destroy");
     })(Ae || (Ae = {}));
-    const ze = ["a", "b", "c", "d", "e", "f"],
-      Ie = {
+    const _e = ["a", "b", "c", "d", "e", "f"],
+      ze = {
         PANUP: "Move up",
         PANDOWN: "Move down",
         PANLEFT: "Move left",
@@ -7636,7 +7636,7 @@
         RESET: "Reset",
         TOGGLEFS: "Toggle fullscreen",
       },
-      _e = {
+      Ie = {
         content: null,
         width: "auto",
         height: "auto",
@@ -7675,7 +7675,7 @@
           inFullscreen: "in-fullscreen",
           htmlHasFullscreen: "with-panzoom-in-fullscreen",
         },
-        l10n: Ie,
+        l10n: ze,
       },
       De = '<circle cx="25" cy="25" r="20"></circle>',
       $e =
@@ -7775,7 +7775,7 @@
       }
       get isResting() {
         if (this.isBouncingX || this.isBouncingY) return !1;
-        for (const e of ze) {
+        for (const e of _e) {
           const t = "e" == e || "f" === e ? 1e-4 : 1e-5;
           if (Math.abs(this.target[e] - this.current[e]) > t) return !1;
         }
@@ -8111,7 +8111,7 @@
         this.setTargetForce();
         const e = this.friction,
           t = this.option("maxVelocity");
-        for (const i of ze)
+        for (const i of _e)
           e
             ? ((this.velocity[i] *= 1 - e),
               t &&
@@ -8129,7 +8129,7 @@
             : this.stop("current");
       }
       setTargetForce() {
-        for (const e of ze)
+        for (const e of _e)
           ("e" === e && this.isBouncingX) ||
             ("f" === e && this.isBouncingY) ||
             (this.velocity[e] =
@@ -8235,7 +8235,7 @@
       enable() {
         const { content: e } = this,
           t = new DOMMatrixReadOnly(window.getComputedStyle(e).transform);
-        for (const e of ze) this.current[e] = this.target[e] = t[e];
+        for (const e of _e) this.current[e] = this.target[e] = t[e];
         this.updateMetrics(),
           this.attachObserver(),
           this.attachEvents(),
@@ -8493,7 +8493,7 @@
         this.rAF && (cancelAnimationFrame(this.rAF), (this.rAF = null)),
           (this.isBouncingX = !1),
           (this.isBouncingY = !1);
-        for (const e of ze) this.velocity[e] = 0;
+        for (const e of _e) this.velocity[e] = 0;
         (this.target.e = this.current.e),
           (this.target.f = this.current.f),
           Ne(this.container, "is-scaling"),
@@ -8585,7 +8585,7 @@
         this.emit("beforeTransform");
         const { current: e, target: t, content: i, contentRect: n } = this,
           s = Object.assign({}, Be);
-        for (const i of ze) {
+        for (const i of _e) {
           const n = "e" == i || "f" === i ? je : 1e5;
           (s[i] = me(e[i], n)),
             Math.abs(t[i] - e[i]) < ("e" == i || "f" === i ? 0.51 : 0.001) &&
@@ -8870,7 +8870,7 @@
           n && (g = g.rotate(n)),
           a && (g = g.scale(-1, 1)),
           l && (g = g.scale(1, -1));
-        for (const e of ze)
+        for (const e of _e)
           "e" !== e &&
           "f" !== e &&
           (g[e] > this.minScale + 1e-5 || g[e] < this.minScale - 1e-5)
@@ -8892,7 +8892,7 @@
         this.rAF && (cancelAnimationFrame(this.rAF), (this.rAF = null)),
           (this.isBouncingX = !1),
           (this.isBouncingY = !1);
-        for (const t of ze)
+        for (const t of _e)
           (this.velocity[t] = 0),
             "current" === e
               ? (this.current[t] = this.target[t])
@@ -9096,7 +9096,7 @@
       reset(e) {
         if (this.state !== Ae.Init && this.state !== Ae.Destroy) {
           this.stop("current");
-          for (const e of ze) this.target[e] = Be[e];
+          for (const e of _e) this.target[e] = Be[e];
           (this.target.a = this.minScale),
             (this.target.d = this.minScale),
             this.clampTargetBounds(),
@@ -9124,7 +9124,7 @@
       enumerable: !0,
       configurable: !0,
       writable: !0,
-      value: _e,
+      value: Ie,
     }),
       Object.defineProperty(Ye, "Plugins", {
         enumerable: !0,
@@ -10902,7 +10902,7 @@
           ArrowRight: "next",
           ArrowLeft: "prev",
         },
-        l10n: Object.assign(Object.assign({}, Ie), {
+        l10n: Object.assign(Object.assign({}, ze), {
           CLOSE: "Close",
           NEXT: "Next",
           PREV: "Previous",
@@ -11023,7 +11023,7 @@
         ? kt()
         : document.addEventListener("DOMContentLoaded", kt));
     const At = "is-zooming-in";
-    class zt extends et {
+    class _t extends et {
       onCreateSlide(e, t, i) {
         const n = this.instance.optionFor(i, "src") || "";
         i.el &&
@@ -11401,7 +11401,7 @@
           t.off("close", e.onClose);
       }
     }
-    Object.defineProperty(zt, "defaults", {
+    Object.defineProperty(_t, "defaults", {
       enumerable: !0,
       configurable: !0,
       writable: !0,
@@ -11414,8 +11414,8 @@
       },
     }),
       "function" == typeof SuppressedError && SuppressedError;
-    const It = "html",
-      _t = "image",
+    const zt = "html",
+      It = "image",
       Dt = "map",
       $t = "youtube",
       Rt = "vimeo",
@@ -11640,7 +11640,7 @@
               l = i.contentWindow;
             if (l) {
               const e = l.document,
-                i = e.getElementsByTagName(It)[0],
+                i = e.getElementsByTagName(zt)[0],
                 n = e.body;
               (a.width = ""),
                 (n.style.overflow = "hidden"),
@@ -11701,7 +11701,7 @@
         i();
       }
       processType(e) {
-        if (e.html) return (e.type = It), (e.src = e.html), void (e.html = "");
+        if (e.html) return (e.type = zt), (e.src = e.html), void (e.html = "");
         const t = this.instance.optionFor(e, "src", "");
         if (!t || "string" != typeof t) return;
         let i = e.type,
@@ -11768,7 +11768,7 @@
               : t.match(
                   /(^data:image\/[a-z0-9+\/=]*,)|(\.(jp(e|g|eg)|gif|png|bmp|webp|svg|ico)((\?|#).*)?$)/i
                 )
-              ? (i = _t)
+              ? (i = It)
               : t.match(/\.(pdf)((\?|#).*)?$/i) && (i = "pdf"))),
           (n = t.match(
             /(?:maps\.)?google\.([a-z]{2,3}(?:\.[a-z]{2})?)\/(?:(?:(?:maps\/(?:place\/(?:.*)\/)?\@(.*),(\d+.?\d+?)z))|(?:\?ll=))(.*)?/i
@@ -11792,13 +11792,13 @@
               (i = Dt)),
           (i = i || this.instance.option("defaultType")),
           (e.type = i),
-          i === _t && (e.thumbSrc = e.thumbSrc || e.src);
+          i === It && (e.thumbSrc = e.thumbSrc || e.src);
       }
       setContent(e) {
         const t = this.instance.optionFor(e, "src") || "";
         if (e && e.type && t) {
           switch (e.type) {
-            case It:
+            case zt:
               this.instance.setContent(e, t);
               break;
             case Nt:
@@ -13200,7 +13200,7 @@
           }
         },
         Html: jt,
-        Images: zt,
+        Images: _t,
         Slideshow: Gt,
         Thumbs: ni,
         Toolbar: ci,
@@ -13229,9 +13229,9 @@
     let Li,
       ki = null,
       Ai = null,
+      _i = 0,
       zi = 0,
       Ii = 0,
-      _i = 0,
       Di = 0;
     const $i = new Map();
     let Ri = 0;
@@ -13417,7 +13417,7 @@
                 e.insertBefore(ki, n),
               null === (t = n.parentElement) || void 0 === t || t.append(Ai)),
             n.addEventListener("mousedown", (e) => {
-              (zi = e.pageX), (Ii = e.pageY), Ne(n, gi);
+              (_i = e.pageX), (zi = e.pageY), Ne(n, gi);
             }),
             this.option("closeExisting"))
           )
@@ -13666,7 +13666,7 @@
         if (s.closest("[data-fancybox-next]"))
           return e.preventDefault(), void this.next();
         if ("click" === e.type && 0 === e.detail) return;
-        if (Math.abs(e.pageX - zi) > 30 || Math.abs(e.pageY - Ii) > 30) return;
+        if (Math.abs(e.pageX - _i) > 30 || Math.abs(e.pageY - zi) > 30) return;
         const o = document.activeElement;
         if (Oi() && o && i.contains(o)) return;
         if (
@@ -13723,7 +13723,7 @@
                     (e.preventDefault(), this[o > 0 ? "prev" : "next"]()))));
       }
       onScroll() {
-        window.scrollTo(_i, Di);
+        window.scrollTo(Ii, Di);
       }
       onKeydown(e) {
         if (!this.isTopmost()) return;
@@ -14191,7 +14191,7 @@
               this.isCurrentSlide(e) || o.emit("removeSlide", e);
           }
         }
-        (_i = window.scrollX),
+        (Ii = window.scrollX),
           (Di = window.scrollY),
           window.addEventListener("scroll", this.onScroll),
           this.emit("close", e),
@@ -14491,32 +14491,32 @@
                 n + "px");
           }
         });
-      let en = document.getElementById("slider"),
-        tn = document.getElementById("slider-input-start"),
-        nn = document.getElementById("slider-input-end"),
-        sn = Number(tn.getAttribute("data-price-min")),
-        on = Number(nn.getAttribute("data-price-max"));
-      fe.create(en, {
-        start: [sn, on],
+      let nn = document.getElementById("slider"),
+        sn = document.getElementById("slider-input-start"),
+        on = document.getElementById("slider-input-end"),
+        rn = Number(sn.getAttribute("data-price-min")),
+        an = Number(on.getAttribute("data-price-max"));
+      fe.create(nn, {
+        start: [rn, an],
         connect: !0,
         step: 1,
-        range: { min: sn, max: on },
+        range: { min: rn, max: an },
       }),
-        en.noUiSlider.on("update", function (e, t) {
-          (tn.value = "от " + Math.ceil(e[0]) + "₽"),
-            (nn.value = "до " + Math.ceil(e[1]) + "₽");
+        nn.noUiSlider.on("update", function (e, t) {
+          (sn.value = "от " + Math.ceil(e[0]) + "₽"),
+            (on.value = "до " + Math.ceil(e[1]) + "₽");
         }),
-        tn.addEventListener("focus", () => {
-          tn.value = tn.value.replace(/[^+\d]/g, "");
+        sn.addEventListener("focus", () => {
+          sn.value = sn.value.replace(/[^+\d]/g, "");
         }),
-        nn.addEventListener("focus", () => {
-          nn.value = nn.value.replace(/[^+\d]/g, "");
+        on.addEventListener("focus", () => {
+          on.value = on.value.replace(/[^+\d]/g, "");
         }),
-        tn.addEventListener("change", function () {
-          en.noUiSlider.set([this.value, null]);
+        sn.addEventListener("change", function () {
+          nn.noUiSlider.set([this.value, null]);
         }),
-        nn.addEventListener("change", function () {
-          en.noUiSlider.set([null, this.value]);
+        on.addEventListener("change", function () {
+          nn.noUiSlider.set([null, this.value]);
         }),
         document
           .querySelector(".filter-button-mobile")
@@ -14616,6 +14616,42 @@
         document.querySelectorAll(".basket-item-event").forEach((e) => {
           console.log(e), Bi(e);
         }),
+      window.addEventListener("DOMContentLoaded", function () {
+        [].forEach.call(
+          document.querySelectorAll("input[type=tel]"),
+          function (e) {
+            var t;
+            function i(e) {
+              e.keyCode && (t = e.keyCode),
+                this.selectionStart < 3 && e.preventDefault();
+              var i = "+7 (___) ___-__-__",
+                n = 0,
+                s = i.replace(/\D/g, ""),
+                o = this.value.replace(/\D/g, ""),
+                r = i.replace(/[_\d]/g, function (e) {
+                  return n < o.length ? o.charAt(n++) || s.charAt(n) : e;
+                });
+              -1 != (n = r.indexOf("_")) &&
+                (n < 5 && (n = 3), (r = r.slice(0, n)));
+              var a = i
+                .substr(0, this.value.length)
+                .replace(/_+/g, function (e) {
+                  return "\\d{1," + e.length + "}";
+                })
+                .replace(/[+()]/g, "\\$&");
+              (!(a = new RegExp("^" + a + "$")).test(this.value) ||
+                this.value.length < 5 ||
+                (t > 47 && t < 58)) &&
+                (this.value = r),
+                "blur" == e.type && this.value.length < 5 && (this.value = "");
+            }
+            e.addEventListener("input", i, !1),
+              e.addEventListener("focus", i, !1),
+              e.addEventListener("blur", i, !1),
+              e.addEventListener("keydown", i, !1);
+          }
+        );
+      }),
       document.querySelector(".product-main-event") &&
         document.body.classList.add("product-page"),
       document.querySelector(".product-option__item") &&
@@ -14766,7 +14802,7 @@
       }
     }
     const Vi = document.querySelectorAll(".zoomable");
-    for (const rn of Vi) new qi(rn);
+    for (const ln of Vi) new qi(ln);
     const Wi = { rootMargin: "0px", threshold: 0.5 },
       Gi = new IntersectionObserver(function (e, t) {
         e.forEach((e) => {
@@ -14788,7 +14824,7 @@
     }, Wi);
     var Ui = document.querySelector(".sidebar-formalization");
     if ((Ui && Yi.observe(Ui), document.querySelector(".bagel"))) {
-      function an(e) {
+      function cn(e) {
         (this.pathLength = e.getTotalLength()),
           (this.setStrokeDasharrayInPercent = function () {
             var t = "";
@@ -14802,45 +14838,46 @@
       }
       var Zi = document.querySelector(".bagel-svg circle");
       console.log(Zi);
-      var Ki = new an(Zi);
+      var Ki = new cn(Zi);
       Ki.setStrokeDasharrayInPercent(
         document.querySelector(".bagel-svg").getAttribute("data-attr")
       ),
         Ki.setStrokeDashoffsetInPercent(0);
     }
     const Ji = document.querySelectorAll(".anchor");
-    for (let ln = 0; ln < Ji.length; ln++)
-      Ji[ln].addEventListener("click", function (e) {
+    for (let dn = 0; dn < Ji.length; dn++)
+      Ji[dn].addEventListener("click", function (e) {
         e.preventDefault();
-        const t = Ji[ln].getAttribute("href").substr(1);
+        const t = Ji[dn].getAttribute("href").substr(1);
         const i =
           document.getElementById(t).getBoundingClientRect().top +
           window.pageYOffset +
           -180;
         window.scrollTo({ top: i, behavior: "smooth" });
       });
-    document.querySelector(".sidebar-basket-final-profit") &&
-      document
-        .querySelector(".sidebar-basket-final-profit-default")
-        .addEventListener("click", function () {
-          const e = document.querySelector(
-              ".sidebar-basket-final-profit-hidden"
-            ),
-            t = document.querySelector(
-              ".sidebar-basket-final-profit-hidden-container"
-            ).clientHeight;
-          document
-            .querySelector(".sidebar-basket-final-profit")
-            .classList.contains("active")
-            ? (document
-                .querySelector(".sidebar-basket-final-profit")
-                .classList.remove("active"),
-              (e.style.height = 0))
-            : (document
-                .querySelector(".sidebar-basket-final-profit")
-                .classList.add("active"),
-              (e.style.height = t + "px"));
-        }),
+    if (
+      (document.querySelector(".sidebar-basket-final-profit") &&
+        document
+          .querySelector(".sidebar-basket-final-profit-default")
+          .addEventListener("click", function () {
+            const e = document.querySelector(
+                ".sidebar-basket-final-profit-hidden"
+              ),
+              t = document.querySelector(
+                ".sidebar-basket-final-profit-hidden-container"
+              ).clientHeight;
+            document
+              .querySelector(".sidebar-basket-final-profit")
+              .classList.contains("active")
+              ? (document
+                  .querySelector(".sidebar-basket-final-profit")
+                  .classList.remove("active"),
+                (e.style.height = 0))
+              : (document
+                  .querySelector(".sidebar-basket-final-profit")
+                  .classList.add("active"),
+                (e.style.height = t + "px"));
+          }),
       document.querySelector(".delivery-page-item") &&
         document.querySelectorAll('[name="delivery"]').forEach((e) => {
           e.addEventListener("click", function () {
@@ -14857,7 +14894,29 @@
                   .classList.add("active");
           });
         }),
-      (window.FLS = !0),
+      document.querySelector(".form-input__code"))
+    ) {
+      var Qi = document.querySelectorAll(".otp__digit"),
+        en = "0123456789".split("");
+      function un(e) {
+        let t = e.target,
+          i = parseInt(t.classList[1].split("__")[2]);
+        ((t.value = e.key),
+        8 == e.keyCode && i > 1 && t.previousElementSibling.focus(),
+        i < 4 && -1 != en.indexOf("" + e.key)) && t.nextElementSibling.focus();
+        var n = "";
+        for (let { value: e } of Qi) n += e;
+        4 == n.length
+          ? (document.querySelector("#_otp").classList.replace("_notok", "_ok"),
+            (document.querySelector("#_otp").innerText = n))
+          : (document.querySelector("#_otp").classList.replace("_ok", "_notok"),
+            (document.querySelector("#_otp").innerText = n));
+      }
+      Qi.forEach((e) => {
+        e.addEventListener("keyup", un);
+      });
+    }
+    (window.FLS = !0),
       (function (e) {
         let t = new Image();
         (t.onload = t.onerror =

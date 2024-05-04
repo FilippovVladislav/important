@@ -22,12 +22,1763 @@
                         </li>
                     </ul>
                 </nav>
+                <div style="flex-basis: 100%; margin-bottom: 40px;">
+                    <h3 class="size-22" style="margin-bottom: 8px">Во всех полях, ошибка в поле работает однотипно</h3>
+                    <h5 class="size-18" style="margin-bottom: 20px">Пример кода для поля Input</h5>
+                    <br>
+                    <code>
+                        &lt;div class="form-item mb-12"&gt; <br>
+                        &lt;div class="form-input__relative form-input-error"&gt; <br>
+                        &lt;input type="tel" class="input" placeholder="+7 (900) 000-00-00"&gt; <br>
+                        &lt;div class="form-input-error-icon icon" style="--icon: url('../img/icon/icon-close.svg')">&lt;/div&gt;
+                        <br>
+                        &lt;/div&gt; <br>
+                        &lt;div class="error-text">Недопустимый формат телефона&lt;/div&gt; <br>
+                        &lt;/div&gt;
+                    </code>
+                    <br><br>
+                    -- "form-input-error" - изначально не будет, добавляем когда ошибка <br>
+                    -- "error-text" - изначально не будет, добавляем когда возникла ошибка
+                </div>
+                <h3 class="size-22" style="margin-bottom: 20px; flex-basis: 100%">Список всех модалок</h3>
+                <ol style="padding-left: 20px">
+                    <li style="margin-bottom: 20px">
+                        <a href="#" data-popup="#auth">Авторизация</a>
+                    </li>
+                    <li style="margin-bottom: 20px">
+                        <a href="#" data-popup="#auth-error">Авторизация ошибка</a>
+                    </li>
+                    <li style="margin-bottom: 20px">
+                        <a href="#" data-popup="#code">Введите код</a>
+                    </li>
+                    <li style="margin-bottom: 20px">
+                        <a href="#" data-popup="#code2">Введите код (ошибка) и можно запросить повторно</a>
+                    </li>
+                    <li style="margin-bottom: 20px">
+                        <a href="#" data-popup="#report-arrival">Сообщить когда появиться в наличии</a>
+                    </li>
+                    <li style="margin-bottom: 20px">
+                        <a href="#" data-popup="#delete-basket">Хотите удалить все товары из корзины?</a>
+                    </li>
+                    <li style="margin-bottom: 20px">
+                        <a href="#" data-popup="#subscription-modal">Оформление подписки</a>
+                    </li>
+                    <li style="margin-bottom: 20px">
+                        <a href="#" data-popup="#delete-subscription">Отменить подписку</a>
+                    </li>
+                    <li style="margin-bottom: 20px">
+                        <a href="#" data-popup="#subscription-error">Сейчас не получится оформить подписку :(</a>
+                    </li>
+                    <li style="margin-bottom: 20px">
+                        <a href="#" data-popup="#subscription">Подписка модалка</a>
+                    </li>
+                    <li style="margin-bottom: 20px">
+                        <a href="#" data-popup="#subscription-success">Подписка модалка оформлена</a>
+                    </li>
+                    <li style="margin-bottom: 20px">
+                        <a href="#" data-popup="#history">История баллов</a>
+                    </li>
+                    <li style="margin-bottom: 20px">
+                        <a href="#" data-popup="#profile">Изменить профиль</a>
+                    </li>
+                    <li style="margin-bottom: 20px">
+                        <a href="#" data-popup="#profile2">Изменить профиль (аватара нет, но все заполнили)</a>
+                    </li>
+                    <li style="margin-bottom: 20px">
+                        <a href="#" data-popup="#order">Заказ 532 860</a>
+                    </li>
+                    <li style="margin-bottom: 20px">
+                        <a href="#" data-popup="#order-cancellation">Заказ 532 860 отменен</a>
+                    </li>
+                    <li style="margin-bottom: 20px">
+                        <a href="#" data-popup="#order-no-pay">Заказ 532 860 Не оплчен</a>
+                    </li>
+                    <li style="margin-bottom: 20px">
+                        <a href="#" data-popup="#order-edit">Заказ 532 860 Изменить</a>
+                    </li>
+                    <li style="margin-bottom: 20px">
+                        <a href="#" data-popup="#order-step-2">Заказ 532 860 статус 2(Получено на складе)</a>
+                    </li>
+                </ol>
             </div>
         </div>
     </main>
     @@include('html/_footer.htm',{})
 </div>
-@@include('html/_popup.htm',{})
+<div id="auth" aria-hidden="false" class="popup auth-popup">
+    <div class="popup__wrapper">
+        <button data-close="" type="button" class="popup__close icon"
+                style="--icon: url('../img/icon/icon-close.svg')"></button>
+        <div class="popup__content">
+            <div class="popup-content">
+                <div class="popup-important">
+                    <img src="img/popup-important.png" alt="">
+                </div>
+                <div class="popup-title text-center">
+                    Авторизация
+                </div>
+                <p class="text-center size-13 mb-24">Войди по номеру телефона или через социальные сети, чтобы получить
+                    доступ к личному кабинету</p>
+                <form action="#">
+                    <div class="form-item mb-12">
+                        <div class="form-input__relative">
+                            <input type="tel" class="input" placeholder="+7 (900) 000-00-00">
+                            <div class="form-input-error-icon icon"
+                                 style="--icon: url('../img/icon/icon-close.svg')"></div>
+                        </div>
+                        <!-- <div class="error-text">Недопустимый формат телефона</div>-->
+                    </div>
+                    <button type="button" class="button button-orange h-56 mb-24" disabled>Далее</button>
+                    <div class="check-line check-line-agreed">
+                        <input type="checkbox" id="agreed">
+                        <label for="agreed" class="check-label">
+                            <span class="check-label__icon"></span>
+                            <span class="filter-label__text">Согласен с обработкой персональных данных и <a href="#">политикой конфиденциальности</a></span>
+                        </label>
+                    </div>
+                </form>
+                <div class="auth-social">
+                    <a href="#" class="auth-social-item">
+                        <img src="img/auth-google.svg" alt="">
+                    </a>
+                    <a href="#" class="auth-social-item">
+                        <img src="img/auth-vk.svg" alt="">
+                    </a>
+                    <a href="#" class="auth-social-item">
+                        <img src="img/auth-yandex.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="auth-error" aria-hidden="false" class="popup auth-popup">
+    <div class="popup__wrapper">
+        <button data-close="" type="button" class="popup__close icon"
+                style="--icon: url('../img/icon/icon-close.svg')"></button>
+        <div class="popup__content">
+            <div class="popup-content">
+                <div class="popup-important">
+                    <img src="img/popup-important.png" alt="">
+                </div>
+                <div class="popup-title text-center">
+                    Авторизация
+                </div>
+                <p class="text-center size-13 mb-24">Войди по номеру телефона или через социальные сети, чтобы получить
+                    доступ к личному кабинету</p>
+                <form action="#">
+                    <div class="form-item mb-12">
+                        <div class="form-input__relative form-input-error">
+                            <input type="tel" class="input" placeholder="+7 (900) 000-00-00">
+                            <div class="form-input-error-icon icon"
+                                 style="--icon: url('../img/icon/icon-close.svg')"></div>
+                        </div>
+                        <div class="error-text">Недопустимый формат телефона</div>
+                    </div>
+                    <button type="button" class="button button-orange h-56 mb-24" disabled>Далее</button>
+                    <div class="check-line check-line-agreed">
+                        <input type="checkbox" id="agreed2">
+                        <label for="agreed2" class="check-label">
+                            <span class="check-label__icon"></span>
+                            <span class="filter-label__text">Согласен с обработкой персональных данных и <a href="#">политикой конфиденциальности</a></span>
+                        </label>
+                    </div>
+                </form>
+                <div class="auth-social">
+                    <a href="#" class="auth-social-item">
+                        <img src="img/auth-google.svg" alt="">
+                    </a>
+                    <a href="#" class="auth-social-item">
+                        <img src="img/auth-vk.svg" alt="">
+                    </a>
+                    <a href="#" class="auth-social-item">
+                        <img src="img/auth-yandex.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="code" aria-hidden="false" class="popup auth-popup">
+    <div class="popup__wrapper">
+        <button data-close="" type="button" class="popup__close icon"
+                style="--icon: url('../img/icon/icon-close.svg')"></button>
+        <div class="popup__content">
+            <div class="popup-content">
+                <a href="#" data-popup="#auth" class="back-auth mb-24 button button-orange-light button-mini icon"
+                   style="--icon: url('../img/icon/icon-arrow-left.svg')">
+                    Обратно
+                </a>
+                <div class="popup-title text-center mb-8">
+                    Введите код из смс
+                </div>
+                <p class="text-center size-13 mb-8 color-80">Мы отправили его на ваш номер</p>
+                <div class="popup-phone-number">
+                    +7 (987) ***-51-57
+                </div>
+                <form action="#">
+                    <div class="form-item mb-12">
+                        <div class="form-input__relative form-input__code otp-input-fields">
+                            <input type="number" class="otp__digit otp__field__1 input">
+                            <input type="number" class="otp__digit otp__field__2 input">
+                            <input type="number" class="otp__digit otp__field__3 input">
+                            <input type="number" class="otp__digit otp__field__4 input">
+                        </div>
+                        <!--                        <div class="error-text">Неверный код </div>-->
+                    </div>
+                    <p id="_otp" class="_notok">855412</p>
+                    <button type="button" class="button button-orange h-56 mb-8" disabled>Далее</button>
+                    <button type="button" class="button button-orange-light h-56" disabled>Отправить код повторно
+                        00:42
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="code2" aria-hidden="false" class="popup auth-popup">
+    <div class="popup__wrapper">
+        <button data-close="" type="button" class="popup__close icon"
+                style="--icon: url('../img/icon/icon-close.svg')"></button>
+        <div class="popup__content">
+            <div class="popup-content">
+                <a href="#" data-popup="#auth" class="back-auth mb-24 button button-orange-light button-mini icon"
+                   style="--icon: url('../img/icon/icon-arrow-left.svg')">
+                    Обратно
+                </a>
+                <div class="popup-title text-center mb-8">
+                    Введите код из смс
+                </div>
+                <p class="text-center size-13 mb-8 color-80">Мы отправили его на ваш номер</p>
+                <div class="popup-phone-number">
+                    +7 (987) ***-51-57
+                </div>
+                <form action="#">
+                    <div class="form-item mb-12">
+                        <div class="form-input__relative form-input__code otp-input-fields form-input-error">
+                            <input type="number" class="otp__digit otp__field__1 input" value="1">
+                            <input type="number" class="otp__digit otp__field__2 input" value="1">
+                            <input type="number" class="otp__digit otp__field__3 input" value="1">
+                            <input type="number" class="otp__digit otp__field__4 input" value="1">
+                        </div>
+                        <div class="error-text">Неверный код</div>
+                    </div>
+                    <button type="button" class="button button-orange h-56 mb-8" disabled>Далее</button>
+                    <button type="button" class="button button-orange-light h-56">Отправить код повторно</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="report-arrival" aria-hidden="true" class="popup">
+    <div class="popup__wrapper">
+        <button data-close type="button" class="popup__close icon"
+                style="--icon: url('../img/icon/icon-close.svg')"></button>
+        <div class="popup__content">
+            <div class="popup-content">
+                <div class="popup-title">
+                    Сообщить, когда появится в наличии
+                </div>
+                <div class="form-item">
+                    <label for="name" class="form-item__label">Имя</label>
+                    <div class="form-input">
+                        <input type="text" id="name" class="input" placeholder="Введите ваше имя">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label for="Email" class="form-item__label">Email</label>
+                    <div class="form-input">
+                        <input type="text" id="Email" class="input" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label for="Email" class="form-item__label">Сообщить, если появится в течение</label>
+                    <div class="select-element select-element-standard">
+                        <div class="select-element__default icon"
+                             style="--icon: url('../img/icon/icon-arrow-down.svg')">
+                            Одной недели
+                        </div>
+                        <div class="select-element__items">
+                            <div class="select-element__item">
+                                <input checked type="radio" id="one-week" name="period" value="one-week">
+                                <label for="one-week">
+                                    <span class="sort-icon"></span>
+                                    <span class="sort-text">Одной недели</span>
+                                </label>
+                            </div>
+                            <div class="select-element__item">
+                                <input type="radio" id="two-week" name="period" value="two-week">
+                                <label for="two-week">
+                                    <span class="sort-icon"></span>
+                                    <span class="sort-text">Двух недель</span>
+                                </label>
+                            </div>
+                            <div class="select-element__item">
+                                <input type="radio" id="three-week" name="period" value="three-week">
+                                <label for="three-week">
+                                    <span class="sort-icon"></span>
+                                    <span class="sort-text">Трех недель</span>
+                                </label>
+                            </div>
+                            <div class="select-element__item">
+                                <input type="radio" id="one-month" name="period" value="one-month">
+                                <label for="one-month">
+                                    <span class="sort-icon"></span>
+                                    <span class="sort-text">Месяца</span>
+                                </label>
+                            </div>
+                            <div class="select-element__item">
+                                <input type="radio" id="two-month" name="period" value="two-month">
+                                <label for="two-month">
+                                    <span class="sort-icon"></span>
+                                    <span class="sort-text">Двух месяцев</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="check-line check-line-agreed">
+                    <input type="checkbox" id="author8">
+                    <label for="author8" class="check-label">
+                        <span class="check-label__icon"></span>
+                        <span class="filter-label__text">Согласен с обработкой персональных данных и <a
+                                href="#">политикой конфиденциальности</a></span>
+                    </label>
+                </div>
+                <button type="button" class="button button-orange h-56">Подтвердить</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="delete-basket" aria-hidden="true" class="popup">
+    <div class="popup__wrapper">
+        <button data-close type="button" class="popup__close icon"
+                style="--icon: url('../img/icon/icon-close.svg')"></button>
+        <div class="popup__content">
+            <div class="popup-content">
+                <div class="popup-title mb-12 text-center">
+                    Хотите удалить все товары из корзины?
+                </div>
+                <p class="size-14 color-80 mb-24 text-center">
+                    Потом сможете собрать новую корзину
+                </p>
+                <div class="popup-button">
+                    <button data-close type="button" class="button h-56 button-orange-light">Отмена</button>
+                    <button type="button" class="button h-56 button-red">Удалить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="subscription-modal" aria-hidden="true" class="popup popup-608">
+    <div class="popup__wrapper">
+        <button data-close type="button" class="popup__close icon"
+                style="--icon: url('../img/icon/icon-close.svg')"></button>
+        <div class="popup__content">
+            <div class="popup-content">
+                <div class="popup-top mb-24">
+                    <div class="popup-title mb-0">
+                        Подписка “Это важно”
+                    </div>
+                    <div class="subscription-popup-info">
+                        <div class="subscription-popup-info-label">Оформлен</div>
+                        <div class="subscription-popup-info-value">01.09.2024</div>
+                    </div>
+                </div>
+                <div class="popup-step mb-24">
+                    <div class="popup-step-item active">
+                        <div class="popup-step-item-circle"></div>
+                        <div class="popup-step-item-title">В сборке (отправим 1-го числа)</div>
+                    </div>
+                    <div class="popup-step-item">
+                        <div class="popup-step-item-circle"></div>
+                        <div class="popup-step-item-title">Получено на склад</div>
+                    </div>
+                    <div class="popup-step-item">
+                        <div class="popup-step-item-circle"></div>
+                        <div class="popup-step-item-title">В пункте выдаче</div>
+                    </div>
+                    <div class="popup-step-item">
+                        <div class="popup-step-item-circle"></div>
+                        <div class="popup-step-item-title">Получено</div>
+                    </div>
+                </div>
+                <div class="popup-data-delivery mb-24">
+                    <div class="size-22 font-balsamiq">Данные доставки</div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-box.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Способ добавки</div>
+                            <div class="popup-data-delivery-title">Почта России</div>
+                            <div class="popup-data-delivery-text">Простое письмо по РФ · Трек номер: 321532450594</div>
+                        </div>
+                        <div class="popup-data-delivery-img">
+                            <img src="img/delivery-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-truck.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Примерная дата доставки</div>
+                            <div class="popup-data-delivery-title">26 марта, вторник</div>
+                        </div>
+                    </div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-location.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Адрес доставки</div>
+                            <div class="popup-data-delivery-title">Ульяновск, Бульвар архитекторов 9</div>
+                        </div>
+                    </div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-profile.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Получатель</div>
+                            <div class="popup-data-delivery-title">Илья Попов</div>
+                            <div class="popup-data-delivery-text">+7 (987) 688 51 57 · IlyaP1998@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-order-information.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Комментарий к заказу</div>
+                            <div class="popup-data-delivery-title">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-order-detail mb-24">
+                    <div class="size-22 font-balsamiq mb-8">Детали заказа</div>
+                    <div class="sidebar-order-detailing">
+                        <div class="sidebar-order-detailing-label">Товары (3)</div>
+                        <div class="sidebar-order-detailing-value">1 900 ₽</div>
+                    </div>
+                    <div class="sidebar-order-detailing">
+                        <div class="sidebar-order-detailing-label">Начислим баллов</div>
+                        <div class="sidebar-order-detailing-value color-orange">+284</div>
+                    </div>
+                    <div class="sidebar-order-detailing">
+                        <div class="sidebar-order-detailing-label">Доставка</div>
+                        <div class="sidebar-order-detailing-value color-green">Бесплатно</div>
+                    </div>
+                    <div class="sidebar-basket-final-result">
+                        Итого
+                        <span>1 900 <span class="ruble">₽</span></span>
+                    </div>
+                </div>
+                <div class="popup-fast-link-container mb-24">
+                    <a href="#" class="popup-fast-link">
+                        <span class="popup-fast-link-left">
+                            <span class="popup-fast-link-icon icon"
+                                  style="--icon: url('../img/icon/icon-messages.svg')"></span>
+                            Поддержка
+                        </span>
+                        <span class="popup-fast-link-arrow icon"
+                              style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                    </a>
+                    <a href="#" class="popup-fast-link popup-fast-link-red" data-popup="#delete-subscription">
+                        <span class="popup-fast-link-left">
+                            <span class="popup-fast-link-icon icon"
+                                  style="--icon: url('../img/icon/icon-close.svg')"></span>
+                            Отменить подписку
+                        </span>
+                        <span class="popup-fast-link-arrow icon"
+                              style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                    </a>
+                </div>
+                <button type="button" class="button button-orange-light h-56 icon"
+                        style="--icon: url('../img/icon/icon-edit.svg')">Изменить данные
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="delete-subscription" aria-hidden="true" class="popup">
+    <div class="popup__wrapper">
+        <button data-close type="button" class="popup__close icon"
+                style="--icon: url('../img/icon/icon-close.svg')"></button>
+        <div class="popup__content">
+            <div class="popup-content">
+                <div class="popup-title mb-12 text-center">
+                    Хотите отписаться от подписки etovazno.com?
+                </div>
+                <p class="size-14 color-80 mb-24 text-center">
+                    Вы больше не сможете получать наши боксы, но в любой момент можете возобновить подписку
+                </p>
+                <div class="popup-button">
+                    <button data-close type="button" class="button h-56 button-orange-light">Отмена</button>
+                    <button type="button" class="button h-56 button-red">Отписаться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="subscription-error" aria-hidden="true" class="popup">
+    <div class="popup__wrapper">
+        <button data-close type="button" class="popup__close icon"
+                style="--icon: url('../img/icon/icon-close.svg')"></button>
+        <div class="popup__content">
+            <div class="popup-content">
+                <div class="popup-title mb-12 text-center">
+                    Сейчас не получится оформить подписку :(
+                </div>
+                <p class="size-14 color-80 mb-24 text-center">
+                    Оформление подписки происходить 11, 12, 13 числа каждого месяца
+                </p>
+                <button data-close type="button" class="button h-56 button-orange-light">Отмена</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="subscription" aria-hidden="true" class="popup popup-608">
+    <div class="popup__wrapper">
+        <button data-close type="button" class="popup__close icon"
+                style="--icon: url('../img/icon/icon-close.svg')"></button>
+        <div class="popup__content">
+            <div class="popup-content">
+                <div class="subscription-popup-top">
+                    <div class="subscription-price">
+                        1 990 <span class="ruble">₽</span> / мес.
+                    </div>
+                </div>
+                <div class="subscription-popup-info-message mb-24 icon"
+                     style="--icon: url('../img/icon/icon-info.svg')">
+                    Конвертики отправляются вам 1 числа следующего месяца.
+                </div>
+                <div class="popup-title mb-8 text-center">
+                    Подписка etovazno.com
+                </div>
+                <div class="popup-subscription-advantages">
+                    <div class="popup-subscription-advantage icon"
+                         style="--icon: url('../img/icon/icon-fi-rr-fox.svg')">Брелки
+                    </div>
+                    <div class="popup-subscription-advantage icon"
+                         style="--icon: url('../img/icon/icon-fi-rr-playing-cards.svg')">Обложки
+                    </div>
+                    <div class="popup-subscription-advantage icon"
+                         style="--icon: url('../img/icon/icon-fi-rr-jpg.svg')">Блокноты
+                    </div>
+                    <div class="popup-subscription-advantage icon"
+                         style="--icon: url('../img/icon/icon-fi-rr-sticker.svg')">Стикеры
+                    </div>
+                    <div class="popup-subscription-advantage icon"
+                         style="--icon: url('../img/icon/icon-fi-rr-menu-dots.svg')">Прочее
+                    </div>
+                </div>
+                <div class="popup-subscription-advantage-info">
+                    <img src="img/checkIcon.svg" alt="">
+                    В первых числах каждого месяца мы бережно собираем бокс из новинок, вышедших за предыдущий месяц
+                </div>
+                <div class="popup-subscription-advantage-info">
+                    <img src="img/checkIcon.svg" alt="">
+                    С июля 2023 года это будут не только стикерные новинки, но и другие товары из нашего магазина,
+                    например: брелки, обложки на паспорт, блокноты и так далее
+                </div>
+                <div class="popup-subscription-advantage-info">
+                    <img src="img/checkIcon.svg" alt="">
+                    Стоимость товаров в подписке по отдельности дороже, их общая приблизительная стоимость — 2 500 ₽
+                </div>
+                <div class="popup-subscription-advantage-info">
+                    <img src="img/checkIcon.svg" alt="">
+                    Доставка по Росcии уже включена в стоимость
+                </div>
+                <div class="popup-bottom mt-16">
+                    <button type="button" class="mb-8 button h-56 button-orange">Подписаться</button>
+                    <p class="color-80 text-center">Подписка оформляется только 11, 12, 13 числа</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="subscription-success" aria-hidden="true" class="popup popup-608 subscription-popup-success">
+    <div class="popup__wrapper">
+        <button data-close type="button" class="popup__close icon"
+                style="--icon: url('../img/icon/icon-close.svg')"></button>
+        <div class="popup__content">
+            <div class="popup-content">
+                <div class="subscription-popup-top">
+
+                </div>
+                <div class="subscription-popup-info-message mb-24 icon"
+                     style="--icon: url('../img/icon/icon-info.svg')">
+                    Конвертики отправляются вам 1 числа следующего месяца.
+                </div>
+                <div class="popup-title mb-8 text-center">
+                    Подписка etovazno.com
+                </div>
+                <div class="popup-subscription-advantages">
+                    <div class="popup-subscription-advantage icon"
+                         style="--icon: url('../img/icon/icon-fi-rr-fox.svg')">Брелки
+                    </div>
+                    <div class="popup-subscription-advantage icon"
+                         style="--icon: url('../img/icon/icon-fi-rr-playing-cards.svg')">Обложки
+                    </div>
+                    <div class="popup-subscription-advantage icon"
+                         style="--icon: url('../img/icon/icon-fi-rr-jpg.svg')">Блокноты
+                    </div>
+                    <div class="popup-subscription-advantage icon"
+                         style="--icon: url('../img/icon/icon-fi-rr-sticker.svg')">Стикеры
+                    </div>
+                    <div class="popup-subscription-advantage icon"
+                         style="--icon: url('../img/icon/icon-fi-rr-menu-dots.svg')">Прочее
+                    </div>
+                </div>
+                <div class="popup-subscription-advantage-info">
+                    <img src="img/checkIcon.svg" alt="">
+                    В первых числах каждого месяца мы бережно собираем бокс из новинок, вышедших за предыдущий месяц
+                </div>
+                <div class="popup-subscription-advantage-info">
+                    <img src="img/checkIcon.svg" alt="">
+                    С июля 2023 года это будут не только стикерные новинки, но и другие товары из нашего магазина,
+                    например: брелки, обложки на паспорт, блокноты и так далее
+                </div>
+                <div class="popup-subscription-advantage-info">
+                    <img src="img/checkIcon.svg" alt="">
+                    Стоимость товаров в подписке по отдельности дороже, их общая приблизительная стоимость — 2 500 ₽
+                </div>
+                <div class="popup-subscription-advantage-info">
+                    <img src="img/checkIcon.svg" alt="">
+                    Доставка по Росcии уже включена в стоимость
+                </div>
+                <div class="popup-bottom mt-16">
+                    <div class="popup-button mb-8">
+                        <button type="button" class="button button-orange h-56">Трек номер <span>321532450594</span>
+                        </button>
+                        <button type="button" class="button button-orange-light h-56">Отписаться</button>
+                    </div>
+                    <p class="color-80 text-center">Подписка оформляется только 11, 12, 13 числа</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="history" aria-hidden="true" class="popup popup-608">
+    <div class="popup__wrapper">
+        <button data-close type="button" class="popup__close icon"
+                style="--icon: url('../img/icon/icon-close.svg')"></button>
+        <div class="popup__content">
+            <div class="popup-content">
+                <div class="popup-title mb-16">
+                    История баллов
+                </div>
+                <div class="popup-bg mb-16 popup-bg-flex">
+                    <div>
+                        <div class="color-80 fw-500 mb-4">Накоплено баллов</div>
+                        <div class="profile-balls-number size-36 font-balsamiq icon"
+                             style="--icon: url('../img/icon/icon-bonus.svg')">32 054
+                        </div>
+                    </div>
+                    <a href="#" class="button button-orange-light h-48 button-more">Подробнее</a>
+                </div>
+                <div class="popup-bg">
+                    <div class="popup-history-item popup-history-item-on">
+                        <div class="popup-history-item-icon icon"
+                             style="--icon: url('../img/icon/icon-arrow-down.svg')"></div>
+                        <div class="popup-history-item-content">
+                            <div class="popup-history-item-flex">
+                                <div class="popup-history-item-label">Начисление</div>
+                                <div class="popup-history-item-date">05.09.2024</div>
+                            </div>
+                            <div class="popup-history-item-flex popup-history-item-info">
+                                <span>Начисление за заказ <span class="ruble">№</span>11700</span>
+                                <span class="popup-history-item-count">+440</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-history-item popup-history-item-on">
+                        <div class="popup-history-item-icon icon"
+                             style="--icon: url('../img/icon/icon-arrow-down.svg')"></div>
+                        <div class="popup-history-item-content">
+                            <div class="popup-history-item-flex">
+                                <div class="popup-history-item-label">Начисление</div>
+                                <div class="popup-history-item-date">05.09.2024</div>
+                            </div>
+                            <div class="popup-history-item-flex popup-history-item-info">
+                                <span>Начисление за заказ <span class="ruble">№</span>11700</span>
+                                <span class="popup-history-item-count">+440</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-history-item popup-history-item-off">
+                        <div class="popup-history-item-icon icon"
+                             style="--icon: url('../img/icon/icon-arrow-down.svg')"></div>
+                        <div class="popup-history-item-content">
+                            <div class="popup-history-item-flex">
+                                <div class="popup-history-item-label">Списание</div>
+                                <div class="popup-history-item-date">05.09.2024</div>
+                            </div>
+                            <div class="popup-history-item-flex popup-history-item-info">
+                                <span>Начисление за заказ <span class="ruble">№</span>11700</span>
+                                <span class="popup-history-item-count">-440</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-history-item popup-history-item-off">
+                        <div class="popup-history-item-icon icon"
+                             style="--icon: url('../img/icon/icon-arrow-down.svg')"></div>
+                        <div class="popup-history-item-content">
+                            <div class="popup-history-item-flex">
+                                <div class="popup-history-item-label">Списание</div>
+                                <div class="popup-history-item-date">05.09.2024</div>
+                            </div>
+                            <div class="popup-history-item-flex popup-history-item-info">
+                                <span>Начисление за заказ <span class="ruble">№</span>11700</span>
+                                <span class="popup-history-item-count">-440</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="profile" aria-hidden="true" class="popup popup-608">
+    <div class="popup__wrapper">
+        <button data-close type="button" class="popup__close icon"
+                style="--icon: url('../img/icon/icon-close.svg')"></button>
+        <div class="popup__content">
+            <div class="popup-content">
+                <div class="popup-title mb-16">
+                    Изменить профиль
+                </div>
+                <form action="#">
+                    <div class="form-avatar mb-24">
+                        <input type="file" class="file-avatar" id="file-avatar">
+                        <label for="file-avatar" class="form-avatar__pic">
+                            <img src="img/avatar.png" alt="">
+                            <span class="form-avatar__icon icon"
+                                  style="--icon: url('../img/icon/icon-camera.svg')"></span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <div class="size-20 font-balsamiq mb-6">Имя</div>
+                        <div class="form-input__relative">
+                            <input type="text" class="input" placeholder="Введите ваше имя">
+                            <div class="form-input-error-icon icon"
+                                 style="--icon: url('../img/icon/icon-close.svg')"></div>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <div class="size-20 font-balsamiq mb-6">Телефон</div>
+                        <div class="form-input__relative">
+                            <input type="tel" class="input" placeholder="Введите ваш телефон">
+                            <div class="form-input-error-icon icon"
+                                 style="--icon: url('../img/icon/icon-close.svg')"></div>
+                            <a href="#" class="form-input__tel-confirm" disabled="">Подтвердить</a>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <div class="size-20 font-balsamiq mb-6">Email</div>
+                        <div class="form-input__relative">
+                            <input type="text" class="input" placeholder="Введите вашу электронную почту">
+                            <div class="form-input-error-icon icon"
+                                 style="--icon: url('../img/icon/icon-close.svg')"></div>
+                        </div>
+                    </div>
+                    <div class="size-20 font-balsamiq">Привязать ваши аккаунты</div>
+                    <p class="size-13 color-60 mb-8">Сможете входить не только по номеру телефона, но и через
+                        привязанную соцсеть</p>
+                    <div class="binding-accounts mb-24">
+                        <a href="#" class="binding-account">
+                            <img src="img/auth-google.svg" alt="" class="binding-account-img">
+                            Привязать Google
+                        </a>
+                        <a href="#" class="binding-account">
+                            <img src="img/auth-vk.svg" alt="" class="binding-account-img">
+                            Привязать ВК
+                        </a>
+                        <a href="#" class="binding-account">
+                            <img src="img/auth-yandex.svg" alt="" class="binding-account-img">
+                            Привязать Яндекс
+                        </a>
+                    </div>
+                    <div class="popup-fast-link-container mb-24">
+                        <a href="#" class="popup-fast-link">
+							<span class="popup-fast-link-left">
+								<span class="popup-fast-link-icon icon"
+                                      style="--icon: url('../img/icon/icon-logout.svg')"></span>
+								Выйти из аккаунта
+							</span>
+                            <span class="popup-fast-link-arrow icon"
+                                  style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                        </a>
+                        <a href="#" class="popup-fast-link popup-fast-link-red" data-popup="#delete-subscription">
+							<span class="popup-fast-link-left">
+								<span class="popup-fast-link-icon icon"
+                                      style="--icon: url('../img/icon/icon-trash.svg')"></span>
+								Удалить профиль
+							</span>
+                            <span class="popup-fast-link-arrow icon"
+                                  style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                        </a>
+                    </div>
+                    <button type="button" class="button button-orange h-56" disabled>Сохранить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="profile2" aria-hidden="true" class="popup popup-608">
+    <div class="popup__wrapper">
+        <button data-close type="button" class="popup__close icon"
+                style="--icon: url('../img/icon/icon-close.svg')"></button>
+        <div class="popup__content">
+            <div class="popup-content">
+                <div class="popup-title mb-16">
+                    Изменить профиль
+                </div>
+                <form action="#">
+                    <div class="form-avatar mb-24">
+                        <input type="file" class="file-avatar" id="file-avatar">
+                        <label for="file-avatar" class="form-avatar__pic">
+                            <img src="img/avatar-default.svg" alt="">
+                            <span class="form-avatar__icon icon"
+                                  style="--icon: url('../img/icon/icon-camera.svg')"></span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <div class="size-20 font-balsamiq mb-6">Имя</div>
+                        <div class="form-input__relative">
+                            <input type="text" class="input" placeholder="Введите ваше имя" value="Илья">
+                            <div class="form-input-error-icon icon"
+                                 style="--icon: url('../img/icon/icon-close.svg')"></div>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <div class="size-20 font-balsamiq mb-6">Телефон</div>
+                        <div class="form-input__relative">
+                            <input type="tel" class="input" placeholder="Введите ваш телефон" value="+7 999 123-45-67">
+                            <div class="form-input-error-icon icon"
+                                 style="--icon: url('../img/icon/icon-close.svg')"></div>
+                            <!-- <a href="#" class="form-input__tel-confirm" disabled="">Подтвердить</a>-->
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <div class="size-20 font-balsamiq mb-6">Email</div>
+                        <div class="form-input__relative">
+                            <input type="text" class="input" placeholder="Введите вашу электронную почту"
+                                   value="mail@mail.com">
+                            <div class="form-input-error-icon icon"
+                                 style="--icon: url('../img/icon/icon-close.svg')"></div>
+                        </div>
+                    </div>
+                    <div class="size-20 font-balsamiq">Привязать ваши аккаунты</div>
+                    <p class="size-13 color-60 mb-8">Сможете входить не только по номеру телефона, но и через
+                        привязанную соцсеть</p>
+                    <div class="binding-accounts mb-24">
+                        <a href="#" class="binding-account active">
+                            <img src="img/auth-google.svg" alt="" class="binding-account-img">
+                            Привязать Google
+                        </a>
+                        <a href="#" class="binding-account">
+                            <img src="img/auth-vk.svg" alt="" class="binding-account-img">
+                            Привязать ВК
+                        </a>
+                        <a href="#" class="binding-account">
+                            <img src="img/auth-yandex.svg" alt="" class="binding-account-img">
+                            Привязать Яндекс
+                        </a>
+                    </div>
+                    <div class="popup-fast-link-container mb-24">
+                        <a href="#" class="popup-fast-link">
+							<span class="popup-fast-link-left">
+								<span class="popup-fast-link-icon icon"
+                                      style="--icon: url('../img/icon/icon-logout.svg')"></span>
+								Выйти из аккаунта
+							</span>
+                            <span class="popup-fast-link-arrow icon"
+                                  style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                        </a>
+                        <a href="#" class="popup-fast-link popup-fast-link-red" data-popup="#delete-subscription">
+							<span class="popup-fast-link-left">
+								<span class="popup-fast-link-icon icon"
+                                      style="--icon: url('../img/icon/icon-trash.svg')"></span>
+								Удалить профиль
+							</span>
+                            <span class="popup-fast-link-arrow icon"
+                                  style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                        </a>
+                    </div>
+                    <button type="button" class="button button-orange h-56">Сохранить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="order" aria-hidden="true" class="popup popup-608">
+    <div class="popup__wrapper">
+        <button data-close type="button" class="popup__close icon"
+                style="--icon: url('../img/icon/icon-close.svg')"></button>
+        <div class="popup__content">
+            <div class="popup-content">
+                <div class="popup-top mb-24">
+                    <div class="popup-title mb-0">
+                        Заказ 532 860
+                    </div>
+                    <div class="subscription-popup-info">
+                        <div class="subscription-popup-info-label">Оформлен</div>
+                        <div class="subscription-popup-info-value">01.09.2024</div>
+                    </div>
+                </div>
+                <div class="popup-step mb-24">
+                    <div class="popup-step-item active">
+                        <div class="popup-step-item-circle"></div>
+                        <div class="popup-step-item-title">В сборке (отправим 1-го числа)</div>
+                    </div>
+                    <div class="popup-step-item">
+                        <div class="popup-step-item-circle"></div>
+                        <div class="popup-step-item-title">Получено на склад</div>
+                    </div>
+                    <div class="popup-step-item">
+                        <div class="popup-step-item-circle"></div>
+                        <div class="popup-step-item-title">В пункте выдаче</div>
+                    </div>
+                    <div class="popup-step-item">
+                        <div class="popup-step-item-circle"></div>
+                        <div class="popup-step-item-title">Получено</div>
+                    </div>
+                </div>
+                <div class="popup-data-delivery mb-24">
+                    <div class="size-22 font-balsamiq">Данные доставки</div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-box.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Способ добавки</div>
+                            <div class="popup-data-delivery-title">Почта России</div>
+                            <div class="popup-data-delivery-text">Простое письмо по РФ · Трек номер: 321532450594</div>
+                        </div>
+                        <div class="popup-data-delivery-img">
+                            <img src="img/delivery-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-truck.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Примерная дата доставки</div>
+                            <div class="popup-data-delivery-title">26 марта, вторник</div>
+                        </div>
+                    </div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-location.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Адрес доставки</div>
+                            <div class="popup-data-delivery-title">Ульяновск, Бульвар архитекторов 9</div>
+                        </div>
+                    </div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-profile.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Получатель</div>
+                            <div class="popup-data-delivery-title">Илья Попов</div>
+                            <div class="popup-data-delivery-text">+7 (987) 688 51 57 · IlyaP1998@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-order-information.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Комментарий к заказу</div>
+                            <div class="popup-data-delivery-title">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-bg mb-24">
+                    <div class="size-22 font-balsamiq">Состав заказа</div>
+                    <div class="popup-order-compound">
+                        <a href="#" class="popup-order-compound-pic">
+                            <img src="img/product.png" alt="">
+                        </a>
+                        <div class="popup-order-compound-content">
+                            <div class="popup-order-compound-info">
+                                <a href="#" class="popup-order-compound-name">
+                                    Стикер-пак "Мерцающий, сверкающий!"
+                                </a>
+                                <div class="popup-order-compound-description">
+                                    Вариант: <span class="color-plum">Новогодний</span>
+                                </div>
+                            </div>
+                            <div class="popup-order-compound-price">
+                                <div class="product-price">
+                                    <div class="product-price__current">
+                                        9 240<span class="ruble">₽</span>
+                                    </div>
+                                    <div class="product-price__old">890₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-order-compound">
+                        <a href="#" class="popup-order-compound-pic">
+                            <img src="img/product.png" alt="">
+                        </a>
+                        <div class="popup-order-compound-content">
+                            <div class="popup-order-compound-info">
+                                <a href="#" class="popup-order-compound-name">
+                                    Стикер-пак "Мерцающий, сверкающий!"
+                                </a>
+                                <div class="popup-order-compound-description">
+                                    Вариант: <span class="color-plum">Новогодний</span>
+                                </div>
+                            </div>
+                            <div class="popup-order-compound-price">
+                                <div class="product-price">
+                                    <div class="product-price__current">
+                                        9 240<span class="ruble">₽</span>
+                                    </div>
+                                    <div class="product-price__old">890₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-order-compound">
+                        <a href="#" class="popup-order-compound-pic">
+                            <img src="img/product.png" alt="">
+                        </a>
+                        <div class="popup-order-compound-content">
+                            <div class="popup-order-compound-info">
+                                <a href="#" class="popup-order-compound-name">
+                                    Стикер-пак "Мерцающий, сверкающий!"
+                                </a>
+                                <div class="popup-order-compound-description">
+                                    Вариант: <span class="color-plum">Новогодний</span>
+                                </div>
+                            </div>
+                            <div class="popup-order-compound-price">
+                                <div class="product-price">
+                                    <div class="product-price__current">
+                                        9 240<span class="ruble">₽</span>
+                                    </div>
+                                    <div class="product-price__old">890₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-order-detail mb-24">
+                    <div class="size-22 font-balsamiq mb-8">Детали заказа</div>
+                    <div class="sidebar-order-detailing">
+                        <div class="sidebar-order-detailing-label">Товары (3)</div>
+                        <div class="sidebar-order-detailing-value">1 900 ₽</div>
+                    </div>
+                    <div class="sidebar-order-detailing">
+                        <div class="sidebar-order-detailing-label">Начислим баллов</div>
+                        <div class="sidebar-order-detailing-value color-orange">+284</div>
+                    </div>
+                    <div class="sidebar-order-detailing">
+                        <div class="sidebar-order-detailing-label">Доставка</div>
+                        <div class="sidebar-order-detailing-value color-green">Бесплатно</div>
+                    </div>
+                    <div class="sidebar-basket-final-result">
+                        Итого
+                        <span>1 900 <span class="ruble">₽</span></span>
+                    </div>
+                </div>
+                <div class="popup-fast-link-container mb-24">
+                    <a href="#" class="popup-fast-link">
+                        <span class="popup-fast-link-left">
+                            <span class="popup-fast-link-icon icon"
+                                  style="--icon: url('../img/icon/icon-messages.svg')"></span>
+                            Поддержка
+                        </span>
+                        <span class="popup-fast-link-arrow icon"
+                              style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                    </a>
+                    <a href="#" class="popup-fast-link popup-fast-link-red" data-popup="#delete-subscription">
+                        <span class="popup-fast-link-left">
+                            <span class="popup-fast-link-icon icon"
+                                  style="--icon: url('../img/icon/icon-close.svg')"></span>
+                        Отменить заказ
+                        </span>
+                        <span class="popup-fast-link-arrow icon"
+                              style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                    </a>
+                </div>
+                <div class="popup-button popup-button-column">
+                    <button type="button" class="button button-orange-light h-56 icon"
+                            style="--icon: url('../img/icon/icon-edit.svg')">Изменить данные
+                    </button>
+                    <button type="button" class="button button-orange h-56 icon"
+                            style="--icon: url('../img/icon/icon-rotate-left.svg')">Заказать повторно
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="order-cancellation" aria-hidden="true" class="popup popup-608">
+    <div class="popup__wrapper">
+        <button data-close type="button" class="popup__close icon"
+                style="--icon: url('../img/icon/icon-close.svg')"></button>
+        <div class="popup__content">
+            <div class="popup-content">
+                <div class="popup-top mb-24">
+                    <div class="popup-title mb-0">
+                        Заказ 532 860
+                    </div>
+                    <div class="subscription-popup-info">
+                        <div class="subscription-popup-info-label">Оформлен</div>
+                        <div class="subscription-popup-info-value">01.09.2024</div>
+                    </div>
+                </div>
+                <div class="size-36 text-center color-red font-balsamiq mb-24">Отменён</div>
+                <div class="popup-data-delivery mb-24">
+                    <div class="size-22 font-balsamiq">Данные доставки</div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-box.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Способ добавки</div>
+                            <div class="popup-data-delivery-title">Почта России</div>
+                            <div class="popup-data-delivery-text">Простое письмо по РФ · Трек номер: 321532450594</div>
+                        </div>
+                        <div class="popup-data-delivery-img">
+                            <img src="img/delivery-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-truck.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Примерная дата доставки</div>
+                            <div class="popup-data-delivery-title">26 марта, вторник</div>
+                        </div>
+                    </div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-location.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Адрес доставки</div>
+                            <div class="popup-data-delivery-title">Ульяновск, Бульвар архитекторов 9</div>
+                        </div>
+                    </div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-profile.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Получатель</div>
+                            <div class="popup-data-delivery-title">Илья Попов</div>
+                            <div class="popup-data-delivery-text">+7 (987) 688 51 57 · IlyaP1998@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-order-information.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Комментарий к заказу</div>
+                            <div class="popup-data-delivery-title">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-bg mb-24">
+                    <div class="size-22 font-balsamiq">Состав заказа</div>
+                    <div class="popup-order-compound">
+                        <a href="#" class="popup-order-compound-pic">
+                            <img src="img/product.png" alt="">
+                        </a>
+                        <div class="popup-order-compound-content">
+                            <div class="popup-order-compound-info">
+                                <a href="#" class="popup-order-compound-name">
+                                    Стикер-пак "Мерцающий, сверкающий!"
+                                </a>
+                                <div class="popup-order-compound-description">
+                                    Вариант: <span class="color-plum">Новогодний</span>
+                                </div>
+                            </div>
+                            <div class="popup-order-compound-price">
+                                <div class="product-price">
+                                    <div class="product-price__current">
+                                        9 240<span class="ruble">₽</span>
+                                    </div>
+                                    <div class="product-price__old">890₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-order-compound">
+                        <a href="#" class="popup-order-compound-pic">
+                            <img src="img/product.png" alt="">
+                        </a>
+                        <div class="popup-order-compound-content">
+                            <div class="popup-order-compound-info">
+                                <a href="#" class="popup-order-compound-name">
+                                    Стикер-пак "Мерцающий, сверкающий!"
+                                </a>
+                                <div class="popup-order-compound-description">
+                                    Вариант: <span class="color-plum">Новогодний</span>
+                                </div>
+                            </div>
+                            <div class="popup-order-compound-price">
+                                <div class="product-price">
+                                    <div class="product-price__current">
+                                        9 240<span class="ruble">₽</span>
+                                    </div>
+                                    <div class="product-price__old">890₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-order-compound">
+                        <a href="#" class="popup-order-compound-pic">
+                            <img src="img/product.png" alt="">
+                        </a>
+                        <div class="popup-order-compound-content">
+                            <div class="popup-order-compound-info">
+                                <a href="#" class="popup-order-compound-name">
+                                    Стикер-пак "Мерцающий, сверкающий!"
+                                </a>
+                                <div class="popup-order-compound-description">
+                                    Вариант: <span class="color-plum">Новогодний</span>
+                                </div>
+                            </div>
+                            <div class="popup-order-compound-price">
+                                <div class="product-price">
+                                    <div class="product-price__current">
+                                        9 240<span class="ruble">₽</span>
+                                    </div>
+                                    <div class="product-price__old">890₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-order-detail mb-24">
+                    <div class="size-22 font-balsamiq mb-8">Детали заказа</div>
+                    <div class="sidebar-order-detailing">
+                        <div class="sidebar-order-detailing-label">Товары (3)</div>
+                        <div class="sidebar-order-detailing-value">1 900 ₽</div>
+                    </div>
+                    <div class="sidebar-order-detailing">
+                        <div class="sidebar-order-detailing-label">Начислим баллов</div>
+                        <div class="sidebar-order-detailing-value color-orange">+284</div>
+                    </div>
+                    <div class="sidebar-order-detailing">
+                        <div class="sidebar-order-detailing-label">Доставка</div>
+                        <div class="sidebar-order-detailing-value color-green">Бесплатно</div>
+                    </div>
+                    <div class="sidebar-basket-final-result">
+                        Итого
+                        <span>1 900 <span class="ruble">₽</span></span>
+                    </div>
+                </div>
+                <div class="popup-fast-link-container mb-24">
+                    <a href="#" class="popup-fast-link">
+                        <span class="popup-fast-link-left">
+                            <span class="popup-fast-link-icon icon"
+                                  style="--icon: url('../img/icon/icon-messages.svg')"></span>
+                            Поддержка
+                        </span>
+                        <span class="popup-fast-link-arrow icon"
+                              style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                    </a>
+                </div>
+                <div class="popup-bottom">
+                    <button type="button" class="button button-orange h-56 icon"
+                            style="--icon: url('../img/icon/icon-rotate-left.svg')">Заказать повторно
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="order-no-pay" aria-hidden="true" class="popup popup-608">
+    <div class="popup__wrapper">
+        <button data-close type="button" class="popup__close icon"
+                style="--icon: url('../img/icon/icon-close.svg')"></button>
+        <div class="popup__content">
+            <div class="popup-content">
+                <div class="popup-top mb-24">
+                    <div class="popup-title mb-0">
+                        Заказ 532 860
+                    </div>
+                    <div class="subscription-popup-info">
+                        <div class="subscription-popup-info-label">Оформлен</div>
+                        <div class="subscription-popup-info-value">01.09.2024</div>
+                    </div>
+                </div>
+                <div class="subscription-popup-info-message mb-24 icon"
+                     style="--icon: url('../img/icon/icon-info.svg')">
+                    Если не оплатите заказ в течение суток, то он автоматически отменится
+                </div>
+                <div class="popup-step mb-24">
+                    <div class="popup-step-item active">
+                        <div class="popup-step-item-circle"></div>
+                        <div class="popup-step-item-title">В сборке <span class="color-red">(не оплачен)</span></div>
+                    </div>
+                    <div class="popup-step-item">
+                        <div class="popup-step-item-circle"></div>
+                        <div class="popup-step-item-title">Получено на склад</div>
+                    </div>
+                    <div class="popup-step-item">
+                        <div class="popup-step-item-circle"></div>
+                        <div class="popup-step-item-title">В пункте выдаче</div>
+                    </div>
+                    <div class="popup-step-item">
+                        <div class="popup-step-item-circle"></div>
+                        <div class="popup-step-item-title">Получено</div>
+                    </div>
+                </div>
+                <div class="popup-data-delivery mb-24">
+                    <div class="size-22 font-balsamiq">Данные доставки</div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-box.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Способ добавки</div>
+                            <div class="popup-data-delivery-title">Почта России</div>
+                            <div class="popup-data-delivery-text">Простое письмо по РФ · Трек номер: 321532450594</div>
+                        </div>
+                        <div class="popup-data-delivery-img">
+                            <img src="img/delivery-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-truck.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Примерная дата доставки</div>
+                            <div class="popup-data-delivery-title">26 марта, вторник</div>
+                        </div>
+                    </div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-location.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Адрес доставки</div>
+                            <div class="popup-data-delivery-title">Ульяновск, Бульвар архитекторов 9</div>
+                        </div>
+                    </div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-profile.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Получатель</div>
+                            <div class="popup-data-delivery-title">Илья Попов</div>
+                            <div class="popup-data-delivery-text">+7 (987) 688 51 57 · IlyaP1998@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-order-information.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Комментарий к заказу</div>
+                            <div class="popup-data-delivery-title">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-bg mb-24">
+                    <div class="size-22 font-balsamiq">Состав заказа</div>
+                    <div class="popup-order-compound">
+                        <a href="#" class="popup-order-compound-pic">
+                            <img src="img/product.png" alt="">
+                        </a>
+                        <div class="popup-order-compound-content">
+                            <div class="popup-order-compound-info">
+                                <a href="#" class="popup-order-compound-name">
+                                    Стикер-пак "Мерцающий, сверкающий!"
+                                </a>
+                                <div class="popup-order-compound-description">
+                                    Вариант: <span class="color-plum">Новогодний</span>
+                                </div>
+                            </div>
+                            <div class="popup-order-compound-price">
+                                <div class="product-price">
+                                    <div class="product-price__current">
+                                        9 240<span class="ruble">₽</span>
+                                    </div>
+                                    <div class="product-price__old">890₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-order-compound">
+                        <a href="#" class="popup-order-compound-pic">
+                            <img src="img/product.png" alt="">
+                        </a>
+                        <div class="popup-order-compound-content">
+                            <div class="popup-order-compound-info">
+                                <a href="#" class="popup-order-compound-name">
+                                    Стикер-пак "Мерцающий, сверкающий!"
+                                </a>
+                                <div class="popup-order-compound-description">
+                                    Вариант: <span class="color-plum">Новогодний</span>
+                                </div>
+                            </div>
+                            <div class="popup-order-compound-price">
+                                <div class="product-price">
+                                    <div class="product-price__current">
+                                        9 240<span class="ruble">₽</span>
+                                    </div>
+                                    <div class="product-price__old">890₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-order-compound">
+                        <a href="#" class="popup-order-compound-pic">
+                            <img src="img/product.png" alt="">
+                        </a>
+                        <div class="popup-order-compound-content">
+                            <div class="popup-order-compound-info">
+                                <a href="#" class="popup-order-compound-name">
+                                    Стикер-пак "Мерцающий, сверкающий!"
+                                </a>
+                                <div class="popup-order-compound-description">
+                                    Вариант: <span class="color-plum">Новогодний</span>
+                                </div>
+                            </div>
+                            <div class="popup-order-compound-price">
+                                <div class="product-price">
+                                    <div class="product-price__current">
+                                        9 240<span class="ruble">₽</span>
+                                    </div>
+                                    <div class="product-price__old">890₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-order-detail mb-24">
+                    <div class="size-22 font-balsamiq mb-8">Детали заказа</div>
+                    <div class="sidebar-order-detailing">
+                        <div class="sidebar-order-detailing-label">Товары (3)</div>
+                        <div class="sidebar-order-detailing-value">1 900 ₽</div>
+                    </div>
+                    <div class="sidebar-order-detailing">
+                        <div class="sidebar-order-detailing-label">Начислим баллов</div>
+                        <div class="sidebar-order-detailing-value color-orange">+284</div>
+                    </div>
+                    <div class="sidebar-order-detailing">
+                        <div class="sidebar-order-detailing-label">Доставка</div>
+                        <div class="sidebar-order-detailing-value color-green">Бесплатно</div>
+                    </div>
+                    <div class="sidebar-basket-final-result">
+                        Итого
+                        <span>1 900 <span class="ruble">₽</span></span>
+                    </div>
+                </div>
+                <div class="popup-fast-link-container mb-24">
+                    <a href="#" class="popup-fast-link">
+                        <span class="popup-fast-link-left">
+                            <span class="popup-fast-link-icon icon"
+                                  style="--icon: url('../img/icon/icon-messages.svg')"></span>
+                            Поддержка
+                        </span>
+                        <span class="popup-fast-link-arrow icon"
+                              style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                    </a>
+                    <a href="#" class="popup-fast-link popup-fast-link-red" data-popup="#delete-subscription">
+                        <span class="popup-fast-link-left">
+                            <span class="popup-fast-link-icon icon"
+                                  style="--icon: url('../img/icon/icon-close.svg')"></span>
+                        Отменить заказ
+                        </span>
+                        <span class="popup-fast-link-arrow icon"
+                              style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                    </a>
+                </div>
+                <div class="popup-button popup-button-column">
+                    <button type="button" class="button button-orange-light h-56 icon"
+                            style="--icon: url('../img/icon/icon-edit.svg')">Изменить данные
+                    </button>
+                    <button type="button" class="button button-orange h-56 icon"
+                            style="--icon: url('../img/icon/icon-rotate-left.svg')">Заказать повторно
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="order-edit" aria-hidden="true" class="popup popup-608">
+    <div class="popup__wrapper">
+        <button data-close type="button" class="popup__close icon"
+                style="--icon: url('../img/icon/icon-close.svg')"></button>
+        <div class="popup__content">
+            <div class="popup-content">
+                <div class="size-28 font-balsamiq mb-24">Изменение данных заказа</div>
+                <div class="popup-bg mb-24">
+                    <h3 class="size-22 mb-16 font-balsamiq">Ваши данные</h3>
+                    <div class="form-input mb-16"> <!-- form-input-error -->
+                        <div class="form-label">ФИО</div>
+                        <div class="form-input__relative">
+                            <input type="text" id="name" class="input h-56" placeholder="Александ Мящериков Николаевич">
+                            <div class="form-input-error-icon icon"
+                                 style="--icon: url('../img/icon/icon-close.svg')"></div>
+                        </div>
+
+                        <!-- <div class="error-text">Ошибка</div>-->
+                    </div>
+                    <div class="form-input-flex">
+                        <div class="form-input mb-16"> <!-- form-input-error -->
+                            <div class="form-label">Электронная почта</div>
+                            <div class="form-input__relative">
+                                <input type="text" id="email" class="input h-56"
+                                       placeholder="Александ Мящериков Николаевич">
+                                <div class="form-input-error-icon icon"
+                                     style="--icon: url('../img/icon/icon-close.svg')"></div>
+                            </div>
+                            <!-- <div class="error-text">Ошибка</div>-->
+                        </div>
+                        <div class="form-input mb-16"> <!-- form-input-error -->
+                            <div class="form-label">Номер телефона</div>
+                            <div class="form-input__relative">
+                                <input type="tel" id="phone" class="input h-56" placeholder="+7 (987) 654-32-10">
+                                <div class="form-input-error-icon icon"
+                                     style="--icon: url('../img/icon/icon-close.svg')"></div>
+                            </div>
+                            <!-- <div class="error-text">Ошибка</div>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-bg mb-24">
+                    <h3 class="size-22 mb-16 font-balsamiq">Адрес доставки</h3>
+                    <img src="img/address.jpg" alt="" class="mb-10">
+                    <div class="form-input"> <!-- form-input-error -->
+                        <div class="form-label">Адрес</div>
+                        <div class="form-input__relative">
+                            <input type="text" id="name" class="input h-56" placeholder="Город">
+                            <div class="form-input-error-icon icon"
+                                 style="--icon: url('../img/icon/icon-close.svg')"></div>
+                        </div>
+
+                        <!-- <div class="error-text">Ошибка</div>-->
+                    </div>
+                </div>
+                <div class="popup-bg mb-24">
+                    <h3 class="size-22 mb-16 font-balsamiq">Комментарий (опционально)</h3>
+                    <textarea class="input input-textarea" placeholder="Какое то сообщение"></textarea>
+                </div>
+                <div class="popup-button">
+                    <button type="button" class="button h-56 button-orange-light">Отменить изменения</button>
+                    <button type="button" class="button h-56 button-orange">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="order-step-2" aria-hidden="true" class="popup popup-608">
+    <div class="popup__wrapper">
+        <button data-close type="button" class="popup__close icon"
+                style="--icon: url('../img/icon/icon-close.svg')"></button>
+        <div class="popup__content">
+            <div class="popup-content">
+                <div class="popup-top mb-24">
+                    <div class="popup-title mb-0">
+                        Заказ 532 860
+                    </div>
+                    <div class="subscription-popup-info">
+                        <div class="subscription-popup-info-label">Оформлен</div>
+                        <div class="subscription-popup-info-value">01.09.2024</div>
+                    </div>
+                </div>
+                <div class="popup-step mb-24">
+                    <div class="popup-step-item passed">
+                        <div class="popup-step-item-circle"></div>
+                        <div class="popup-step-item-title">В сборке (отправим 1-го числа)</div>
+                    </div>
+                    <div class="popup-step-item active">
+                        <div class="popup-step-item-circle"></div>
+                        <div class="popup-step-item-title">Получено на склад</div>
+                    </div>
+                    <div class="popup-step-item">
+                        <div class="popup-step-item-circle"></div>
+                        <div class="popup-step-item-title">В пункте выдаче</div>
+                    </div>
+                    <div class="popup-step-item">
+                        <div class="popup-step-item-circle"></div>
+                        <div class="popup-step-item-title">Получено</div>
+                    </div>
+                </div>
+                <div class="popup-data-delivery mb-24">
+                    <div class="size-22 font-balsamiq">Данные доставки</div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-box.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Способ добавки</div>
+                            <div class="popup-data-delivery-title">Почта России</div>
+                            <div class="popup-data-delivery-text">Простое письмо по РФ · Трек номер: 321532450594</div>
+                        </div>
+                        <div class="popup-data-delivery-img">
+                            <img src="img/delivery-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-truck.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Примерная дата доставки</div>
+                            <div class="popup-data-delivery-title">26 марта, вторник</div>
+                        </div>
+                    </div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-location.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Адрес доставки</div>
+                            <div class="popup-data-delivery-title">Ульяновск, Бульвар архитекторов 9</div>
+                        </div>
+                    </div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-profile.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Получатель</div>
+                            <div class="popup-data-delivery-title">Илья Попов</div>
+                            <div class="popup-data-delivery-text">+7 (987) 688 51 57 · IlyaP1998@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="popup-data-delivery-item">
+                        <div class="popup-data-delivery-icon icon"
+                             style="--icon: url('../img/icon/icon-order-information.svg')"></div>
+                        <div class="popup-data-delivery-content">
+                            <div class="popup-data-delivery-label">Комментарий к заказу</div>
+                            <div class="popup-data-delivery-title">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-bg mb-24">
+                    <div class="size-22 font-balsamiq">Состав заказа</div>
+                    <div class="popup-order-compound">
+                        <a href="#" class="popup-order-compound-pic">
+                            <img src="img/product.png" alt="">
+                        </a>
+                        <div class="popup-order-compound-content">
+                            <div class="popup-order-compound-info">
+                                <a href="#" class="popup-order-compound-name">
+                                    Стикер-пак "Мерцающий, сверкающий!"
+                                </a>
+                                <div class="popup-order-compound-description">
+                                    Вариант: <span class="color-plum">Новогодний</span>
+                                </div>
+                            </div>
+                            <div class="popup-order-compound-price">
+                                <div class="product-price">
+                                    <div class="product-price__current">
+                                        9 240<span class="ruble">₽</span>
+                                    </div>
+                                    <div class="product-price__old">890₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-order-compound">
+                        <a href="#" class="popup-order-compound-pic">
+                            <img src="img/product.png" alt="">
+                        </a>
+                        <div class="popup-order-compound-content">
+                            <div class="popup-order-compound-info">
+                                <a href="#" class="popup-order-compound-name">
+                                    Стикер-пак "Мерцающий, сверкающий!"
+                                </a>
+                                <div class="popup-order-compound-description">
+                                    Вариант: <span class="color-plum">Новогодний</span>
+                                </div>
+                            </div>
+                            <div class="popup-order-compound-price">
+                                <div class="product-price">
+                                    <div class="product-price__current">
+                                        9 240<span class="ruble">₽</span>
+                                    </div>
+                                    <div class="product-price__old">890₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-order-compound">
+                        <a href="#" class="popup-order-compound-pic">
+                            <img src="img/product.png" alt="">
+                        </a>
+                        <div class="popup-order-compound-content">
+                            <div class="popup-order-compound-info">
+                                <a href="#" class="popup-order-compound-name">
+                                    Стикер-пак "Мерцающий, сверкающий!"
+                                </a>
+                                <div class="popup-order-compound-description">
+                                    Вариант: <span class="color-plum">Новогодний</span>
+                                </div>
+                            </div>
+                            <div class="popup-order-compound-price">
+                                <div class="product-price">
+                                    <div class="product-price__current">
+                                        9 240<span class="ruble">₽</span>
+                                    </div>
+                                    <div class="product-price__old">890₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-order-detail mb-24">
+                    <div class="size-22 font-balsamiq mb-8">Детали заказа</div>
+                    <div class="sidebar-order-detailing">
+                        <div class="sidebar-order-detailing-label">Товары (3)</div>
+                        <div class="sidebar-order-detailing-value">1 900 ₽</div>
+                    </div>
+                    <div class="sidebar-order-detailing">
+                        <div class="sidebar-order-detailing-label">Начислим баллов</div>
+                        <div class="sidebar-order-detailing-value color-orange">+284</div>
+                    </div>
+                    <div class="sidebar-order-detailing">
+                        <div class="sidebar-order-detailing-label">Доставка</div>
+                        <div class="sidebar-order-detailing-value color-green">Бесплатно</div>
+                    </div>
+                    <div class="sidebar-basket-final-result">
+                        Итого
+                        <span>1 900 <span class="ruble">₽</span></span>
+                    </div>
+                </div>
+                <div class="popup-fast-link-container mb-24">
+                    <a href="#" class="popup-fast-link">
+                        <span class="popup-fast-link-left">
+                            <span class="popup-fast-link-icon icon"
+                                  style="--icon: url('../img/icon/icon-messages.svg')"></span>
+                            Поддержка
+                        </span>
+                        <span class="popup-fast-link-arrow icon"
+                              style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                    </a>
+                    <a href="#" class="popup-fast-link popup-fast-link-red" data-popup="#delete-subscription">
+                        <span class="popup-fast-link-left">
+                            <span class="popup-fast-link-icon icon"
+                                  style="--icon: url('../img/icon/icon-close.svg')"></span>
+                        Отменить заказ
+                        </span>
+                        <span class="popup-fast-link-arrow icon"
+                              style="--icon: url('../img/icon/icon-arrow-right.svg')"></span>
+                    </a>
+                </div>
+                <div class="popup-button popup-button-column">
+                    <button type="button" class="button button-orange-light h-56 icon"
+                            style="--icon: url('../img/icon/icon-edit.svg')">Изменить данные
+                    </button>
+                    <button type="button" class="button button-orange h-56 icon"
+                            style="--icon: url('../img/icon/icon-rotate-left.svg')">Заказать повторно
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @@include('html/_js.htm',{})
 </body>
 
