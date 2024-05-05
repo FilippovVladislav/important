@@ -26,6 +26,7 @@ body.popup-show::after {
   transition: visibility 0.8s ease 0s;
   visibility: hidden;
   pointer-events: none;
+  padding-bottom: 20px;
 }
 
 .popup_show {

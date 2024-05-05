@@ -204,6 +204,7 @@ if(document.querySelector('.product-gallery')){
   })
   const swiperBig = new Swiper('.gallery-big', {
     modules: [Thumbs],
+    allowTouchMove: false,
     thumbs: {
       swiper: swiperSmall,
     },

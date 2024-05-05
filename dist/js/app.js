@@ -7065,6 +7065,7 @@
               Object.assign(e.thumbs, { init: r, update: a });
           },
         ],
+        allowTouchMove: !1,
         thumbs: { swiper: tn },
       });
     }

@@ -606,7 +606,7 @@
   }
 
   header {
-    top: 60px;
+    top: 74px;
     @media(max-width: $s400) {
       top: 76px;
     }
@@ -660,7 +660,7 @@
 @keyframes topsend {
   from {
     position: sticky;
-    top: -44px;
+    top: -62px;
   }
   to {
     position: sticky;
@@ -688,7 +688,7 @@
   }
   to {
     position: sticky;
-    top: -44px;
+    top: -62px;
   }
 }
 
@@ -2134,6 +2134,12 @@
   @media(max-width: $s750) {
     width: 81%;
   }
+}
+
+.zoomable{
+  display: flex;
+  height: 100%;
+  object-fit: cover;
 }
 
 .zoomable--zoomed {
@@ -4469,7 +4475,7 @@
     position: relative;
     pointer-events: auto;
   }
-  img{
+  img, picture{
     width: 100%;
     height: 100%;
     object-fit: cover;
