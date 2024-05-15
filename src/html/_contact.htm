@@ -1,0 +1,784 @@
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+<script>
+    const map = {
+        "type": "FeatureCollection",
+        "features": [
+            {
+                "type": "Feature",
+                "id": 0,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        55.752886, 37.667734
+                    ],
+                },
+                "information": {
+                    "city" : "Москва",
+                    "name" : "Своя полка",
+                    "street" : "Москва, Нижняя Сыромятническая улица, 10, с9 (метро Курская)",
+                    "time" : "Работаем с 12 до 21",
+                    "instagram" : "https://www.instagram.com/svoyapolka.artplay/",
+                    "instagramName" : "Нельзяграм svoyapolka.artpla",
+                    "phone" : "+7 (985) 892-98-85",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 1,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        59.981460, 30.210316
+                    ],
+                },
+                "information": {
+                    "city" : "Санкт-Петербургд",
+                    "name" : "Ginger Joys",
+                    "street" : "Санкт-Петербург, Приморский проспект, 72, этаж 1",
+                    "time" : "Работаем с 10 до 22",
+                    "instagram" : "https://www.instagram.com/ginger_joys/",
+                    "instagramName" : "Нельзяграм ginger_joys",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 2,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        56.322145, 43.999168
+                    ],
+                },
+                "information": {
+                    "city" : "Нижний Новгород",
+                    "name" : "Молодость",
+                    "street" : "Нижний Новгород, Октябрьская улица, 6",
+                    "time" : "Работаем с 10 до 22",
+                    "instagram" : "https://www.instagram.com/molodost_nn/",
+                    "instagramName" : "Нельзяграм molodost_nn",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 3,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        58.011652, 56.240439
+                    ],
+                },
+                "information": {
+                    "city" : "Пермь",
+                    "name" : "Чердакк",
+                    "street" : "Пермь, улица Ленина, 54",
+                    "time" : "Работаем с 11 до 21",
+                    "instagram" : "https://www.instagram.com/cherdakk/",
+                    "instagramName" : "Нельзяграм cherdakk",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 4,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        57.630212, 39.869092
+                    ],
+                },
+                "information": {
+                    "city" : "Ярославль",
+                    "name" : "Travinka",
+                    "street" : "Ярославль, улица Победы, 38/27",
+                    "time" : "Работаем с 10 до 20",
+                    "instagram" : "https://www.instagram.com/travinka_market/",
+                    "instagramName" : "Нельзяграм travinka_market",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 5,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        54.620376, 39.723538
+                    ],
+                },
+                "information": {
+                    "city" : "Рязань",
+                    "name" : "Твоя полка",
+                    "street" : "Рязань, улица Дзержинского, 60/2",
+                    "time" : "Работаем с 10 до 20",
+                    "instagram" : "https://www.instagram.com/tvoyapolka_rzn/",
+                    "instagramName" : "Нельзяграм tvoyapolka_rzn",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 6,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        56.316544, 43.996051
+                    ],
+                },
+                "information": {
+                    "city" : "Нижний Новгород",
+                    "name" : "Лавка “Пшено”",
+                    "street" : "Нижний Новгород, улица Звездинка, 12А (метро Горьковская)",
+                    "time" : "Работаем с 12 до 20",
+                    "instagram" : "https://www.instagram.com/lavkapsheno/",
+                    "instagramName" : "Нельзяграм lavkapsheno",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 7,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        51.667171, 39.192966
+                    ],
+                },
+                "information": {
+                    "city" : "Воронеж",
+                    "name" : "oh.gifts",
+                    "street" : "Воронеж, Плехановская улица, 31",
+                    "time" : "Работаем с 10 до 21",
+                    "instagram" : "https://www.instagram.com/tvoyapolka_voronezh/",
+                    "instagramName" : "Нельзяграм tvoyapolka_voronezh",
+                    "phone" : "+7 (900) 961-97-65",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 8,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        58.592442, 49.658713
+                    ],
+                },
+                "information": {
+                    "city" : "Киров",
+                    "name" : "Твоя полка",
+                    "street" : "Киров, ТЦ \"Novita Centro\", Октябрьский пр-т, 92, 1 этаж",
+                    "time" : "Работаем с 10 до 20",
+                    "instagram" : "https://www.instagram.com/polka_kirov/",
+                    "instagramName" : "Нельзяграм polka_kirov",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 9,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        64.536624, 40.523443
+                    ],
+                },
+                "information": {
+                    "city" : "Архангельск",
+                    "name" : "Твоя полка",
+                    "street" : "Архангельск, проспект Чумбарова-Лучинского, 41",
+                    "time" : "Работаем с 11 до 20",
+                    "instagram" : "https://vk.com/tvoypolka_arkhangelsk",
+                    "instagramName" : "Вконтакте tvoypolka_arkhangelsk",
+                    "phone" : "+7 (921) 243-31-32",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 10,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        53.186377, 50.094812
+                    ],
+                },
+                "information": {
+                    "city" : "Самара",
+                    "name" : "Твоя полка",
+                    "street" : "Самара, Ленинградская улица, 55 (метро Алабинская)",
+                    "time" : "Нет информации",
+                    "instagram" : "https://vk.com/tvoyapolka_samara",
+                    "instagramName" : "Вконтакте tvoyapolka_samara",
+                    "phone" : "+7 (937) 068-52-90",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 11,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        51.762129, 36.184553
+                    ],
+                },
+                "information": {
+                    "city" : "Курск",
+                    "name" : "Твоя полка",
+                    "street" : "Курск, улица Карла Маркса, 68",
+                    "time" : "Работаем с 10 до 22",
+                    "instagram" : "https://vk.com/tvoyapolka_kursk",
+                    "instagramName" : "Вконтакте tvoyapolka_kursk",
+                    "phone" : "+7 (4712) 55-10-56",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 12,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        58.522697, 31.265872
+                    ],
+                },
+                "information": {
+                    "city" : "Великий Новгород",
+                    "name" : "Твоя полка",
+                    "street" : "Великий Новгород, Чудинцева улица, 5",
+                    "time" : "Работаем с 10 до 20",
+                    "instagram" : "https://vk.com/tvoyapolka_vnovgorod",
+                    "instagramName" : "Вконтакте tvoyapolka_vnovgorod",
+                    "phone" : "+7 (8162) 68-61-03",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 13,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        58.522697, 31.265872
+                    ],
+                },
+                "information": {
+                    "city" : "Великий Новгород",
+                    "name" : "Твоя полка",
+                    "street" : "Великий Новгород, Чудинцева улица, 5",
+                    "time" : "Работаем с 10 до 20",
+                    "instagram" : "https://vk.com/tvoyapolka_vnovgorod",
+                    "instagramName" : "Вконтакте tvoyapolka_vnovgorod",
+                    "phone" : "+7 (8162) 68-61-03",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 14,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        58.011890, 56.239873
+                    ],
+                },
+                "information": {
+                    "city" : "Пермь",
+                    "name" : "Твоя полка",
+                    "street" : "Пермь, улица Ленина, 39",
+                    "time" : "Работаем с 11 до 20",
+                    "instagram" : "https://vk.com/tvoyapolka_perm",
+                    "instagramName" : "Вконтакте tvoyapolka_perm",
+                    "phone" : "+7 (952) 652-47-82",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 15,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        53.236049, 34.354882
+                    ],
+                },
+                "information": {
+                    "city" : "Брянск",
+                    "name" : "Твоя полка",
+                    "street" : "Брянск, проспект Ленина, 3",
+                    "time" : "Работаем с 10 до 20",
+                    "instagram" : "https://vk.com/tvoyapolka",
+                    "instagramName" : "Вконтакте tvoyapolka",
+                    "phone" : "+7 (4832) 30-04-90",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 16,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        61.792162, 34.368555
+                    ],
+                },
+                "information": {
+                    "city" : "Петрозаводск",
+                    "name" : "Твоя полка",
+                    "street" : "Петрозаводск, улица Кирова, 19А",
+                    "time" : "Работаем с 10 до 20",
+                    "instagram" : "https://vk.com/tvoyapolka_petrozavodsk",
+                    "instagramName" : "Вконтакте tvoyapolka_petrozavodsk",
+                    "phone" : "+7 (8142) 28-08-71",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 17,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        56.836849, 60.594357
+                    ],
+                },
+                "information": {
+                    "city" : "Екатеринбург",
+                    "name" : "Полочки",
+                    "street" : "Екатеринбург, улица Вайнера, 8",
+                    "time" : " Работаем с 10 до 20:30",
+                    "phone" : "+7 (950) 544-15-88",
+                    "instagramName" : "Вайнера, 8 - то же самое, что Ленина,24. Просто дом угловой, магазин на 2м этаже, по эскалатору направо.",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 18,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        47.221509, 39.715381
+                    ],
+                },
+                "information": {
+                    "city" : "Ростов-на-Дону",
+                    "name" : "Твоя полка Ростов",
+                    "street" : "Ростов-на-Дону, Большая садовая 78",
+                    "time" : " Работаем с 10 до 21",
+                    "phone" : "+7 (989) 511-41-61",
+                    "instagramName" : "-",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 19,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        45.060077, 39.026364
+                    ],
+                },
+                "information": {
+                    "city" : "Краснодар",
+                    "name" : "Книжная Полька",
+                    "street" : "Краснодар, Восточно-кругликовская, 48/1, офис 37",
+                    "time" : "Нет информации",
+                    "phone" : "+7 (961) 518-84-56",
+                    "instagramName" : "График работы плавающий, так что перед походом обязательно позвоните :)",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 20,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        56.836997, 60.623130
+                    ],
+                },
+                "information": {
+                    "city" : "Екатеринбург",
+                    "name" : "Универмаг Большой",
+                    "street" : "Екатеринбург, улица Малышева, 71",
+                    "time" : "Работаем с 10  до 22",
+                    "phone" : "+7 (343) 385-90-07",
+                    "instagramName" : "-",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 21,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        52.284938, 104.289095
+                    ],
+                },
+                "information": {
+                    "city" : "Иркутск",
+                    "name" : "Твоя полка Иркутск",
+                    "street" : "Иркутск, ул. Урицкого 2",
+                    "time" : "Работаем с 10  до 19",
+                    "instagram" : "https://vk.com/tvoyapolka_irkutsk",
+                    "instagramName" : "Вконтакте tvoyapolka_irkutsk",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 22,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        55.920658, 37.843292
+                    ],
+                },
+                "information": {
+                    "city" : "Королев",
+                    "name" : "Booklyabooks",
+                    "street" : "Королев, улица 50-летия ВЛКСМ, 6А",
+                    "time" : "Нет информации",
+                    "instagramName" : "Возможен самовывоз из офиса по предварительной договоренности",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 23,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        54.190704, 37.613647
+                    ],
+                },
+                "information": {
+                    "city" : "Тула",
+                    "name" : "Booklyabooks",
+                    "street" : "Тула, Учётный переулок, 3",
+                    "time" : "Работаем с 12  до 19",
+                    "instagram" : "https://vk.com/booklyabooks",
+                    "instagramName" : "Вконтакте booklyabooks",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 24,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        56.126398, 40.391372
+                    ],
+                },
+                "information": {
+                    "city" : "Владимир",
+                    "name" : "Кофейня Маяк",
+                    "street" : "Владимир, Дворянская 13",
+                    "time" : "Нет информации",
+                    "instagram" : "https://lighthouse-coffee.ru/",
+                    "instagramName" : "Сайт lighthouse-coffee.ru",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 25,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        53.355707, 83.664253
+                    ],
+                },
+                "information": {
+                    "city" : "Барнаул",
+                    "name" : "Крибле Крабле",
+                    "street" : "Барнаул, ул. Энтузиастов 59",
+                    "time" : "Работаем с 10  до 20",
+                    "instagramName" : "-",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 26,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        54.717298, 20.502798
+                    ],
+                },
+                "information": {
+                    "city" : "Калининград",
+                    "name" : "Барахольщик",
+                    "street" : "Калининград, Ленинский проспект 13-15",
+                    "time" : "Работаем с 10  до 21",
+                    "instagram" : "https://www.instagram.com/brhl_store/",
+                    "instagramName" : "Нельзяграм @brhl_store",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 27,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        59.930331, 30.363676
+                    ],
+                },
+                "information": {
+                    "city" : "Санкт-петербург",
+                    "name" : "DARI DARI",
+                    "street" : "Санкт-петербург, улица Гончарная, д.2 (метро Площадь Восстания)",
+                    "time" : "Работаем с 10  до 22",
+                    "instagram" : "https://vk.com/daridari_ru",
+                    "instagramName" : "Вконтакте daridari_ru",
+                    "phone" : "+7 (962) 684-43-34",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 28,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        55.737451, 37.635485
+                    ],
+                },
+                "information": {
+                    "city" : "Москва",
+                    "name" : "Ska vi LÄSA?",
+                    "street" : "Москва, Большая Татарская 35с3 (метро Павелецкая)",
+                    "time" : "Работаем с 10  до 20",
+                    "instagram" : "https://vk.com/skavilasabooks?from=search",
+                    "instagramName" : "Вконтакте skavilasabooks",
+                    "phone" : "+7 (993) 906-20-81",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 29,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        56.133432, 40.418196
+                    ],
+                },
+                "information": {
+                    "city" : "Владимир",
+                    "name" : "Кофейня “Маяк” филиал 2",
+                    "street" : "Владимир, Большая московская 71",
+                    "time" : "Работаем с 8  до 21",
+                    "instagramName" : "-",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 30,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        56.168792, 40.462510
+                    ],
+                },
+                "information": {
+                    "city" : "Владимир",
+                    "name" : "Кофейня “Маяк” филиал 3",
+                    "street" : "Владимир, Суздальский проспект 15",
+                    "time" : "Работаем с 8  до 21",
+                    "instagramName" : "-",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+            {
+                "type": "Feature",
+                "id": 31,
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        59.926720, 30.323207
+                    ],
+                },
+                "information": {
+                    "city" : "Санкт-Петербург",
+                    "name" : "Locali",
+                    "street" : "Санкт-Петербург, улица Гороховая 49Б, общественное пространство SENO (метро Сенная площадь)",
+                    "time" : "Работаем с 10 до 21",
+                    "instagramName" : "-",
+                    "photos" : ['img/pic-default.JPG']
+                }
+            },
+        ]
+    }
+
+    ymaps.ready(init);
+
+    function init () {
+        var myMap = new ymaps.Map('map', {
+                center: [55.76, 37.64],
+                zoom: 10
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+            objectManager = new ymaps.ObjectManager({
+                // Чтобы метки начали кластеризоваться, выставляем опцию.
+                clusterize: false,
+                // ObjectManager принимает те же опции, что и кластеризатор.
+                gridSize: 32,
+                clusterDisableClickZoom: true
+            });
+
+        // Чтобы задать опции одиночным объектам и кластерам,
+        // обратимся к дочерним коллекциям ObjectManager.
+        objectManager.objects.options.set('preset', 'islands#orangeDotIcon');
+        objectManager.clusters.options.set('preset', 'islands#orangeClusterIcons');
+        myMap.geoObjects.add(objectManager);
+
+        function filterMap(city){
+            if(city == 'Все города'){
+                objectManager.setFilter(function (object) {
+                    return object.information.city != city});
+                myMap.setBounds(myMap.geoObjects.getBounds())
+            }else{
+                objectManager.setFilter(function (object) {
+                    return object.information.city == city
+                });
+                myMap.setBounds(myMap.geoObjects.getBounds())
+                myMap.setZoom(13);
+                setTimeout(function (){
+                    myMap.setZoom(12);
+                }, 10)
+            }
+
+        }
+
+        objectManager.add(map);
+        myMap.setBounds(myMap.geoObjects.getBounds())
+
+        objectManager.objects.events.add(['click'], onObjectClick);
+
+        function onObjectClick(e) {
+            let objectId;
+            if(e.length != undefined){
+                objectId = e;
+            }else{
+                objectId = e.get('objectId');
+                if(document.querySelector(`.address-shop-item`).classList.contains('active')){
+                    document.querySelector(`.address-shop-item.active`).classList.remove('active')
+                }
+                document.querySelector(`.address-shop-item[data-id="${objectId}"]`).classList.add('active');
+                let positionTop = document.querySelector(`.address-shop-item[data-id="${objectId}"]`).offsetTop
+                if(window.innerWidth > 767){
+                    document.querySelector('.address-shop').scrollTo({top: positionTop, left: 0, behavior: "smooth"})
+                }else{
+                    window.scrollBy({top: positionTop + (window.innerHeight / 2), left: 0, behavior: "smooth"})
+                }
+
+            }
+
+            let object = objectManager.objects.getById(objectId);
+            myMap.setZoom(15)
+            myMap.panTo(object.geometry.coordinates)
+        }
+
+        function addressListEvent(){
+            document.querySelectorAll('.address-shop-item').forEach((item) => {
+                item.addEventListener('click', function (){
+                    let siblingsItems = getSiblings(item)
+                    siblingsItems.forEach((element) => {
+                        element.classList.remove('active')
+                    })
+                    item.classList.add('active')
+                    objectManager.objects.events.add(['click'], onObjectClick(item.getAttribute('data-id')));
+                })
+            })
+        }
+        addressListEvent();
+
+        document.querySelectorAll('[name="city"]').forEach((item) => {
+            item.addEventListener('input', function (){
+
+                addressListEvent();
+                pointList(item.getAttribute('data-name'));
+                filterMap(item.getAttribute('data-name'));
+            })
+        })
+
+    }
+
+    function pointList(city) {
+        document.querySelector('.address-shop').innerHTML = ''
+        map.features.forEach((item, index) => {
+            let newElement = document.createElement('div');
+            newElement.className = `address-shop-item`
+            newElement.setAttribute(`data-id`, item.id)
+            newElement.innerHTML = ` <div class="address-shop-pic">
+                                        <span class="icon icon-full" style="--icon: url('../img/icon/icon-maximize.svg')"></span>
+                                    </div>
+                                    <div class="address-shop-flex">
+                                        <div class="address-shop-icon"></div>
+                                        <div class="address-shop-content">
+                                            <div class="address-shop-title">Магазин «${item.information.name}» </div>
+                                            <div class="address-shop-info">
+                                                <div class="address-shop-info-line icon" style="--icon: url('../img/icon/icon-location.svg')">${item.information.street}</div>
+                                                <div class="address-shop-info-line icon" style="--icon: url('../img/icon/icon-clock.svg')">${item.information.time}</div>
+                                                ${item.information.phone != undefined ? '<a href="tel:'+item.information.phone+'" class="address-shop-info-line icon" style="--icon: url(\'../img/icon/icon-phone.svg\')">' + item.information.phone + '</a>' : ''}
+                                                ${item.information.instagram != undefined ? '<a href="'+item.information.instagram+'" target="_blank" class="address-shop-info-line icon" style="--icon: url(\'../img/icon/icon-danger.svg\')">' + item.information.instagramName + '</a>'
+                                                : '<div class="address-shop-info-line icon" style="--icon: url(\'../img/icon/icon-danger.svg\')">' + item.information.instagramName + '</div>'}
+                                            </div>
+                                            <a href="#" class="button button-orange-light button-mini button-100">Построить маршрут</a>
+                                        </div>
+                                    </div>
+                                    `
+            if(city != undefined){
+                if(city == item.information.city){
+                    document.querySelector('.address-shop').append(newElement)
+                }else if(city == 'Все города'){
+                    document.querySelector('.address-shop').append(newElement)
+                }
+            }else{
+                document.querySelector('.address-shop').append(newElement)
+            }
+            for(itemPic of Object.values(item.information.photos)){
+                newElement.querySelector('.address-shop-pic').innerHTML += `<a href="${itemPic}" data-fancybox="fancy-${index}" class="address-shop-pic-img">
+                        <img src="${itemPic}" alt="">
+                    </a>`
+            }
+        })
+    }
+
+    const getSiblings = function (elem) {
+
+        // Setup siblings array and get the first sibling
+        var siblings = [];
+        var sibling = elem.parentNode.firstChild;
+
+        // Loop through each sibling and push to the array
+        while (sibling) {
+            if (sibling.nodeType === 1 && sibling !== elem) {
+                siblings.push(sibling);
+            }
+            sibling = sibling.nextSibling
+        }
+
+        return siblings;
+
+    };
+
+
+
+    window.addEventListener('load', function () {
+        pointList();
+    })
+
+</script>
