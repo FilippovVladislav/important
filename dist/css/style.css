@@ -7177,6 +7177,52 @@ footer {
 .address-shop-info-line:last-child {
   margin-bottom: 0;
 }
+
+.notification-container {
+  position: fixed;
+  right: 8px;
+  top: 200px;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+.notification-item {
+  padding: 0 16px;
+  width: 100%;
+  transition: all 0.25s linear;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 45px;
+  opacity: 0;
+  max-width: 304px;
+  height: 0;
+  box-shadow: 0px 2px 12px 0px rgba(54, 47, 60, 0.08);
+}
+.notification-item.active {
+  margin-bottom: 26px;
+  height: 74px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  opacity: 1;
+}
+.notification-item:before {
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+
+.notification-item-green:before {
+  background: #30C066;
+}
+
+.notification-item-red {
+  color: #C03042;
+}
+.notification-item-red:before {
+  background: #C03042;
+}
 .swiper {
   overflow: hidden;
 }

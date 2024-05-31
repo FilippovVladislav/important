@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Ответы на вопросы"
+})
+
+<body>
+<div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+        <div class="container">
+            <div class="main-page">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumb-items">
+                        <li class="breadcrumb-item">
+                            <a href="#" class="breadcrumb-link">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            Ответы на вопросы
+                        </li>
+                    </ul>
+                </nav>
+                <div class="product-block product-block-light mt-0">
+                    <div class="product-block-head">
+                        <h3 class="size-28 font-balsamiq">Ответы на вопросы</h3>
+                    </div>
+                    <div class="question-block">
+                        <h5 class="question-block__value">Нужно ли вырезать стикеры?</h5>
+                        <div class="question-block__description">На всех стикер-паках уже есть резка на стикеры, ничего
+                            вырезать не нужно
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <div class="question-block__value">Возможна ли оплата наложенным платежом?</div>
+                        <div class="question-block__description">Данная услуга, к сожалению, недоступна в нашем
+                            магазине. Вы можете заказать товар только по 100% предоплате.
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <div class="question-block__value">Возврат товара</div>
+                        <div class="question-block__description">
+                            <p>
+                                Мы осуществляем возврат товара, только если на нем при получении Вы заметили брак.
+                                Зафиксируйте его с помощью фото и пришлите нам на почту <a
+                                    href="mailto:info@etovazno.com" class="text-underline">info@etovazno.com</a>, мы
+                                обязательно
+                                решим эту проблему.
+                            </p>
+                            <p class="color-orange">
+                                В иных случаях возврат не осуществляется.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <div class="question-block__value">Можно ли попасть в вашу команду?</div>
+                        <div class="question-block__description">
+                            Мы в постоянном поиске художников/фотографов/людей, умеющих красиво оформлять развороты.
+                            Если Вы хотите попасть в нашу команду, скидывайте портфолио в личные
+                            сообщения <a href="#" class="color-orange">https://vk.me/nastasiyabox</a> или на почту <a
+                                href="mailto:anastasiiabox@etovazno.com"
+                                class="color-orange">anastasiiabox@etovazno.com</a>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <div class="question-block__value">Я оплатил(а) заказ, как быстро его отправят?</div>
+                        <div class="question-block__description">Все заказы обычно отправляются в течение двух дней
+                            после оплаты. Если выбрана доставка заказным письмом, то трек-номер придет вам на почту, а
+                            так же появится в личном кабинете в течение трех дней. Исключения - предзаказы, тогда
+                            стикеры отправляются только после выхода в продажу.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="notification-container">
+        <div class="notification-item notification-item-green icon" style="--icon: url('../img/icon/icon-tick-circle.svg')">
+            Настройки сохранены. Сообщим, когда товар появится в наличии
+        </div>
+        <div class="notification-item notification-item-red icon" style="--icon: url('../img/icon/icon-close-circle.svg')">
+            Упс, что-то пошло не так, попробуйте снова
+        </div>
+    </div>
+    @@include('html/_footer.htm',{})
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+</body>
+
+</html>
