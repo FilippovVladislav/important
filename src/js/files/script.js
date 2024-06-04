@@ -474,7 +474,7 @@ function callback2 (entries, observer) {
 
 
 if(document.querySelector('.bagel')){
-    function SVGRoad(elem) {
+  /*  function SVGRoad(elem) {
         this.pathLength = elem.getTotalLength();
         this.setStrokeDasharrayInPercent = function() {
             var strokeDasharray = "";
@@ -485,17 +485,23 @@ if(document.querySelector('.bagel')){
         };
 
         this.setStrokeDashoffsetInPercent = function(strokeDashoffset) {
+
             elem.style.strokeDashoffset = strokeDashoffset / 100 * this.pathLength;
         };
     }
 
     var pathElem = document.querySelector(".bagel-svg circle");
-    console.log(pathElem)
     var SVGRoadInstance = new SVGRoad(pathElem);
 
 //change the following values
     SVGRoadInstance.setStrokeDasharrayInPercent(document.querySelector(".bagel-svg").getAttribute('data-attr'));
-    SVGRoadInstance.setStrokeDashoffsetInPercent(0);
+    SVGRoadInstance.setStrokeDashoffsetInPercent(0);*/
+    let circle = document.querySelector('#bar');
+    let val = document.querySelector('.bagel-svg').getAttribute('data-attr');
+    let r = circle.getAttribute('r');
+    let c = Math.PI*(r*2);
+    let pct = ((100-val)/100)*c;
+    circle.style.strokeDashoffset = pct + 'px';
 }
 
 const anchors = document.querySelectorAll('.anchor')

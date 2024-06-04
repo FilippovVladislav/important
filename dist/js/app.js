@@ -6875,7 +6875,7 @@
         }),
       document.querySelector(".product-gallery"))
     ) {
-      const tn = new re(".gallery-small", {
+      const Qi = new re(".gallery-small", {
         modules: [ue, le],
         freeMode: !0,
         watchSlidesProgress: !0,
@@ -7066,7 +7066,7 @@
           },
         ],
         allowTouchMove: !1,
-        thumbs: { swiper: tn },
+        thumbs: { swiper: Qi },
       });
     }
     if (document.querySelector(".wholesale-swiper")) {
@@ -14492,32 +14492,32 @@
                 n + "px");
           }
         });
-      let nn = document.getElementById("slider"),
-        sn = document.getElementById("slider-input-start"),
-        on = document.getElementById("slider-input-end"),
-        rn = Number(sn.getAttribute("data-price-min")),
-        an = Number(on.getAttribute("data-price-max"));
-      fe.create(nn, {
-        start: [rn, an],
+      let en = document.getElementById("slider"),
+        tn = document.getElementById("slider-input-start"),
+        nn = document.getElementById("slider-input-end"),
+        sn = Number(tn.getAttribute("data-price-min")),
+        on = Number(nn.getAttribute("data-price-max"));
+      fe.create(en, {
+        start: [sn, on],
         connect: !0,
         step: 1,
-        range: { min: rn, max: an },
+        range: { min: sn, max: on },
       }),
-        nn.noUiSlider.on("update", function (e, t) {
-          (sn.value = "от " + Math.ceil(e[0]) + "₽"),
-            (on.value = "до " + Math.ceil(e[1]) + "₽");
+        en.noUiSlider.on("update", function (e, t) {
+          (tn.value = "от " + Math.ceil(e[0]) + "₽"),
+            (nn.value = "до " + Math.ceil(e[1]) + "₽");
         }),
-        sn.addEventListener("focus", () => {
-          sn.value = sn.value.replace(/[^+\d]/g, "");
+        tn.addEventListener("focus", () => {
+          tn.value = tn.value.replace(/[^+\d]/g, "");
         }),
-        on.addEventListener("focus", () => {
-          on.value = on.value.replace(/[^+\d]/g, "");
+        nn.addEventListener("focus", () => {
+          nn.value = nn.value.replace(/[^+\d]/g, "");
         }),
-        sn.addEventListener("change", function () {
-          nn.noUiSlider.set([this.value, null]);
+        tn.addEventListener("change", function () {
+          en.noUiSlider.set([this.value, null]);
         }),
-        on.addEventListener("change", function () {
-          nn.noUiSlider.set([null, this.value]);
+        nn.addEventListener("change", function () {
+          en.noUiSlider.set([null, this.value]);
         }),
         document
           .querySelector(".filter-button-mobile")
@@ -14803,7 +14803,7 @@
       }
     }
     const Vi = document.querySelectorAll(".zoomable");
-    for (const ln of Vi) new qi(ln);
+    for (const rn of Vi) new qi(rn);
     const Wi = { rootMargin: "0px", threshold: 0.5 },
       Gi = new IntersectionObserver(function (e, t) {
         e.forEach((e) => {
@@ -14825,31 +14825,17 @@
     }, Wi);
     var Ui = document.querySelector(".sidebar-formalization");
     if ((Ui && Yi.observe(Ui), document.querySelector(".bagel"))) {
-      function cn(e) {
-        (this.pathLength = e.getTotalLength()),
-          (this.setStrokeDasharrayInPercent = function () {
-            var t = "";
-            for (let e = 0; e < arguments.length; e++)
-              t += (arguments[e] / 100) * this.pathLength + " ";
-            e.style.strokeDasharray = t;
-          }),
-          (this.setStrokeDashoffsetInPercent = function (t) {
-            e.style.strokeDashoffset = (t / 100) * this.pathLength;
-          });
-      }
-      var Zi = document.querySelector(".bagel-svg circle");
-      console.log(Zi);
-      var Ki = new cn(Zi);
-      Ki.setStrokeDasharrayInPercent(
-        document.querySelector(".bagel-svg").getAttribute("data-attr")
-      ),
-        Ki.setStrokeDashoffsetInPercent(0);
+      let an = document.querySelector("#bar"),
+        ln = document.querySelector(".bagel-svg").getAttribute("data-attr"),
+        cn = an.getAttribute("r"),
+        dn = ((100 - ln) / 100) * (Math.PI * (2 * cn));
+      an.style.strokeDashoffset = dn + "px";
     }
-    const Ji = document.querySelectorAll(".anchor");
-    for (let dn = 0; dn < Ji.length; dn++)
-      Ji[dn].addEventListener("click", function (e) {
+    const Zi = document.querySelectorAll(".anchor");
+    for (let un = 0; un < Zi.length; un++)
+      Zi[un].addEventListener("click", function (e) {
         e.preventDefault();
-        const t = Ji[dn].getAttribute("href").substr(1);
+        const t = Zi[un].getAttribute("href").substr(1);
         const i =
           document.getElementById(t).getBoundingClientRect().top +
           window.pageYOffset +
@@ -14897,24 +14883,24 @@
         }),
       document.querySelector(".form-input__code"))
     ) {
-      var Qi = document.querySelectorAll(".otp__digit"),
-        en = "0123456789".split("");
-      function un(e) {
+      var Ki = document.querySelectorAll(".otp__digit"),
+        Ji = "0123456789".split("");
+      function hn(e) {
         let t = e.target,
           i = parseInt(t.classList[1].split("__")[2]);
         ((t.value = e.key),
         8 == e.keyCode && i > 1 && t.previousElementSibling.focus(),
-        i < 4 && -1 != en.indexOf("" + e.key)) && t.nextElementSibling.focus();
+        i < 4 && -1 != Ji.indexOf("" + e.key)) && t.nextElementSibling.focus();
         var n = "";
-        for (let { value: e } of Qi) n += e;
+        for (let { value: e } of Ki) n += e;
         4 == n.length
           ? (document.querySelector("#_otp").classList.replace("_notok", "_ok"),
             (document.querySelector("#_otp").innerText = n))
           : (document.querySelector("#_otp").classList.replace("_ok", "_notok"),
             (document.querySelector("#_otp").innerText = n));
       }
-      Qi.forEach((e) => {
-        e.addEventListener("keyup", un);
+      Ki.forEach((e) => {
+        e.addEventListener("keyup", hn);
       });
     }
     (window.FLS = !0),

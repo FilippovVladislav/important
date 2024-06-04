@@ -2846,7 +2846,6 @@
   line-height: 1.35;
   align-items: center;
   justify-content: center;
-  background: rgba(54, 47, 60, 0.12);
 }
 
 .bagel-inner {
@@ -2886,15 +2885,16 @@
   position: absolute;
   top: 0;
   left: 0;
-  /*  stroke-dasharray: 360;
-    stroke-dashoffset: 150;*/
-  transform: rotate(-90deg);
-
   circle {
-    fill: none;
-    stroke: url(#GradientColor);
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.5s linear;
+    stroke: rgba(54, 47, 60, 0.12);
     stroke-width: 10px;
   }
+}
+
+#bar{
+  stroke: $orange;
 }
 
 .loyalty-block-right {
