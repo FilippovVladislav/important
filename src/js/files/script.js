@@ -107,24 +107,24 @@ if (document.querySelector('.product-event__add')) {
             if(item.closest('.product-main-event__button')){
                 document.querySelectorAll('.product-main-event__button .product-event__add').forEach((element) => {
                     element.closest('.product-event__add').classList.add('active');
-                    editCountProduct(element.closest('.product-event__add'));
+                  /*  editCountProduct(element.closest('.product-event__add'));*/
                 })
             }else{
                 item.closest('.product-event__add').classList.add('active');
-                editCountProduct(item.closest('.product-event__add'));
+             /*   editCountProduct(item.closest('.product-event__add'));*/
             }
         })
     })
     if (document.querySelector('.basket-item-event')) {
         document.querySelectorAll('.basket-item-event').forEach((item) => {
-            editCountProduct(item);
+          /*  editCountProduct(item);*/
         })
     }
 }else{
     if (document.querySelector('.basket-item-event')) {
         document.querySelectorAll('.basket-item-event').forEach((item) => {
-            console.log(item)
-            editCountProduct(item);
+
+           /* editCountProduct(item);*/
         })
     }
 }
