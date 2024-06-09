@@ -751,6 +751,23 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 12px;
 }
 
+.form-input {
+  position: relative;
+}
+
+.form-input-apply {
+  position: absolute;
+  right: 18px;
+  top: 12px;
+  display: none;
+}
+.form-input-apply:before {
+  background: var(--color-orange);
+}
+.form-input-apply.active {
+  display: block;
+}
+
 .form-input-flex {
   display: flex;
   justify-content: space-between;

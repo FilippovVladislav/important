@@ -12,6 +12,23 @@
 	}
 }
 
+.form-input{
+	position: relative;
+}
+
+.form-input-apply{
+	position: absolute;
+	right: 18px;
+	top: 12px;
+	display: none;
+	&:before{
+		background: $orange;
+	}
+	&.active{
+		display: block;
+	}
+}
+
 .form-input-flex{
 	display: flex;
 	justify-content: space-between;
