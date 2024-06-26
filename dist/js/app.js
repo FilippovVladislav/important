@@ -7076,6 +7076,26 @@
         pagination: { el: ".swiper-pagination", clickable: !0 },
       });
     }
+    if (document.querySelector(".card-slider")) {
+      new ae(".card-slider", {
+        modules: [le],
+        spaceBetween: 10,
+        navigation: {
+          prevEl: document
+            .querySelector(".swiper-arrow-container")
+            .querySelector(".swiper-arrow_prev"),
+          nextEl: document
+            .querySelector(".swiper-arrow-container")
+            .querySelector(".swiper-arrow_next"),
+        },
+        breakpoints: {
+          320: { slidesPerView: 2, spaceBetween: 8 },
+          450: { slidesPerView: 3, spaceBetween: 16 },
+          700: { slidesPerView: 4, spaceBetween: 16 },
+          950: { slidesPerView: 5, spaceBetween: 16 },
+        },
+      });
+    }
     new (i(732))({
       elements_selector: "[data-src],[data-srcset]",
       class_loaded: "_lazy-loaded",

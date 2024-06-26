@@ -4612,3 +4612,146 @@
     background: #C03042;
   }
 }
+
+.swiper-arrow-container{
+  display: flex;
+  align-items: center;
+  .swiper-arrow{
+    margin-left: 6px;
+    width: 34px;
+    height: 34px;
+    background: rgba(240, 127, 60, 0.16);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:before{
+      background: #F07F3C;
+      width: 18px;
+      height: 18px;
+    }
+  }
+  .swiper-button-disabled{
+    opacity: .5;
+    pointer-events: none;
+  }
+}
+
+.payment-info__icon{
+  margin-top: 24px;
+}
+
+.payment-info__text{
+  color: rgba(54, 47, 60, 0.6);
+  font-size: 11px;
+  margin-top: 24px;
+}
+
+.card-slider{
+  margin: -10px;
+  padding: 10px;
+}
+
+.card-slide-add{
+  background: rgba(191, 177, 172, 0.1);
+  height: 88px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(54, 47, 60, 0.8);
+  font-family: 'BalsamiqSans';
+  justify-content: center;
+  border: 1px solid transparent;
+  .icon{
+    margin-bottom: 8px;
+    &:before{
+      background: rgba(54, 47, 60, 0.8);
+    }
+  }
+  &:hover{
+    border: 1px solid $orange;
+    color: $orange;
+    .icon{
+      &:before{
+        background: $orange;
+      }
+    }
+  }
+}
+
+.current-card{
+  background: rgba(191, 177, 172, 0.1);
+  height: 88px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid transparent;
+  padding: 12px;
+  transition: all .25s linear;
+  position: relative;
+  color: #362F3C;
+  .icon{
+    margin-bottom: 8px;
+    &:before{
+      background: rgba(54, 47, 60, 0.8);
+    }
+  }
+  &:hover{
+    border: 1px solid $orange;
+    color: $orange;
+    .icon{
+      &:before{
+        background: $orange;
+      }
+    }
+    .delete-card{
+      opacity: 1;
+    }
+  }
+}
+
+.current-card__title{
+  font-size: 18px;
+  font-family: 'BalsamiqSans';
+}
+
+.delete-card{
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #F03C53;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all .25s linear;
+  &:before{
+    background: white !important;
+    width: 18px;
+    height: 18px;
+  }
+  &:hover{
+    background: #dc3349;
+  }
+}
+
+.current-card__info{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.current-card__number{
+  font-size: 14px;
+  color: #362F3C;
+}
+
+.current-card__icon{
+
+}
