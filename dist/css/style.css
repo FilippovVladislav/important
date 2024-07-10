@@ -531,6 +531,7 @@ h6 {
   line-height: 1.2;
   letter-spacing: -0.8px;
   font-weight: 700;
+  margin: 20px 0;
 }
 @media (max-width: 750px) {
   .content h1 {
@@ -543,6 +544,7 @@ h6 {
   line-height: 1.2;
   letter-spacing: -0.8px;
   font-weight: 700;
+  margin: 20px 0;
 }
 @media (max-width: 750px) {
   .content h2 {
@@ -555,6 +557,7 @@ h6 {
   line-height: 1.2;
   letter-spacing: -0.8px;
   font-weight: 700;
+  margin: 20px 0;
 }
 @media (max-width: 750px) {
   .content h3 {
@@ -567,6 +570,7 @@ h6 {
   line-height: 1.2;
   letter-spacing: -0.8px;
   font-weight: 700;
+  margin: 20px 0;
 }
 @media (max-width: 750px) {
   .content h4 {
@@ -579,6 +583,7 @@ h6 {
   line-height: 1.2;
   letter-spacing: -0.8px;
   font-weight: 700;
+  margin: 20px 0;
 }
 @media (max-width: 750px) {
   .content h5 {
@@ -591,6 +596,7 @@ h6 {
   line-height: 1.2;
   letter-spacing: -0.8px;
   font-weight: 700;
+  margin: 20px 0;
 }
 @media (max-width: 750px) {
   .content h6 {
