@@ -525,6 +525,79 @@ h6 {
   font-family: BalsamiqSans;
 }
 
+.content h1 {
+  font-family: BalsamiqSans;
+  font-size: 48px;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+  font-weight: 700;
+}
+@media (max-width: 750px) {
+  .content h1 {
+    font-size: 38px;
+  }
+}
+.content h2 {
+  font-family: BalsamiqSans;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+  font-weight: 700;
+}
+@media (max-width: 750px) {
+  .content h2 {
+    font-size: 28px;
+  }
+}
+.content h3 {
+  font-family: BalsamiqSans;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+  font-weight: 700;
+}
+@media (max-width: 750px) {
+  .content h3 {
+    font-size: 22px;
+  }
+}
+.content h4 {
+  font-family: BalsamiqSans;
+  font-size: 22px;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+  font-weight: 700;
+}
+@media (max-width: 750px) {
+  .content h4 {
+    font-size: 18px;
+  }
+}
+.content h5 {
+  font-family: BalsamiqSans;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+  font-weight: 700;
+}
+@media (max-width: 750px) {
+  .content h5 {
+    font-size: 18px;
+  }
+}
+.content h6 {
+  font-family: BalsamiqSans;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+  font-weight: 700;
+}
+@media (max-width: 750px) {
+  .content h6 {
+    font-size: 18px;
+  }
+}
+
 .size-36 {
   font-size: 36px;
   line-height: 42px;

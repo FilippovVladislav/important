@@ -155,6 +155,69 @@ h6 {
 	font-family: BalsamiqSans;
 }
 
+.content{
+	h1{
+		font-family: BalsamiqSans;
+		font-size: 48px;
+		line-height: 1.2;
+		letter-spacing: -.8px;
+		font-weight: 700;
+		@media(max-width: $s750) {
+			font-size: 38px;
+		}
+	}
+	h2{
+		font-family: BalsamiqSans;
+		font-size: 36px;
+		line-height: 1.2;
+		letter-spacing: -.8px;
+		font-weight: 700;
+		@media(max-width: $s750) {
+			font-size: 28px;
+		}
+	}
+	h3{
+		font-family: BalsamiqSans;
+		font-size: 28px;
+		line-height: 1.2;
+		letter-spacing: -.8px;
+		font-weight: 700;
+		@media(max-width: $s750) {
+			font-size: 22px;
+		}
+	}
+	h4{
+		font-family: BalsamiqSans;
+		font-size: 22px;
+		line-height: 1.2;
+		letter-spacing: -.8px;
+		font-weight: 700;
+		@media(max-width: $s750) {
+			font-size: 18px;
+		}
+	}
+	h5{
+		font-family: BalsamiqSans;
+		font-size: 20px;
+		line-height: 1.2;
+		letter-spacing: -.8px;
+		font-weight: 700;
+		@media(max-width: $s750) {
+			font-size: 18px;
+		}
+	}
+	h6{
+		font-family: BalsamiqSans;
+		font-size: 18px;
+		line-height: 1.2;
+		letter-spacing: -.8px;
+		font-weight: 700;
+		@media(max-width: $s750) {
+			font-size: 18px;
+		}
+	}
+}
+
 .size-36{
 	font-size: 36px;
 	line-height: 42px;
