@@ -2958,16 +2958,13 @@ footer {
     margin-bottom: 16px;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 1200px) {
   .sidebar-filter form {
     width: 100%;
   }
   .sidebar-filter .filter-button-mobile {
     flex-shrink: 0;
     margin-left: 10px;
-  }
-  .sidebar-filter .select-element {
-    width: 100%;
   }
 }
 
@@ -3502,7 +3499,7 @@ footer {
 .scroll-top header {
   top: 60px;
 }
-@media (max-width: 400px) {
+@media (max-width: 750px) {
   .scroll-top header {
     top: 76px;
   }

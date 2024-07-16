@@ -82,16 +82,13 @@
     width: 100%;
     margin-bottom: 16px;
   }
-  @media(max-width: $s750) {
+  @media(max-width: $s1200) {
     form{
       width: 100%;
     }
     .filter-button-mobile{
       flex-shrink: 0;
       margin-left: 10px;
-    }
-    .select-element{
-      width: 100%;
     }
   }
 }
@@ -622,7 +619,7 @@
 
   header {
     top: 60px;
-    @media(max-width: $s400) {
+    @media(max-width: $s750) {
       top: 76px;
     }
   }
