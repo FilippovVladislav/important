@@ -2886,6 +2886,11 @@ footer {
   flex-basis: 100%;
   margin-bottom: 16px;
 }
+@media (max-width: 750px) {
+  .breadcrumbs {
+    padding: 0 8px;
+  }
+}
 
 .breadcrumb-items {
   display: flex;
@@ -2951,6 +2956,18 @@ footer {
     margin-right: 0;
     width: 100%;
     margin-bottom: 16px;
+  }
+}
+@media (max-width: 750px) {
+  .sidebar-filter form {
+    width: 100%;
+  }
+  .sidebar-filter .filter-button-mobile {
+    flex-shrink: 0;
+    margin-left: 10px;
+  }
+  .sidebar-filter .select-element {
+    width: 100%;
   }
 }
 
@@ -3483,7 +3500,7 @@ footer {
   animation-fill-mode: forwards;
 }
 .scroll-top header {
-  top: 74px;
+  top: 60px;
 }
 @media (max-width: 400px) {
   .scroll-top header {

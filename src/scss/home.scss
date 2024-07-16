@@ -9,6 +9,9 @@
 .breadcrumbs {
   flex-basis: 100%;
   margin-bottom: 16px;
+  @media(max-width: $s750) {
+    padding: 0 8px;
+  }
 }
 
 .breadcrumb-items {
@@ -78,6 +81,18 @@
     margin-right: 0;
     width: 100%;
     margin-bottom: 16px;
+  }
+  @media(max-width: $s750) {
+    form{
+      width: 100%;
+    }
+    .filter-button-mobile{
+      flex-shrink: 0;
+      margin-left: 10px;
+    }
+    .select-element{
+      width: 100%;
+    }
   }
 }
 
@@ -606,7 +621,7 @@
   }
 
   header {
-    top: 74px;
+    top: 60px;
     @media(max-width: $s400) {
       top: 76px;
     }
