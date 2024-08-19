@@ -27,7 +27,7 @@ if(document.querySelector('.swiper-index')){
       delay: 10000
     },
     effect: "fade",
-    loop: true,
+    loop: false,
     fadeEffect: true,
     navigation: {
       nextEl: ".swiper-navigation-index .swiper-navigation-next",
@@ -61,7 +61,7 @@ function sliderThreeElementDesktop(item){
   let sliderProduct = new Swiper(item, {
     modules: [Navigation, Pagination, A11y],
     a11y: true,
-    loop: true,
+    loop: false,
     navigation: {
       nextEl: item.closest('.product-block-slider').querySelector('.swiper-navigation-next'),
       prevEl: item.closest('.product-block-slider').querySelector('.swiper-navigation-prev'),
@@ -90,7 +90,7 @@ function sliderFourElementDesktop(item){
   let sliderProduct = new Swiper(item, {
     modules: [Navigation, Pagination, A11y],
     a11y: true,
-    loop: true,
+    loop: false,
     navigation: {
       nextEl: item.closest('.product-block-slider').querySelector('.swiper-navigation-next'),
       prevEl: item.closest('.product-block-slider').querySelector('.swiper-navigation-prev'),
@@ -116,7 +116,7 @@ function sliderFiveElementDesktop(item){
   let sliderProduct = new Swiper(item, {
     modules: [Navigation, Pagination, A11y],
     a11y: true,
-    loop: true,
+    loop: false,
     navigation: {
       nextEl: item.closest('.product-block-slider').querySelector('.swiper-navigation-next'),
       prevEl: item.closest('.product-block-slider').querySelector('.swiper-navigation-prev'),
@@ -143,7 +143,7 @@ function sliderFiveElementLight(item){
   let sliderProduct = new Swiper(item, {
     modules: [Navigation, Pagination, A11y],
     a11y: true,
-    loop: true,
+    loop: false,
     navigation: {
       nextEl: item.closest('.product-block-slider').querySelector('.swiper-navigation-next'),
       prevEl: item.closest('.product-block-slider').querySelector('.swiper-navigation-prev'),

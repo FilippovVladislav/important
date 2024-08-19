@@ -3059,6 +3059,10 @@
   font-size: 13px;
 }
 
+.swiper-button-disabled{
+  display: none;
+}
+
 .sidebar-profile {
   padding: 0;
   border-radius: 0;
@@ -3067,6 +3071,8 @@
     display: block;
     width: 100%;
     margin-top: 16px;
+    position: relative;
+    top: auto !important;
     .sidebar-profile-person {
       display: none;
     }

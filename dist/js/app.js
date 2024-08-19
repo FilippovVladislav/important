@@ -6775,7 +6775,7 @@
         autoHeight: !0,
         autoplay: { delay: 1e4 },
         effect: "fade",
-        loop: !0,
+        loop: !1,
         fadeEffect: !0,
         navigation: {
           nextEl: ".swiper-navigation-index .swiper-navigation-next",
@@ -6792,7 +6792,7 @@
                 new ae(e, {
                   modules: [le, de, ue],
                   a11y: !0,
-                  loop: !0,
+                  loop: !1,
                   navigation: {
                     nextEl: e
                       .closest(".product-block-slider")
@@ -6814,7 +6814,7 @@
                 new ae(e, {
                   modules: [le, de, ue],
                   a11y: !0,
-                  loop: !0,
+                  loop: !1,
                   navigation: {
                     nextEl: e
                       .closest(".product-block-slider")
@@ -6835,7 +6835,7 @@
                 new ae(e, {
                   modules: [le, de, ue],
                   a11y: !0,
-                  loop: !0,
+                  loop: !1,
                   navigation: {
                     nextEl: e
                       .closest(".product-block-slider")
@@ -6856,7 +6856,7 @@
                 new ae(e, {
                   modules: [le, de, ue],
                   a11y: !0,
-                  loop: !0,
+                  loop: !1,
                   navigation: {
                     nextEl: e
                       .closest(".product-block-slider")
