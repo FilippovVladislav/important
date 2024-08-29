@@ -6775,7 +6775,7 @@
         autoHeight: !0,
         autoplay: { delay: 1e4 },
         effect: "fade",
-        loop: !1,
+        loop: !0,
         fadeEffect: !0,
         navigation: {
           nextEl: ".swiper-navigation-index .swiper-navigation-next",

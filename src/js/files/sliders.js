@@ -27,7 +27,7 @@ if(document.querySelector('.swiper-index')){
       delay: 10000
     },
     effect: "fade",
-    loop: false,
+    loop: true,
     fadeEffect: true,
     navigation: {
       nextEl: ".swiper-navigation-index .swiper-navigation-next",
