@@ -6875,7 +6875,7 @@
         }),
       document.querySelector(".product-gallery"))
     ) {
-      const Ji = new ae(".gallery-small", {
+      const Ki = new ae(".gallery-small", {
         modules: [ue, le],
         freeMode: !0,
         watchSlidesProgress: !0,
@@ -7066,7 +7066,7 @@
           },
         ],
         allowTouchMove: !1,
-        thumbs: { swiper: Ji },
+        thumbs: { swiper: Ki },
       });
     }
     if (document.querySelector(".wholesale-swiper")) {
@@ -14512,32 +14512,32 @@
                 n + "px");
           }
         });
-      let Qi = document.getElementById("slider"),
-        en = document.getElementById("slider-input-start"),
-        tn = document.getElementById("slider-input-end"),
-        nn = Number(en.getAttribute("data-price-min")),
-        sn = Number(tn.getAttribute("data-price-max"));
-      fe.create(Qi, {
-        start: [nn, sn],
+      let Ji = document.getElementById("slider"),
+        Qi = document.getElementById("slider-input-start"),
+        en = document.getElementById("slider-input-end"),
+        tn = Number(Qi.getAttribute("data-price-min")),
+        nn = Number(en.getAttribute("data-price-max"));
+      fe.create(Ji, {
+        start: [tn, nn],
         connect: !0,
         step: 1,
-        range: { min: nn, max: sn },
+        range: { min: tn, max: nn },
       }),
-        Qi.noUiSlider.on("update", function (e, t) {
-          (en.value = "от " + Math.ceil(e[0]) + "₽"),
-            (tn.value = "до " + Math.ceil(e[1]) + "₽");
+        Ji.noUiSlider.on("update", function (e, t) {
+          (Qi.value = "от " + Math.ceil(e[0]) + "₽"),
+            (en.value = "до " + Math.ceil(e[1]) + "₽");
+        }),
+        Qi.addEventListener("focus", () => {
+          Qi.value = Qi.value.replace(/[^+\d]/g, "");
         }),
         en.addEventListener("focus", () => {
           en.value = en.value.replace(/[^+\d]/g, "");
         }),
-        tn.addEventListener("focus", () => {
-          tn.value = tn.value.replace(/[^+\d]/g, "");
+        Qi.addEventListener("change", function () {
+          Ji.noUiSlider.set([this.value, null]);
         }),
         en.addEventListener("change", function () {
-          Qi.noUiSlider.set([this.value, null]);
-        }),
-        tn.addEventListener("change", function () {
-          Qi.noUiSlider.set([null, this.value]);
+          Ji.noUiSlider.set([null, this.value]);
         }),
         document
           .querySelector(".filter-button-mobile")
@@ -14768,7 +14768,7 @@
       }
     }
     const qi = document.querySelectorAll(".zoomable");
-    for (const on of qi) new Hi(on);
+    for (const sn of qi) new Hi(sn);
     const Vi = { rootMargin: "0px", threshold: 0.5 },
       Wi = new IntersectionObserver(function (e, t) {
         e.forEach((e) => {
@@ -14784,23 +14784,23 @@
     const Xi = new IntersectionObserver(function (e, t) {
       e.forEach((e) => {
         e.isIntersecting
-          ? document.querySelector(".basket-mobile").classList.remove("active")
-          : document.querySelector(".basket-mobile").classList.add("active");
+          ? document.querySelector(".basket-mobile")?.classList.remove("active")
+          : document.querySelector(".basket-mobile")?.classList.add("active");
       });
     }, Vi);
     var Yi = document.querySelector(".sidebar-formalization");
     if ((Yi && Xi.observe(Yi), document.querySelector(".bagel"))) {
-      let an = document.querySelector("#bar"),
-        rn = document.querySelector(".bagel-svg").getAttribute("data-attr"),
-        ln = an.getAttribute("r"),
-        cn = ((100 - rn) / 100) * (Math.PI * (2 * ln));
-      an.style.strokeDashoffset = cn + "px";
+      let on = document.querySelector("#bar"),
+        an = document.querySelector(".bagel-svg").getAttribute("data-attr"),
+        rn = on.getAttribute("r"),
+        ln = ((100 - an) / 100) * (Math.PI * (2 * rn));
+      on.style.strokeDashoffset = ln + "px";
     }
     const Ui = document.querySelectorAll(".anchor");
-    for (let dn = 0; dn < Ui.length; dn++)
-      Ui[dn].addEventListener("click", function (e) {
+    for (let cn = 0; cn < Ui.length; cn++)
+      Ui[cn].addEventListener("click", function (e) {
         e.preventDefault();
-        const t = Ui[dn].getAttribute("href").substr(1);
+        const t = Ui[cn].getAttribute("href").substr(1);
         const i =
           document.getElementById(t).getBoundingClientRect().top +
           window.pageYOffset +
@@ -14848,14 +14848,15 @@
         }),
       document.querySelector(".form-input__code"))
     ) {
-      var Zi = document.querySelectorAll(".otp__digit"),
-        Ki = "0123456789".split("");
-      function un(e) {
+      var Zi = document.querySelectorAll(".otp__digit");
+      "0123456789".split("");
+      function dn(e) {
         let t = e.target,
           i = parseInt(t.classList[1].split("__")[2]);
-        ((t.value = e.key),
-        8 == e.keyCode && i > 1 && t.previousElementSibling.focus(),
-        i < 4 && -1 != Ki.indexOf("" + e.key)) && t.nextElementSibling.focus();
+        (8 == (e.which || e.keyCode) &&
+          i > 1 &&
+          t.previousElementSibling.focus(),
+        i < 4) && t.nextElementSibling.focus();
         var n = "";
         for (let { value: e } of Zi) n += e;
         4 == n.length
@@ -14865,7 +14866,7 @@
             (document.querySelector("#_otp").innerText = n));
       }
       Zi.forEach((e) => {
-        e.addEventListener("keyup", un);
+        e.addEventListener("keyup", dn);
       });
     }
     (window.FLS = !0),

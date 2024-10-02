@@ -465,9 +465,9 @@ if(target2){
 function callback2 (entries, observer) {
     entries.forEach(entry => {
         if(entry.isIntersecting){
-            document.querySelector('.basket-mobile').classList.remove('active')
+            document.querySelector('.basket-mobile')?.classList.remove('active')
         }else{
-            document.querySelector('.basket-mobile').classList.add('active')
+            document.querySelector('.basket-mobile')?.classList.add('active')
         }
     });
 };
@@ -554,11 +554,12 @@ if(document.querySelector('.form-input__code')){
     function handle_next_input(event){
         let current = event.target
         let index = parseInt(current.classList[1].split("__")[2])
-        current.value = event.key
-        if(event.keyCode == 8 && index > 1){
+
+        let asci = event.which || event.keyCode;
+        if(asci == 8 && index > 1){
             current.previousElementSibling.focus()
         }
-        if(index < 4 && mykey.indexOf(""+event.key+"") != -1){
+        if(index < 4){
             var next = current.nextElementSibling;
             next.focus()
         }
