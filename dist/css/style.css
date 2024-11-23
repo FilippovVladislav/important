@@ -3344,6 +3344,12 @@ footer {
   position: relative;
   padding-bottom: 4px;
 }
+.swiper-index .swiper-slide {
+  pointer-events: none;
+}
+.swiper-index .swiper-slide-active {
+  pointer-events: auto;
+}
 
 .swiper-navigation-index {
   right: 14px;

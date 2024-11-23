@@ -464,6 +464,12 @@
   flex-direction: column;
   position: relative;
   padding-bottom: 4px;
+  .swiper-slide{
+    pointer-events: none;
+  }
+  .swiper-slide-active{
+    pointer-events: auto;
+  }
 }
 
 .swiper-navigation-index {
